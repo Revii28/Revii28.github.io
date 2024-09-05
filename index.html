@@ -41,15 +41,34 @@
             font-size: 24px;
         }
         form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        form label, form input, form textarea {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 10px;
-        }
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 500px;
+    }
+    form label {
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+    }
+    form input, form textarea {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        margin-bottom: 16px;
+        width: 100%;
+        max-width: 400px;
+        font-size: 16px;
+    }
+    form textarea {
+        resize: vertical;
+        min-height: 100px;
+    }
         .btn {
             background-color: #e74c3c;
             color: white;
@@ -86,42 +105,72 @@
             height: 24px;
             margin-right: 10px;
         }
+
+        /* CSS untuk notifikasi dummy */
+        .notification {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #25D366;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: none;
+            font-size: 14px;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            display: block;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Kabel Data 3in1 Fast Charging 100W USB Micro, Type C, Lightning - Best Quality</h1>
+    <header style="background-color: red; padding: 20px;">
+        <h1 style="color: #fff; font-size: 24px; text-align: center; margin: 0;">
+            Kabel Data 3in1 Fast Charging 100W USB Micro, Type C, Lightning - Best Quality
+        </h1>
     </header>
+    
 
     <section class="image-section">
         <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdIpDuPKoeSYHhVCdIzbqgOAwTuyjQRByf0f3tGWdIA.webp" alt="Stop Kontak Terbakar">
         <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdIHKkVk7eP8LG6CdI5meaqidFQAESwKmajQOYwkQ.webp" alt="Colokan Rumit">
     </section>
 
-    <section class="problem">
-        <h2>Masalah Ketika Butuh Banyak Stop Kontak</h2>
+    <section class="problem" style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
+        <h2 style="color: #d9534f;">🔌 Masalah Umum dengan Stop Kontak Terbatas</h2>
         <ul>
-            <li>Rumit mencari colokan aman untuk mengecas HP atau laptop yang mati 🔥</li>
-            <li>Butuh waktu lama untuk gantian dengan orang lain 😩</li>
-            <li>Biaya Ratusan Ribu jika terbakar karena stop kontak 🔥</li>
+            <li>🔍 Kesulitan menemukan colokan aman untuk mengisi daya HP atau laptop Anda 🔥</li>
+            <li>⏳ Waktu tunggu yang lama saat harus bergantian dengan orang lain 😩</li>
+            <li>💸 Biaya mahal dan risiko kebakaran jika stop kontak tidak aman 🔥</li>
         </ul>
-        <p>Saatnya Untuk Selamatkan Keluarga Tercinta Anda!</p>
+        <p style="font-weight: bold; color: #5bc0de;">Selamatkan Keluarga Anda dari Masalah Stop Kontak!</p>
         <ul>
-            <li>Pastikan terdapat banyak kegunaan dalam alat ini</li>
-            <li>Pastikan alatnya praktis mudah dibawa kemana-mana</li>
-            <li>Pastikan bisa diletakkan di tempat penyimpanan aman dari jangkauan anak-anak</li>
-            <li>Pastikan terbuat dari material berkualitas dan awet untuk jangka panjang</li>
+            <li>🔧 Temukan alat dengan banyak fungsi untuk memenuhi berbagai kebutuhan</li>
+            <li>👜 Pastikan alat tersebut praktis dan mudah dibawa kemana-mana</li>
+            <li>🔒 Letakkan di tempat penyimpanan yang aman dari jangkauan anak-anak</li>
+            <li>🛡️ Pilih bahan berkualitas yang tahan lama untuk investasi jangka panjang</li>
         </ul>
     </section>
-
-    <section class="product">
-        <h2>Kabel USB Multifungsi Import</h2>
-        <p>Dengan Fitur dan Fungsi Terlengkap:</p>
-        <ul>
-            <li>FAST CHARGING</li>
-            <li>MULTIFUNGSI UNTUK SEGALA JENIS GADGET</li>
-            <li>TERBUAT DARI BAHAN YANG AMAN</li>
-            <li>SUDAH MENGGUNAKAN TEKNOLOGI YANG TERCANGGIH</li>
+    
+    <section class="product" style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+        <h2 style="color: #d9534f; text-align: center;">Kabel USB Multifungsi Import</h2>
+        <p style="text-align: center; font-size: 18px; color: #333;">Dengan Fitur dan Fungsi Terlengkap:</p>
+        <ul style="list-style-type: none; padding: 0; text-align: center;">
+            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>🔋 FAST CHARGING:</strong> Pengisian daya cepat untuk semua perangkat.
+            </li>
+            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>🔗 MULTIFUNGSI UNTUK SEGALA JENIS GADGET:</strong> Kompatibel dengan berbagai jenis perangkat.
+            </li>
+            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>🔒 TERBUAT DARI BAHAN YANG AMAN:</strong> Material berkualitas tinggi untuk keselamatan maksimal.
+            </li>
+            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                <strong>🚀 SUDAH MENGGUNAKAN TEKNOLOGI YANG TERCANGGIH:</strong> Teknologi terbaru untuk performa terbaik.
+            </li>
         </ul>
         <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/Cdkr7XKyuXPe1gCdkMjKgHMDJE8ziTFKyVmRBlAFLEw.webp" alt="Kabel USB Multifungsi">
         <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdT9OSx4wZ7Pf4cCdkEcnfEzZCu57NQdKboM0dZCwQZQ.webp" alt="Kabel USB Multifungsi">
@@ -143,6 +192,8 @@
         <h3>Mau Dong, Berapa Harganya?</h3>
         <p>PROMO TERBATAS</p>
         <p class="price">Rp125.000/pcs <span>(GRATIS ONGKIR)</span></p>
+
+        <img src="https://cdn.orderonline.id/uploads/images_2115831722487236554.gif" alt="orderForm" >
         <form id="orderForm" action="https://api.whatsapp.com/send" method="get" target="_blank" onsubmit="sendWhatsAppMessage(); return false;">
             <label for="name">Nama:</label>
             <input type="text" id="name" name="name" required>
@@ -156,14 +207,10 @@
             <label for="message">Pesan Tambahan:</label>
             <textarea id="message" name="message"></textarea>
             
-            <button type="submit" class="btn">Kirim Pesanan via WhatsApp</button>
+            <button type="submit" class="btn" style="background: linear-gradient(45deg, #25D366, #128C7E); color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer;">Kirim Pesanan via WhatsApp</button>
+
         </form>
     </section>
-
-    <footer>
-        <p>&copy; 2024 Kabel Data 3in1 Fast Charging.</p>
-        <p> Semua hak cipta dilindungi.</p>
-    </footer>
 
     <script>
         function sendWhatsAppMessage() {
@@ -180,10 +227,58 @@
                 Pesan Tambahan: ${message}`
             );
 
-            const url = `https://api.whatsapp.com/send?phone=6281384280933&text=${encodedMessage}`;
+            const url = `https://api.whatsapp.com/send?phone=6285220966923&text=${encodedMessage}`;
 
             window.open(url, '_blank');
         }
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Kabel Data 3in1 Fast Charging.</p>
+        <p> Semua hak cipta dilindungi.</p>
+    </footer>
+
+
+    <!-- Dummy Notification JavaScript -->
+    <script>
+        const customers = [
+            {name: 'Budi Santoso', quantity: 1, amount: 125000},
+            {name: 'Rani', quantity: 1, amount: 125000},
+            {name: 'Sari Pratiwi', quantity: 2, amount: 250000},
+            {name: 'Andi Darmawan', quantity: 3, amount: 375000},
+            {name: 'Wawan Setiawan', quantity: 2, amount: 250000},
+            {name: 'Yudistira Handika', quantity: 1, amount: 125000},
+            {name: 'Dina Febriyanti', quantity: 3, amount: 375000},
+            {name: 'Tina Fitria', quantity: 2, amount: 250000},
+            {name: 'Joko Handoko', quantity: 1, amount: 125000},
+            {name: 'Lia Puspitasari', quantity: 3, amount: 375000}
+        ];
+
+        let currentCustomer = 0;
+
+        function showNotification() {
+            const notification = document.createElement('div');
+            notification.classList.add('notification');
+            notification.innerHTML = `🛒 <strong>${customers[currentCustomer].name}</strong> telah memesan <strong>${customers[currentCustomer].quantity} pcs</strong> senilai <strong>Rp${customers[currentCustomer].amount}</strong> 📢`;
+            document.body.appendChild(notification);
+
+            // Tambahkan kelas show untuk menampilkan notifikasi
+            setTimeout(() => {
+                notification.classList.add('show');
+            }, 10); // Tambah delay kecil agar animasi bekerja
+
+            // Hapus notifikasi setelah 5 detik
+            setTimeout(() => {
+                notification.classList.remove('show');
+                setTimeout(() => {
+                    notification.remove();
+                }, 500); // Hapus elemen setelah transisi selesai
+            }, 5000);
+
+            currentCustomer = (currentCustomer + 1) % customers.length; // Perulangan pelanggan
+        }
+
+        setInterval(showNotification, 6000); // Muncul setiap 6 detik
     </script>
 </body>
 </html>
