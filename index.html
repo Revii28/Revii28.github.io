@@ -1,304 +1,436 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kabel Data 3in1 Fast Charging 100W USB Micro, Type C, Lightning. Dapatkan sekarang dengan harga promo!">
-    <meta name="keywords" content="kabel data 3in1, fast charging, usb micro, type c, lightning, kabel kualitas terbaik, harga promo">
-    <title>Kabel Data 3in1 Fast Charging | Best Quality</title>
-    <link rel="stylesheet" href="styles.css">
-    <style> 
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
+    <title>Dream Gummies Plus | Rhea Store</title>
+    <style>
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
-        header, .problem, .product, .pricing, .order, footer {
+        body {
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
         }
-        h1, h2, h3 {
-            color: #e74c3c;
+        header {
+            background-color: white;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .image-section img, .product img, .order img, .pricing img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
         }
-        .problem ul, .product ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        .problem ul li, .product ul li {
-            background: url('checkmark.png') no-repeat left center;
-            padding-left: 40px;
-            margin: 10px 0;
-            text-align: left;
-        }
-        .price {
-            color: #e74c3c;
+        .logo {
+            font-weight: bold;
             font-size: 24px;
         }
-        form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #ffffff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 20px;
-        margin: 20px auto;
-        max-width: 500px;
-    }
-    form label {
-        margin-bottom: 8px;
-        font-weight: bold;
-        color: #333;
-    }
-    form input, form textarea {
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        margin-bottom: 16px;
-        width: 100%;
-        max-width: 400px;
-        font-size: 16px;
-    }
-    form textarea {
-        resize: vertical;
-        min-height: 100px;
-    }
-        .btn {
-            background-color: #e74c3c;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
+        .nav-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: #333;
         }
-        footer {
-            background-color: #f4f4f4;
-            padding: 10px 0;
+        .product-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        .whatsapp-button {
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .product-rating {
             display: flex;
             align-items: center;
-            background-color: #25D366;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-
-        .whatsapp-button:hover {
-            background-color: #128C7E;
+        .stars {
+            color: gold;
         }
-
-        .whatsapp-icon {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+        .product-images {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
         }
-
-        /* CSS untuk notifikasi dummy */
-        .notification {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            background-color: #25D366;
-            color: white;
-            padding: 10px;
+        .product-images img {
+            width: 48%;
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: none;
-            font-size: 14px;
-            z-index: 1000;
         }
-
-        .notification.show {
-            display: block;
+        .price-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .price {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4a154b;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #999;
+            margin-left: 10px;
+        }
+        .discount {
+            background-color: #4a154b;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        .quantity-selector {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .quantity-selector button {
+            background-color: #f0f0f0;
+            border: none;
+            padding: 10px 15px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .quantity-selector input {
+            width: 50px;
+            text-align: center;
+            font-size: 18px;
+            border: 1px solid #ddd;
+            padding: 5px;
+        }
+        .add-to-cart {
+            background-color: #4a154b;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .section {
+            margin-top: 40px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .features {
+            display: flex;
+            justify-content: space-between;
+        }
+        .feature {
+            text-align: center;
+            width: 30%;
+        }
+        .feature-icon {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+        .ingredients {
+            display: flex;
+            justify-content: space-between;
+        }
+        .ingredient {
+            text-align: center;
+            width: 20%;
+        }
+        .ingredient img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .testimonials {
+            display: flex;
+            justify-content: space-between;
+        }
+        .testimonial {
+            width: 30%;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .reviews {
+            margin-top: 40px;
+        }
+        .review {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .review-stars {
+            color: gold;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-section {
+            width: 25%;
+        }
+        .footer-section h3 {
+            margin-bottom: 20px;
+        }
+        .footer-section ul {
+            list-style-type: none;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            color: white;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
-    
-    <!-- Meta Pixel Code -->
-<script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '437280459346925');
-    fbq('track', 'PageView');
-    </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=437280459346925&ev=PageView&noscript=1"
-    /></noscript>
-    <!-- End Meta Pixel Code -->
-    
-    <header style="background-color: red; padding: 20px;">
-        <h1 style="color: #fff; font-size: 24px; text-align: center; margin: 0;">
-            Kabel Data 3in1 Fast Charging 100W USB Micro, Type C, Lightning - Best Quality
-        </h1>
+    <header>
+        <nav>
+            <div class="logo">Rhea Store</div>
+            <div class="nav-links">
+                <a href="/page/kabel-data-4in1-fast-charging-kabel-cas-4in1-type-c-usb-lightning-tipe-c-copy-1725437675000.html">Shop</a>
+                <a href="#">Story</a>
+                <a href="#">FAQ</a>
+                <a href="#">Search</a>
+                <a href="#">Cart</a>
+            </div>
+        </nav>
     </header>
-    
 
-    <section class="image-section">
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdIpDuPKoeSYHhVCdIzbqgOAwTuyjQRByf0f3tGWdIA.webp" alt="Stop Kontak Terbakar">
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdIHKkVk7eP8LG6CdI5meaqidFQAESwKmajQOYwkQ.webp" alt="Colokan Rumit">
-    </section>
+    <div class="container">
+        <div class="product-container">
+            <div class="product-header">
+                <h1 class="product-title">Dream Gummies Plus</h1>
+                <div class="product-rating">
+                    <div class="stars">★★★★★</div>
+                    <span>(1,234 reviews)</span>
+                </div>
+            </div>
+            <div class="product-images">
+                <img src="/api/placeholder/400/400" alt="Dream Gummies Plus">
+                <img src="/api/placeholder/400/400" alt="Dream Gummies Plus Detail">
+            </div>
+            <div class="price-container">
+                <span class="price">$39.99</span>
+                <span class="original-price">$59.99</span>
+                <span class="discount">33% OFF</span>
+            </div>
+            <div class="quantity-selector">
+                <button>-</button>
+                <input type="number" value="1" min="1" >
+                <button>+</button>
+            </div>
+            <button class="add-to-cart">Add to Cart</button>
+        </div>
 
-    <section class="problem" style="background-color: #f9f9f9; padding: 20px; border-radius: 8px;">
-        <h2 style="color: #d9534f;">🔌 Masalah Umum dengan Stop Kontak Terbatas</h2>
-        <ul>
-            <li>🔍 Kesulitan menemukan colokan aman untuk mengisi daya HP atau laptop Anda 🔥</li>
-            <li>⏳ Waktu tunggu yang lama saat harus bergantian dengan orang lain 😩</li>
-            <li>💸 Biaya mahal dan risiko kebakaran jika stop kontak tidak aman 🔥</li>
-        </ul>
-        <p style="font-weight: bold; color: #5bc0de;">Selamatkan Keluarga Anda dari Masalah Stop Kontak!</p>
-        <ul>
-            <li>🔧 Temukan alat dengan banyak fungsi untuk memenuhi berbagai kebutuhan</li>
-            <li>👜 Pastikan alat tersebut praktis dan mudah dibawa kemana-mana</li>
-            <li>🔒 Letakkan di tempat penyimpanan yang aman dari jangkauan anak-anak</li>
-            <li>🛡️ Pilih bahan berkualitas yang tahan lama untuk investasi jangka panjang</li>
-        </ul>
-    </section>
-    
-    <section class="product" style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
-        <h2 style="color: #d9534f; text-align: center;">Kabel USB Multifungsi Import</h2>
-        <p style="text-align: center; font-size: 18px; color: #333;">Dengan Fitur dan Fungsi Terlengkap:</p>
-        <ul style="list-style-type: none; padding: 0; text-align: center;">
-            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <strong>🔋 FAST CHARGING:</strong> Pengisian daya cepat untuk semua perangkat.
-            </li>
-            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <strong>🔗 MULTIFUNGSI UNTUK SEGALA JENIS GADGET:</strong> Kompatibel dengan berbagai jenis perangkat.
-            </li>
-            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <strong>🔒 TERBUAT DARI BAHAN YANG AMAN:</strong> Material berkualitas tinggi untuk keselamatan maksimal.
-            </li>
-            <li style="background-color: #fff; margin: 10px 0; padding: 15px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                <strong>🚀 SUDAH MENGGUNAKAN TEKNOLOGI YANG TERCANGGIH:</strong> Teknologi terbaru untuk performa terbaik.
-            </li>
-        </ul>
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/Cdkr7XKyuXPe1gCdkMjKgHMDJE8ziTFKyVmRBlAFLEw.webp" alt="Kabel USB Multifungsi">
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdT9OSx4wZ7Pf4cCdkEcnfEzZCu57NQdKboM0dZCwQZQ.webp" alt="Kabel USB Multifungsi">
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdTGZmlI6My9F2CdkM4sGdlxoeO6TTAq85Y8WzCtJZQ.webp" alt="Kabel USB Multifungsi">
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdTcPZRA3MfMJ1CdkMBwbNzuGOU9ZTCOvdFUNkuwUXw.webp" alt="Kabel USB Multifungsi">
-    </section>
+        <div class="section">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🌙</div>
+                    <p>Fall asleep faster</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">⏰</div>
+                    <p>Stay asleep longer</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌿</div>
+                    <p>100% Natural ingredients</p>
+                </div>
+            </div>
+        </div>
 
-    <section class="pricing">
-        <h2>Berapa Harganya?</h2>
-        <img src="https://bdsgp.my.id/img/800/bw5d48ohbw5g85p6n6_3/CdT91qihh8oBLtSCdky3siaTn0L6r0TLmBpZky1DeheQ.webp" alt="Harga di Toko Lain">
-        <p><strike>Harga di Toko Lain: Rp200.000</strike></p>
-        <h3>PROMO TERBATAS</h3>
-        <p class="price">Rp125.000 <span>(GRATIS ONGKIR)</span></p>
-        <p>Beli 2 hanya Rp200.000 (GRATIS ONGKIR FULL)</p>
-        <img src="https://bdsgp.my.id/img/1000/bw5d48ohbw5g85p6n6_3/CdTeoKaKacCnizUCdkyrp4SRDmnKY2SquyCKeVLJ7HA.webp" alt="Gratis Ongkir">
-    </section>
+        <div class="section">
+            <h2 class="section-title">Key Ingredients</h2>
+            <div class="ingredients">
+                <div class="ingredient">
+                    <img src="/api/placeholder/80/80" alt="Melatonin">
+                    <p>Melatonin</p>
+                </div>
+                <div class="ingredient">
+                    <img src="/api/placeholder/80/80" alt="L-Theanine">
+                    <p>L-Theanine</p>
+                </div>
+                <div class="ingredient">
+                    <img src="/api/placeholder/80/80" alt="Magnesium">
+                    <p>Magnesium</p>
+                </div>
+                <div class="ingredient">
+                    <img src="/api/placeholder/80/80" alt="Chamomile">
+                    <p>Chamomile</p>
+                </div>
+            </div>
+        </div>
 
-    <section class="order">
-        <h3>Mau Dong, Berapa Harganya?</h3>
-        <p>PROMO TERBATAS</p>
-        <p class="price">Rp125.000/pcs <span>(GRATIS ONGKIR)</span></p>
+        <div class="section">
+            <h2 class="section-title">Us vs Other Brands</h2>
+            <table class="comparison-table">
+                <tr>
+                    <th></th>
+                    <th>Rhea Store</th>
+                    <th>Other Brands</th>
+                </tr>
+                <tr>
+                    <td>100% Natural</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                </tr>
+                <tr>
+                    <td>Scientifically proven</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                </tr>
+                <tr>
+                    <td>Sugar-free option</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                </tr>
+                <tr>
+                    <td>Money-back guarantee</td>
+                    <td>✓</td>
+                    <td>✗</td>
+                </tr>
+            </table>
+        </div>
 
-        <img src="https://cdn.orderonline.id/uploads/images_2115831722487236554.gif" alt="orderForm" >
-        <form id="orderForm" action="https://api.whatsapp.com/send" method="get" target="_blank" onsubmit="sendWhatsAppMessage(); return false;">
-            <label for="name">Nama:</label>
-            <input type="text" id="name" name="name" required>
-            
-            <label for="phone">Nomor Telepon:</label>
-            <input type="tel" id="phone" name="phone" required>
-            
-            <label for="quantity">Jumlah Pesanan:</label>
-            <input type="number" id="quantity" name="quantity" required min="1">
-            
-            <label for="message">Pesan Tambahan:</label>
-            <textarea id="message" name="message"></textarea>
-            
-            <button type="submit" class="btn" style="background: linear-gradient(45deg, #25D366, #128C7E); color: white; border: none; border-radius: 5px; padding: 10px 20px; font-size: 16px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); cursor: pointer;">Kirim Pesanan via WhatsApp</button>
+        <div class="section">
+            <h2 class="section-title">Proof is in the sleep</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"I've never slept better! These gummies are a game-changer."</p>
+                    <p>- John D.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"Finally found a natural solution that works. Highly recommended!"</p>
+                    <p>- Sarah M.</p>
+                </div>
+                <div class="testimonial">
+                    <p>"My sleep quality has improved dramatically. Thank you, Rhea Store!"</p>
+                    <p>- Michael R.</p>
+                </div>
+            </div>
+        </div>
 
-        </form>
-    </section>
+        <div class="section">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <p class="faq-question">What are the benefits of Dream Gummies Plus?</p>
+                <p>Dream Gummies Plus helps you fall asleep faster, stay asleep longer, and wake up feeling refreshed.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">How does Dream Gummies Plus work?</p>
+                <p>Our unique blend of natural ingredients works together to promote relaxation and improve sleep quality.</p>
+            </div>
+            <div class="faq-item">
+                <p class="faq-question">Is Dream Gummies Plus safe?</p>
+                <p>Yes, Dream Gummies Plus is made with 100% natural ingredients and is safe for regular use. However, always consult with your healthcare provider before starting any new supplement regimen.</p>
+            </div>
+        </div>
 
-    
-    <script>
-        function sendWhatsAppMessage() {
-            const name = document.getElementById('name').value;
-            const phone = document.getElementById('phone').value;
-            const quantity = document.getElementById('quantity').value;
-            const message = document.getElementById('message').value;
-
-            const encodedMessage = encodeURIComponent(
-                `Halo, saya ingin memesan Kabel Data 3in1 Fast Charging.
-                Nama: ${name}
-                Nomor Telepon: ${phone}
-                Jumlah Pesanan: ${quantity}
-                Pesan Tambahan: ${message}`
-            );
-
-            const url = `https://api.whatsapp.com/send?phone=6285220966923&text=${encodedMessage}`;
-
-            window.open(url, '_blank');
-        }
-    </script>
+        <div class="reviews">
+            <h2 class="section-title">Customer Reviews</h2>
+            <div class="review">
+                <div class="review-header">
+                    <div class="review-stars">★★★★★</div>
+                    <span>2 weeks ago</span>
+                </div>
+                <p>"These gummies have transformed my sleep routine. I fall asleep quickly and wake up feeling refreshed. Highly recommended!"</p>
+                <p>- Emily S.</p>
+            </div>
+            <div class="review">
+                <div class="review-header">
+                    <div class="review-stars">★★★★★</div>
+                    <span>1 month ago</span>
+                </div>
+                <p>"I was skeptical at first, but these gummies really work. My sleep quality has improved significantly, and I have more energy during the day."</p>
+                <p>- Mark T.</p>
+            </div>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Kabel Data 3in1 Fast Charging.</p>
-        <p> Semua hak cipta dilindungi.</p>
-    </footer>
-
-
-    <!-- Dummy Notification JavaScript -->
-    <script>
-        const customers = [
-            {name: 'Budi Santoso', quantity: 1, amount: 125000},
-            {name: 'Rani', quantity: 1, amount: 125000},
-            {name: 'Sari Pratiwi', quantity: 2, amount: 250000},
-            {name: 'Andi Darmawan', quantity: 3, amount: 375000},
-            {name: 'Wawan Setiawan', quantity: 2, amount: 250000},
-            {name: 'Yudistira Handika', quantity: 1, amount: 125000},
-            {name: 'Dina Febriyanti', quantity: 3, amount: 375000},
-            {name: 'Tina Fitria', quantity: 2, amount: 250000},
-            {name: 'Joko Handoko', quantity: 1, amount: 125000},
-            {name: 'Lia Puspitasari', quantity: 3, amount: 375000}
-        ];
-
-        let currentCustomer = 0;
-
-        function showNotification() {
-            const notification = document.createElement('div');
-            notification.classList.add('notification');
-            notification.innerHTML = `🛒 <strong>${customers[currentCustomer].name}</strong> telah memesan <strong>${customers[currentCustomer].quantity} pcs</strong> senilai <strong>Rp${customers[currentCustomer].amount}</strong> 📢`;
-            document.body.appendChild(notification);
-
-            // Tambahkan kelas show untuk menampilkan notifikasi
-            setTimeout(() => {
-                notification.classList.add('show');
-            }, 10); // Tambah delay kecil agar animasi bekerja
-
-            // Hapus notifikasi setelah 5 detik
-            setTimeout(() => {
-                notification.classList.remove('show');
-                setTimeout(() => {
-                    notification.remove();
-                }, 500); // Hapus elemen setelah transisi selesai
-            }, 5000);
-
-            currentCustomer = (currentCustomer + 1) % customers.length; // Perulangan pelanggan
-        }
-
-        setInterval(showNotification, 6000); // Muncul setiap 6 detik
-    </script>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#">All Products</a></li>
+                        <li><a href="#">Best Sellers</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <ul>
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Press</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</footer>
 </body>
 </html>
