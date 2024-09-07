@@ -8,7 +8,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const message = document.getElementById('message').value;
 
     // Create WhatsApp message
-    const whatsappMessage = `Hello, Nama saya ${name}. Email saya ${email} and Nomer Telepon saya ${phone}. Pesan saya: ${message}`;
+    const whatsappMessage = `Hello, Nama saya ${name}\nEmail saya ${email}\ndan Nomer Telepon saya ${phone}.\nPesan saya: ${message}`;
     
     // Encode the message for URL
     const encodedMessage = encodeURIComponent(whatsappMessage);
