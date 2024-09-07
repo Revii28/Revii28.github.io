@@ -3,434 +3,230 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dream Gummies Plus | Rhea Store</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-        body {
-            background-color: #f5f5f5;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background-color: white;
-            padding: 10px 0;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-        .logo {
-            font-weight: bold;
-            font-size: 24px;
-        }
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #333;
-        }
-        .product-container {
-            background-color: white;
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-        .product-header {
-            display: flex;
-            justify-content: space-between;
-        }
-        .product-title {
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .product-rating {
-            display: flex;
-            align-items: center;
-        }
-        .stars {
-            color: gold;
-        }
-        .product-images {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-        .product-images img {
-            width: 48%;
-            border-radius: 8px;
-        }
-        .price-container {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .price {
-            font-size: 24px;
-            font-weight: bold;
-            color: #4a154b;
-        }
-        .original-price {
-            text-decoration: line-through;
-            color: #999;
-            margin-left: 10px;
-        }
-        .discount {
-            background-color: #4a154b;
-            color: white;
-            padding: 2px 6px;
-            border-radius: 4px;
-            margin-left: 10px;
-        }
-        .quantity-selector {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .quantity-selector button {
-            background-color: #f0f0f0;
-            border: none;
-            padding: 10px 15px;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .quantity-selector input {
-            width: 50px;
-            text-align: center;
-            font-size: 18px;
-            border: 1px solid #ddd;
-            padding: 5px;
-        }
-        .add-to-cart {
-            background-color: #4a154b;
-            color: white;
-            border: none;
-            padding: 15px 30px;
-            font-size: 18px;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .section {
-            margin-top: 40px;
-        }
-        .section-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .features {
-            display: flex;
-            justify-content: space-between;
-        }
-        .feature {
-            text-align: center;
-            width: 30%;
-        }
-        .feature-icon {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
-        .ingredients {
-            display: flex;
-            justify-content: space-between;
-        }
-        .ingredient {
-            text-align: center;
-            width: 20%;
-        }
-        .ingredient img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            margin-bottom: 10px;
-        }
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        .comparison-table th, .comparison-table td {
-            padding: 10px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-        .testimonials {
-            display: flex;
-            justify-content: space-between;
-        }
-        .testimonial {
-            width: 30%;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-        }
-        .faq-item {
-            margin-bottom: 20px;
-        }
-        .faq-question {
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-        .reviews {
-            margin-top: 40px;
-        }
-        .review {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .review-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-        .review-stars {
-            color: gold;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 40px 0;
-            margin-top: 40px;
-        }
-        .footer-content {
-            display: flex;
-            justify-content: space-between;
-        }
-        .footer-section {
-            width: 25%;
-        }
-        .footer-section h3 {
-            margin-bottom: 20px;
-        }
-        .footer-section ul {
-            list-style-type: none;
-        }
-        .footer-section ul li {
-            margin-bottom: 10px;
-        }
-        .footer-section ul li a {
-            color: white;
-            text-decoration: none;
-        }
-    </style>
+    <title>RHEA STORE - Indonesia</title>
+    <link rel="icon" href="/asset/Rhea.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">Rhea Store</div>
-            <div class="nav-links">
-                <a href="/page/kabel-data-4in1-fast-charging-kabel-cas-4in1-type-c-usb-lightning-tipe-c-copy-1725437675000.html">Shop</a>
-                <a href="#">Story</a>
-                <a href="#">FAQ</a>
-                <a href="#">Search</a>
-                <a href="#">Cart</a>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container">
-        <div class="product-container">
-            <div class="product-header">
-                <h1 class="product-title">Dream Gummies Plus</h1>
-                <div class="product-rating">
-                    <div class="stars">★★★★★</div>
-                    <span>(1,234 reviews)</span>
-                </div>
-            </div>
-            <div class="product-images">
-                <img src="/api/placeholder/400/400" alt="Dream Gummies Plus">
-                <img src="/api/placeholder/400/400" alt="Dream Gummies Plus Detail">
-            </div>
-            <div class="price-container">
-                <span class="price">$39.99</span>
-                <span class="original-price">$59.99</span>
-                <span class="discount">33% OFF</span>
-            </div>
-            <div class="quantity-selector">
-                <button>-</button>
-                <input type="number" value="1" min="1" >
-                <button>+</button>
-            </div>
-            <button class="add-to-cart">Add to Cart</button>
+    <div class="color">
+        <div class="header">
+            <img src="/asset/Rhea.png" alt="RHEA STORE logo">
+        </div>
+        
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+        </div>
+        
+        <div class="content">
+            <p>Rhea Store offers direct imports from China & Japan with the most competitive prices and the best quality. Experience exclusive products firsthand and make every purchase a satisfying experience!</p>
+            
+            <div class="carousel">
+                <img src="/asset/Container.jpg" alt="Rhea Store Fashion 1" class="carousel-slide active">
+                <img src="/asset/Gudang.jpg" alt="Rhea Store Fashion 2" class="carousel-slide">
+                <img src="/asset/Pengiriman.png" alt="Rhea Store Fashion 3" class="carousel-slide">
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div> 
+            
+            <p class="quote">"Trust is a treasure we cherish deeply. That’s why we hold ourselves to the highest standard of integrity, with every decision and action taken to honor your trust and bring you nothing but the best."</p>
+        </div>
+        
+        <div class="contact">
+            <h2>Contact RHEA STORE for Orders</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="text" placeholder="Phone Number">
+                <textarea placeholder="Your message"></textarea>
+                <button type="submit" style="margin-left: 14px;">Send Message</button>
+            </form>
         </div>
 
-        <div class="section">
-            <h2 class="section-title">Key Features</h2>
-            <div class="features">
-                <div class="feature">
-                    <div class="feature-icon">🌙</div>
-                    <p>Fall asleep faster</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">⏰</div>
-                    <p>Stay asleep longer</p>
-                </div>
-                <div class="feature">
-                    <div class="feature-icon">🌿</div>
-                    <p>100% Natural ingredients</p>
-                </div>
-            </div>
-        </div>
+        <div class="product-cards" id="productCards"></div>
 
-        <div class="section">
-            <h2 class="section-title">Key Ingredients</h2>
-            <div class="ingredients">
-                <div class="ingredient">
-                    <img src="/api/placeholder/80/80" alt="Melatonin">
-                    <p>Melatonin</p>
+        <!-- Updated Modal structure -->
+        <div id="productModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 id="productModalTitle" class="modal-title"></h2>
+                    <span class="close" onclick="closeModal()">&times;</span>
                 </div>
-                <div class="ingredient">
-                    <img src="/api/placeholder/80/80" alt="L-Theanine">
-                    <p>L-Theanine</p>
-                </div>
-                <div class="ingredient">
-                    <img src="/api/placeholder/80/80" alt="Magnesium">
-                    <p>Magnesium</p>
-                </div>
-                <div class="ingredient">
-                    <img src="/api/placeholder/80/80" alt="Chamomile">
-                    <p>Chamomile</p>
+                <div class="modal-body">
+                    <img id="productModalImage" src="" alt="" class="modal-image">
+                    <div class="modal-details">
+                        <p id="productModalPrice" class="modal-price"></p>
+                        <div class="modal-rating">
+                            <span class="star-rating">★★★★★</span>
+                            <span id="productModalRating"></span>
+                        </div>
+                        <p id="productModalDescription"></p>
+                        <div class="modal-protection">
+                            <strong>Protection:</strong> <span id="productModalProtection"></span>
+                        </div>
+                        <div class="modal-shipping">
+                            <strong>Shipping:</strong> <span id="productModalShipping"></span>
+                        </div>
+                        <div class="modal-color">
+                            <strong>Color:</strong>
+                            <div id="productModalColors"></div>
+                        </div>
+                        <div class="modal-quantity">
+                            <strong>Quantity:</strong>
+                            <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                            <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly>
+                            <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                            <span id="productModalStock" class="stock-info">Stock: 20</span>
+                        </div>
+                        
+                        <button class="buy-now-btn">Buy Now</button>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="section">
-            <h2 class="section-title">Us vs Other Brands</h2>
-            <table class="comparison-table">
-                <tr>
-                    <th></th>
-                    <th>Rhea Store</th>
-                    <th>Other Brands</th>
-                </tr>
-                <tr>
-                    <td>100% Natural</td>
-                    <td>✓</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <td>Scientifically proven</td>
-                    <td>✓</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <td>Sugar-free option</td>
-                    <td>✓</td>
-                    <td>✗</td>
-                </tr>
-                <tr>
-                    <td>Money-back guarantee</td>
-                    <td>✓</td>
-                    <td>✗</td>
-                </tr>
-            </table>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Proof is in the sleep</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <p>"I've never slept better! These gummies are a game-changer."</p>
-                    <p>- John D.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"Finally found a natural solution that works. Highly recommended!"</p>
-                    <p>- Sarah M.</p>
-                </div>
-                <div class="testimonial">
-                    <p>"My sleep quality has improved dramatically. Thank you, Rhea Store!"</p>
-                    <p>- Michael R.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section">
-            <h2 class="section-title">Frequently Asked Questions</h2>
-            <div class="faq-item">
-                <p class="faq-question">What are the benefits of Dream Gummies Plus?</p>
-                <p>Dream Gummies Plus helps you fall asleep faster, stay asleep longer, and wake up feeling refreshed.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-question">How does Dream Gummies Plus work?</p>
-                <p>Our unique blend of natural ingredients works together to promote relaxation and improve sleep quality.</p>
-            </div>
-            <div class="faq-item">
-                <p class="faq-question">Is Dream Gummies Plus safe?</p>
-                <p>Yes, Dream Gummies Plus is made with 100% natural ingredients and is safe for regular use. However, always consult with your healthcare provider before starting any new supplement regimen.</p>
-            </div>
-        </div>
-
-        <div class="reviews">
-            <h2 class="section-title">Customer Reviews</h2>
-            <div class="review">
-                <div class="review-header">
-                    <div class="review-stars">★★★★★</div>
-                    <span>2 weeks ago</span>
-                </div>
-                <p>"These gummies have transformed my sleep routine. I fall asleep quickly and wake up feeling refreshed. Highly recommended!"</p>
-                <p>- Emily S.</p>
-            </div>
-            <div class="review">
-                <div class="review-header">
-                    <div class="review-stars">★★★★★</div>
-                    <span>1 month ago</span>
-                </div>
-                <p>"I was skeptical at first, but these gummies really work. My sleep quality has improved significantly, and I have more energy during the day."</p>
-                <p>- Mark T.</p>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <div class="container">
+        
+        <div class="footer">
             <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Shop</h3>
+                <div class="footer-section about">
+                    <h2>RHEA STORE</h2>
+                    <p>Bringing creativity and joy into every piece of fashion we create. Based in Indonesia, we combine wit and mindfulness into designs that transform everyday moments into wearable art.</p>
+                </div>
+                <div class="footer-section links">
+                    <h2>Quick Links</h2>
                     <ul>
-                        <li><a href="#">All Products</a></li>
-                        <li><a href="#">Best Sellers</a></li>
-                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#shop">Shop</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
-                <div class="footer-section">
-                    <h3>About Us</h3>
-                    <ul>
-                        <li><a href="#">Our Story</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Press</a></li>
-                    </ul>
+                <div class="footer-section contact">
+                    <h2>Contact Us</h2>
+                    <p><strong>Email:</strong> rheastore1@gmail.com</p>
+                    <p><strong>Phone:</strong> +6285220966923</p>
+                    <p><strong>Location:</strong> Perumahan Geria Cendikia Blok C8 No 40 Curug Gunung Sindur, Bogor, Indonesia, West Java</p>
                 </div>
-                <div class="footer-section">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping & Returns</a></li>
-                        <li><a href="#">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li><a href="#">Facebook</a></li>
-                        <li><a href="#">Instagram</a></li>
-                        <li><a href="#">Twitter</a></li>
-                    </ul>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RHEA STORE - All Rights Reserved</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/profile.php?id=61565481986129"><img src="/asset/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com/rhea_store1/"><img src="/asset/instagram.png" alt="Instagram"></a>
                 </div>
             </div>
         </div>
     </div>
-</div>
-</footer>
+    <script>
+        const products = [
+            { 
+                name: 'Kabel Data Charger Fast Charging 3 in 1 Kabel Lightning Micro USB Type C Black for Android IOS Type-c', 
+                price: 'Rp125.000', 
+                imgSrc: ['/asset/products/Kabel data 3 in 1/1.png', '/asset/products/Kabel data 3 in 1/2.png', '/asset/products/Kabel data 3 in 1/3.png'], 
+                description: '3 in 1 Charger For Samsung Xiaomi Android IOS 1.2M',
+                rating: '4.8 (267 Penilaian)',
+                protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+                shipping: 'Gratis Ongkir',
+                colors: ['3in1 Hitam', '3in1&10w Adaptor', '1in1 Hitam', '10w Adaptor', '120w 3in1 Hitam'],
+                stock: 13290,
+                linkPayment: 'https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1'
+            },
+            // Tambahkan produk lain sesuai kebutuhan
+        ];
+    
+        const productCardsContainer = document.getElementById('productCards');
+        const modal = document.getElementById('productModal');
+        const modalTitle = document.getElementById('productModalTitle');
+        const modalPrice = document.getElementById('productModalPrice');
+        const modalImage = document.getElementById('productModalImage');
+        const modalDescription = document.getElementById('productModalDescription');
+        const modalRating = document.getElementById('productModalRating');
+        const modalProtection = document.getElementById('productModalProtection');
+        const modalShipping = document.getElementById('productModalShipping');
+        const modalColors = document.getElementById('productModalColors');
+        const modalStock = document.getElementById('productModalStock');
+        const quantityInput = document.getElementById('quantityInput');
+    
+        // Fungsi untuk membuka modal
+        function openModal(index) {
+            const product = products[index];
+            modalTitle.innerText = product.name;
+            modalPrice.innerText = product.price;
+            modalImage.src = product.imgSrc[0];
+            modalDescription.innerText = product.description;
+            modalRating.innerText = product.rating;
+            modalProtection.innerText = product.protection;
+            modalShipping.innerText = product.shipping;
+            modalStock.innerText = `Stock: ${product.stock}`;
+    
+            // Mengisi pilihan warna
+            modalColors.innerHTML = '';
+            product.colors.forEach((color, i) => {
+                const colorOption = document.createElement('span');
+                colorOption.className = 'color-option' + (i === 0 ? ' selected' : '');
+                colorOption.innerText = color;
+                colorOption.onclick = () => selectColor(colorOption);
+                modalColors.appendChild(colorOption);
+            });
+    
+            // Menampilkan modal
+            modal.style.display = 'block';
+        }
+    
+        // Fungsi untuk menutup modal
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+    
+        // Fungsi untuk memilih warna
+        function selectColor(element) {
+            document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+        }
+    
+        // Fungsi untuk mengubah kuantitas
+        function changeQuantity(delta) {
+            quantityInput.value = Math.max(1, parseInt(quantityInput.value) + delta);
+        }
+    
+        // Event listener untuk tombol close
+        document.querySelector('.close').onclick = closeModal;
+    
+        // Event listener untuk tombol buy now
+        document.querySelector('.buy-now-btn').onclick = () => {
+            alert('Thank you for your purchase!');
+            closeModal();
+        };
+    
+        // Menambahkan produk ke dalam halaman
+        products.forEach((product, index) => {
+            const card = document.createElement('div');
+            card.className = 'product-card';
+            card.innerHTML = `
+                <img src="${product.imgSrc[0]}" alt="${product.name}">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
+                <button onclick="openModal(${index})">Details</button>
+            `;
+            productCardsContainer.appendChild(card);
+        });
+    
+        // Fungsi untuk menampilkan slide carousel
+        let slideIndex = 0;
+        showSlides();
+    
+        function plusSlides(n) {
+            slideIndex += n;
+            showSlides();
+        }
+    
+        function showSlides() {
+            const slides = document.querySelectorAll('.carousel-slide');
+            slides.forEach(slide => {
+                slide.classList.remove('active');
+            });
+            slideIndex = (slideIndex + slides.length) % slides.length;
+            slides[slideIndex].classList.add('active');
+        }
+    </script>
+    
 </body>
 </html>
