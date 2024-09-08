@@ -28,7 +28,7 @@ const products = [
     { 
         name: 'kabel data 4in1 fast charging kabel cas 4in1 type c usb lightning tipe c', 
         price: 'Rp66.000', 
-        imgSrc: ['/asset/products/Kabel data 4 in 1/gambar1.jpg', '/asset/products/Kabel data 4 in 1/gambar2.jpg', '/asset/products/Kabel data 4 in 1/gambar3.jpg'], 
+        imgSrc: ['/asset/products/Kabel data 4 in 1/gambar1.jpg', '/asset/products/Kabel data 4 in 1/gambar1.jpg', '/asset/products/Kabel data 4 in 1/gambar1.jpg'], 
         description: `Kabel Super Fast Charge PD65W | Kabel 4 in 1 Fast Charge USB C USB A Multiple Charging | Charge Iphone dan Android
 
         Kabel Data portable multifungsi dengan pengisian data super cepat

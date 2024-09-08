@@ -205,6 +205,7 @@ body, html {
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
 }
+
 .modal-content {
     background-color: #fff;
     margin: 2% auto;
@@ -227,7 +228,7 @@ body, html {
 
 .close:hover,
 .close:focus {
-    color:red; 
+    color: red; 
     text-decoration: none;
 }
 
@@ -358,7 +359,8 @@ body, html {
 
 .footer-content {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 0 auto; /* Memusatkan konten */
+    padding: 0 20px; /* Memberikan jarak pada kiri dan kanan */
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -400,7 +402,7 @@ body, html {
 
 .footer-bottom {
     background-color: #858484;
-    padding: 15px 0;
+    padding: 15px 20px; /* Tambahkan padding kiri-kanan */
     text-align: center;
     font-size: 14px;
     color: #bbb;
@@ -449,8 +451,12 @@ body, html {
         width: 45%;
     }
 
+    .footer-content {
+        padding: 0 15px; /* Jarak lebih kecil pada ukuran layar kecil */
+    }
+    
     .footer-section {
-        flex-basis: 100%;
+        flex-basis: 100%; /* Membuat setiap section full-width pada layar kecil */
     }
 
     .modal-body {
@@ -521,9 +527,14 @@ body, html {
         position: relative;
         overflow: hidden;
     }
-    .product-card-image-container img, .modal-image-container img {
+    .product-card-image-container img {
         width: 100%;
         height: auto;
+    }
+
+    .modal-image-container img {
+        width: 1px;
+        height: 100px;
     }
     .image-nav {
         position: absolute;
