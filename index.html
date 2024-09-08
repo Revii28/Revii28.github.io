@@ -1,138 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RHEA STORE</title>
-    <link rel="icon" href="/asset/Rhea.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="color">
-        <div class="header">
-          <a href="/index.html">  <img src="/asset/Rhea.png" alt="RHEA STORE logo"></a>
-        </div>
-        
-        <div class="nav">
-            <a href="/index.html">Home</a>
-            <a href="/page/main/Shop/Shop.html">Shop</a>
-        </div>
-        
-        <div class="content">
-            <p>Rhea Store offers direct imports from China & Japan with the most competitive prices and the best quality. Experience exclusive products firsthand and make every purchase a satisfying experience!</p>
-            
-            <div class="carousel">
-                <img src="/asset/Container.jpg" alt="Rhea Store Fashion 1" class="carousel-slide active">
-                <img src="/asset/Gudang.jpg" alt="Rhea Store Fashion 2" class="carousel-slide">
-                <img src="/asset/Pengiriman.png" alt="Rhea Store Fashion 3" class="carousel-slide">
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div> 
-            
-            <p class="quote">"Trust is a treasure we cherish deeply. That’s why we hold ourselves to the highest standard of integrity, with every decision and action taken to honor your trust and bring you nothing but the best."</p>
-        </div>
-        
-        <div class="contact">
-            <h2>Contact RHEA STORE for Support</h2>
-            <form id="contactForm">
-                <input type="text" id="name" placeholder="Your Name" required>
-                <input type="email" id="email" placeholder="Your Email" required>
-                <input type="text" id="phone" placeholder="Phone Number">
-                <textarea id="message" placeholder="Your message"></textarea>
-                <button type="submit" style="margin-left: 14px;">Send Message</button>
-            </form>
-        </div>
-        <div class="product-cards" id="productCards"></div>
+    <link rel="icon" href="/asset/Rhea.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <a href="/index.html" class="navbar-brand">Rhea Store</a>
+    <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="/index.html" class="active">Home</a></li>
+        <li><a href="/page/main/Shop/Shop.html">Shop</a></li>
+        <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
 
-        <!-- Updated Modal structure -->
-        <div id="productModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 id="productModalTitle" class="modal-title"></h2>
-                    <span class="close" onclick="closeModal()">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <img id="productModalImage" src="" alt="" class="modal-image">
-                    <div class="modal-details">
-                        <p id="productModalPrice" class="modal-price"></p>
-                        <div class="modal-rating">
-                            <span class="star-rating">★★★★★</span>
-                            <span id="productModalRating"></span>
-                        </div>
-                        <div class="modal-protection">
-                            <strong>Description:</strong> <span id="productModalDescription"></span>
-                        </div>
-                        
-                        <div class="modal-protection">
-                            <strong>Protection:</strong> <span id="productModalProtection"></span>
-                        </div>
-                        <div class="modal-shipping">
-                            <!-- <strong>Shipping:</strong> <span id="productModalShipping"></span> -->
-                        </div>
-                        <div class="modal-color">
-                            <strong>Variant:</strong>
-                            <div id="productModalColors"></div>
-                        </div>
-                        <div class="modal-quantity">
-                            <strong>Quantity:</strong>
-                            <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
-                            <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly>
-                            <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
-                            <span id="productModalStock" class="stock-info">Stock: 20</span>
-                        </div>
-                        
-                        <button class="buy-now-btn">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="footer">
-            <div class="footer-content">
-                <div class="footer-section about">
-                    <h2>RHEA STORE</h2>
-                    <p>Bringing the Best from China & Japan to Your Doorstep with Unmatched Quality and Value. Trust Us to Deliver Excellence in Every Purchase.</p>
-                </div>
-                <div class="footer-section links">
-                    <h2>Quick Links</h2>
-                    <ul>
-                        <li><a href="/index.html">Home</a></li>
-                        <li><a href="/page/main/Shop/Shop.html">Shop</a></li>
-                        <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section contact">
-                    <h2>Contact Us</h2>
-                    <p><strong>Email:</strong> rheastore1@gmail.com</p>
-                    <p><strong>Phone:</strong> +6285220966923</p>
-                    <p><strong>Location:</strong> Perumahan Geria Cendikia Blok C8 No 40 Curug Gunung Sindur, Bogor, Indonesia, West Java</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 RHEA STORE - All Rights Reserved</p>
-                <div class="socials">
-                    <a href="https://www.facebook.com/profile.php?id=61565481986129"><img src="/asset/facebook.png" alt="Facebook"></a>
-                    <a href="https://www.instagram.com/rhea_store1/"><img src="/asset/instagram.png" alt="Instagram"></a>
-                </div>
-            </div>
+    <div class="navbar-icons">
+        <button id="searchToggle">🔍</button>
+    </div>
+    <button class="navbar-toggle" id="navbarToggle">☰</button>
+
+    <!-- Search Popup -->
+    <div class="search-popup" id="searchPopup">
+        <div class="search-popup-content">
+            <span class="close" id="closeSearchPopup">&times;</span>
+            <input type="text" id="searchInput" placeholder="Search by name or price" />
+            <button id="searchButton">🔍</button>
+            <div onclick="openModal" id="searchResults"></div>
         </div>
     </div>
+</nav>
+
+<div class="header">
+    <a href="/index.html">
+        <img src="/asset/Rhea.png" alt="RHEA STORE logo" />
+    </a>
+</div>
+<!-- End Navbar -->
+
+      <!-- Contact -->
+      <div class="content">
+        <p>
+          Rhea Store offers direct imports from China & Japan with the most
+          competitive prices and the best quality. Experience exclusive products
+          firsthand and make every purchase a satisfying experience!
+        </p>
+
+        <div class="carousel">
+          <img
+            src="/asset/Container.jpg"
+            alt="Rhea Store Fashion 1"
+            class="carousel-slide active"
+          />
+          <img
+            src="/asset/Gudang.jpg"
+            alt="Rhea Store Fashion 2"
+            class="carousel-slide"
+          />
+          <img
+            src="/asset/Pengiriman.png"
+            alt="Rhea Store Fashion 3"
+            class="carousel-slide"
+          />
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <p class="quote">
+          "Trust is a treasure we cherish deeply. That’s why we hold ourselves
+          to the highest standard of integrity, with every decision and action
+          taken to honor your trust and bring you nothing but the best."
+        </p>
+      </div>
+
+      <div class="contact">
+        <h2>Contact RHEA STORE for Support</h2>
+        <form id="contactForm">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <input type="text" id="phone" placeholder="Phone Number" />
+          <textarea id="message" placeholder="Your message"></textarea>
+          <button type="submit" style="margin-left: 14px">Send Message</button>
+        </form>
+      </div>
+
+      <!-- End Contact -->
+
+      <div class="product-cards" id="productCards"></div>
+
+      <!-- Updated Modal structure -->
+      <div id="productModal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 id="productModalTitle" class="modal-title"></h2>
+            <span class="close" onclick="closeModal()">&times;</span>
+          </div>
+          <div class="modal-body">
+            <img id="productModalImage" src="" alt="" class="modal-image" />
+            <div class="modal-details">
+              <p id="productModalPrice" class="modal-price"></p>
+              <div class="modal-rating">
+                <span class="star-rating">★★★★★</span>
+                <span id="productModalRating"></span>
+              </div>
+              <div class="modal-protection">
+                <strong>Description:</strong>
+                <span id="productModalDescription"></span>
+              </div>
+
+              <div class="modal-protection">
+                <strong>Protection:</strong>
+                <span id="productModalProtection"></span>
+              </div>
+              <div class="modal-shipping">
+                <!-- <strong>Shipping:</strong> <span id="productModalShipping"></span> -->
+              </div>
+              <div class="modal-color">
+                <strong>Variant:</strong>
+                <div id="productModalColors"></div>
+              </div>
+              <div class="modal-quantity">
+                <strong>Quantity:</strong>
+                <button class="quantity-btn" onclick="changeQuantity(-1)">
+                  -
+                </button>
+                <input
+                  type="number"
+                  id="quantityInput"
+                  class="quantity-input"
+                  value="1"
+                  min="1"
+                  readonly
+                />
+                <button class="quantity-btn" onclick="changeQuantity(1)">
+                  +
+                </button>
+                <span id="productModalStock" class="stock-info">Stock: 20</span>
+              </div>
+
+              <button class="buy-now-btn">Buy Now</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer">
+        <div class="footer-content">
+          <div class="footer-section about">
+            <h2>RHEA STORE</h2>
+            <p>
+              Bringing the Best from China & Japan to Your Doorstep with
+              Unmatched Quality and Value. Trust Us to Deliver Excellence in
+              Every Purchase.
+            </p>
+          </div>
+          <div class="footer-section links">
+            <h2>Quick Links</h2>
+            <ul>
+              <li><a href="/index.html">Home</a></li>
+              <li><a href="/page/main/Shop/Shop.html">Shop</a></li>
+              <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h2>Contact Us</h2>
+            <p><strong>Email:</strong> rheastore1@gmail.com</p>
+            <p><strong>Phone:</strong> +6285220966923</p>
+            <p>
+              <strong>Location:</strong> Perumahan Geria Cendikia Blok C8 No 40
+              Curug Gunung Sindur, Bogor, Indonesia, West Java
+            </p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 RHEA STORE - All Rights Reserved</p>
+          <div class="socials">
+            <a href="https://www.facebook.com/profile.php?id=61565481986129"
+              ><img src="/asset/facebook.png" alt="Facebook"
+            /></a>
+            <a href="https://www.instagram.com/rhea_store1/"
+              ><img src="/asset/instagram.png" alt="Instagram"
+            /></a>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- OrderOnline Tracker Code -->
-<script>
-    !function(w, d, e, v, n, t, s) {
-    if (w.ooq) return;
-    n = w.ooq = function() { n.callMethod ? n.callMethod.apply(n, arguments) : n.queue.push(arguments) };
-    if (!w._ooq) w._ooq = n;
-    n.push = n;n.loaded = !0;n.version = '2.0';n.queue = [];
-    t = d.createElement(e);t.async = !0;t.src = v;
-    s = d.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t, s);
-    }(window, document, 'script', 'https://public.orderonline.id/js/tracker.js');
-    ooq('init', 'rheastore', 'kabel-data-charger-fast-charging-3-in-1');
-    ooq('track', 'SalesPageView');
+    <script>
+      !(function (w, d, e, v, n, t, s) {
+        if (w.ooq) return;
+        n = w.ooq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!w._ooq) w._ooq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = d.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = d.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://public.orderonline.id/js/tracker.js"
+      );
+      ooq("init", "rheastore", "kabel-data-charger-fast-charging-3-in-1");
+      ooq("track", "SalesPageView");
     </script>
-    <noscript><img height="1" width="1" style="display:none" src="https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1/track"/></noscript>
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1/track"
+    /></noscript>
     <!-- End OrderOnline Tracker Code -->
     <script src="scripts.js" defer></script>
-</body>
+  </body>
 </html>

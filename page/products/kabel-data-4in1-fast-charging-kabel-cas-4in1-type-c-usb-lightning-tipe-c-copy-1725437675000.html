@@ -1,1 +1,230 @@
-hello world !
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+        .product-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+            margin-bottom: 20px;
+        }
+        .product-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .product-body {
+            display: flex;
+            gap: 20px;
+        }
+        .product-image {
+            width: 45%;
+            max-width: 350px;
+            border-radius: 8px;
+            object-fit: contain;
+        }
+        .product-details {
+            flex-grow: 1;
+        }
+        .product-price {
+            font-size: 24px;
+            color: #FF6F91;
+            font-weight: bold;
+        }
+        .product-rating {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+        .star-rating {
+            color: #ff599b;
+        }
+        .product-description, .product-protection, .product-color, .product-quantity {
+            margin-bottom: 15px;
+        }
+        .color-option {
+            display: inline-block;
+            padding: 8px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-right: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .color-option.selected {
+            border-color: #ff599b;
+            color: #fff;
+            background-color: #ff599b;
+        }
+        .quantity-btn {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            height: 36px;
+            width: 36px;
+            font-size: 20px;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        .quantity-input {
+            width: 60px;
+            height: 36px;
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        .buy-now-btn {
+            background-color: #ff599b;
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .buy-now-btn:hover {
+            background-color: #ff4081;
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-header">
+            <h1 class="product-title">Kabel Data Charger Fast Charging 3 in 1 Kabel Lightning Micro USB Type C Black for Android IOS Type-c</h1>
+        </div>
+        <div class="product-body">
+            <img id="productImage" src="/asset/products/Kabel data 3 in 1/1.png" alt="Product Image" class="product-image">
+            <div class="product-details">
+                <p class="product-price">Rp125.000</p>
+                <div class="product-rating">
+                    <span class="star-rating">★★★★★</span>
+                    <span>4.8 (267 Penilaian)</span>
+                </div>
+                <div class="product-description">
+                    <strong>Description:</strong>
+                    <p>Fitur:（Dapat digunakan untuk mengisi daya laptop）<br><br>
+
+                    ①Output daya penuh 100W, luar biasa cepat. Dapat mengisi daya 90% dalam 30 menit. Kabel data dapat memenuhi semua tingkat daya pengisian cepat yang ada di pasaran dan kompatibel dengan 88w, 66w, 40w, dan 22,5w.<br><br>
+                    
+                    ②Antarmuka USB 3.0, standar, kecepatan transfer file hingga 480MB/S<br><br>
+                    
+                    ③5 baterai super-i tebal, tidak panas, pengisian lebih stabil dan lebih aman.<br><br>
+                    
+                    ④Kualitasnya tahan uji, bantalan uji ayun 40KG 20000 kali<br><br>
+                    
+                    ⑤Bahan silikon asli, lembut dan elastis, tepi dilapisi listrik, tidak mudah kusut dan bebas debu<br><br>
+                    
+                    ⑥Port bundar logam satu bagian kuat dan tahan aus, dan konektor paduan seng seluruh logam dapat dipasang dan dicabut 1.000 kali sesuka hati.Ini akan terlihat seperti baru setelah penggunaan jangka panjang dan tidak akan mudah rusak.<br><br>
+                    
+                    ⑦Kompatibel dengan IOS dan Android, transfer file hingga 480MB/s</p>
+                </div>
+                <div class="product-protection">
+                    <strong>Protection:</strong> Melindungi barang belanjaan dari kerusakan hingga 6 bulan
+                </div>
+                <div class="product-color">
+                    <strong>Variant:</strong>
+                    <div id="productColors"></div>
+                </div>
+                <div class="product-quantity">
+                    <strong>Quantity:</strong>
+                    <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                    <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly>
+                    <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                    <span id="productStock" class="stock-info">Stock: 199</span>
+                </div>
+                <button class="buy-now-btn" onclick="buyNow()">Buy Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const product = {
+            name: 'Kabel Data Charger Fast Charging 3 in 1 Kabel Lightning Micro USB Type C Black for Android IOS Type-c',
+            price: 'Rp125.000',
+            imgSrc: ['/asset/products/Kabel data 3 in 1/1.png', '/asset/products/Kabel data 3 in 1/2.png', '/asset/products/Kabel data 3 in 1/3.png'],
+            colors: ['3in1 Hitam'],
+            stock: 199,
+            linkPayment: 'https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1'
+        };
+
+        let currentImageIndex = 0;
+        let quantity = 1;
+
+        function changeQuantity(change) {
+            quantity = Math.max(1, Math.min(product.stock, quantity + change));
+            document.getElementById('quantityInput').value = quantity;
+        }
+
+        function switchImage(direction) {
+            currentImageIndex = (currentImageIndex + direction + product.imgSrc.length) % product.imgSrc.length;
+            document.getElementById('productImage').src = product.imgSrc[currentImageIndex];
+        }
+
+        function buyNow() {
+            window.location.href = product.linkPayment;
+        }
+
+        // Initialize color options
+        const colorContainer = document.getElementById('productColors');
+        product.colors.forEach(color => {
+            const colorOption = document.createElement('span');
+            colorOption.className = 'color-option';
+            colorOption.textContent = color;
+            colorOption.onclick = () => {
+                document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+                colorOption.classList.add('selected');
+            };
+            colorContainer.appendChild(colorOption);
+        });
+
+        // Add image navigation
+        const productImage = document.getElementById('productImage');
+        const prevButton = document.createElement('button');
+        prevButton.textContent = '←';
+        prevButton.style.position = 'absolute';
+        prevButton.style.left = '10px';
+        prevButton.style.top = '50%';
+        prevButton.onclick = () => switchImage(-1);
+        
+        const nextButton = document.createElement('button');
+        nextButton.textContent = '→';
+        nextButton.style.position = 'absolute';
+        nextButton.style.right = '10px';
+        nextButton.style.top = '50%';
+        nextButton.onclick = () => switchImage(1);
+
+        const imageContainer = document.createElement('div');
+        imageContainer.style.position = 'relative';
+        imageContainer.appendChild(productImage);
+        imageContainer.appendChild(prevButton);
+        imageContainer.appendChild(nextButton);
+
+        productImage.parentNode.replaceChild(imageContainer, productImage);
+    </script>
+</body>
+</html>

@@ -1,5 +1,6 @@
 const products = [
     { 
+        id: 1,
         name: 'Kabel Data Charger Fast Charging 3 in 1 Kabel Lightning Micro USB Type C Black for Android IOS Type-c', 
         price: 'Rp125.000', 
         imgSrc: ['/asset/products/Kabel data 3 in 1/1.png', '/asset/products/Kabel data 3 in 1/2.png', '/asset/products/Kabel data 3 in 1/3.png'], 
@@ -26,6 +27,7 @@ const products = [
         linkPayment: 'https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1'
     },
     { 
+        id: 2,
         name: 'kabel data 4in1 fast charging kabel cas 4in1 type c usb lightning tipe c', 
         price: 'Rp66.000', 
         imgSrc: ['/asset/products/Kabel data 4 in 1/gambar1.jpg', '/asset/products/Kabel data 4 in 1/gambar2.jpg', '/asset/products/Kabel data 4 in 1/gambar3.jpg'], 
@@ -64,6 +66,7 @@ const products = [
         linkPayment: 'https://rheastore.orderonline.id/kabel-data-4in1-fast-charging-kabel-cas-4in1-type-c-usb-lightning-tipe-c'
     },
     { 
+        id: 3,
         name: 'Sepatu Sneakers Keren PRIA/WANITA', 
         price: 'Rp93.500', 
         imgSrc: ['/asset/products/Sepatu Jepang/gambar1.jpg', '/asset/products/Sepatu Jepang/gambar2.jpg', '/asset/products/Sepatu Jepang/gambar3.jpg'], 
@@ -124,6 +127,30 @@ const products = [
     // ... (other product entries remain unchanged) ...
 ];
 
+// Navbar and search functionality
+
+const navbarToggle = document.getElementById('navbarToggle');
+const navbarMenu = document.getElementById('navbarMenu');
+const searchToggle = document.getElementById('searchToggle');
+const searchContainer = document.getElementById('searchContainer');
+
+navbarToggle.addEventListener('click', () => {
+    navbarMenu.classList.toggle('active');
+});
+
+searchToggle.addEventListener('click', () => {
+    searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
+});
+
+// Close menu when clicking outside
+document.addEventListener('click', (event) => {
+    if (!event.target.closest('.navbar')) {
+        navbarMenu.classList.remove('active');
+        searchContainer.style.display = 'none';
+    }
+});
+
+// Product cards and modal
 const productCardsContainer = document.getElementById('productCards');
 const modal = document.getElementById('productModal');
 const modalTitle = document.getElementById('productModalTitle');
@@ -152,9 +179,24 @@ function changeImage(productIndex, delta) {
     }
 }
 
+// Fungsi untuk membuka modal berdasarkan ID produk
+function openModalById(productId) {
+    const product = products.find(p => p.id === productId);
+    if (product) {
+        currentProductIndex = products.indexOf(product);
+        fillModal(product);
+    }
+}
+
+// Fungsi untuk membuka modal berdasarkan index
 function openModal(index) {
     const product = products[index];
     currentProductIndex = index;
+    fillModal(product);
+}
+
+// Fungsi untuk mengisi modal dengan data produk
+function fillModal(product) {
     currentImageIndex = 0;
     modalTitle.innerText = product.name;
     modalPrice.innerText = product.price;
@@ -162,7 +204,6 @@ function openModal(index) {
     modalDescription.innerText = product.description;
     modalRating.innerText = product.rating;
     modalProtection.innerText = product.protection;
-    // modalShipping.innerText = product.shipping;
     modalStock.innerText = `Stock: ${product.stock}`;
 
     modalColors.innerHTML = '';
@@ -196,7 +237,7 @@ document.querySelector('.buy-now-btn').onclick = () => {
     const product = products[currentProductIndex];
     window.location.href = product.linkPayment;
 };
-
+// Display products
 products.forEach((product, index) => {
     const card = document.createElement('div');
     card.className = 'product-card';
@@ -285,3 +326,45 @@ function changeQuantity(change) {
     stockDisplay.textContent = `Stock: ${remainingStock}`;
 }
 
+// Toggle search popup
+
+const searchPopup = document.getElementById('searchPopup');
+const closeSearchPopup = document.getElementById('closeSearchPopup');
+
+searchToggle.addEventListener('click', () => {
+    searchPopup.style.top = '0';
+});
+
+closeSearchPopup.addEventListener('click', () => {
+    searchPopup.style.top = '-100%';
+});
+
+// Pencarian produk dan membuka modal berdasarkan ID produk yang diklik
+searchButton.addEventListener('click', () => {
+    const query = searchInput.value.trim().toLowerCase();
+    searchResults.innerHTML = ''; // Bersihkan hasil pencarian sebelumnya
+  
+    const filteredProducts = products.filter(product => 
+      product.name.toLowerCase().includes(query) || product.price.toLowerCase().includes(query)
+    );
+  
+    if (filteredProducts.length > 0) {
+      filteredProducts.forEach(product => {
+        const resultItem = document.createElement('div');
+        resultItem.classList.add('search-result-item');
+        resultItem.innerHTML = `
+          <img src="${product.imgSrc[0]}" alt="${product.name}" style="width: 100px; height: 100px;" />
+          <p>${product.name} - ${product.price}</p>
+        `;
+  
+        // Menambahkan event listener untuk membuka modal saat produk diklik
+        resultItem.addEventListener('click', () => {
+          openModalById(product.id); // Membuka modal berdasarkan ID produk
+        });
+  
+        searchResults.appendChild(resultItem);
+      });
+    } else {
+      searchResults.innerHTML = '<p>No products found.</p>';
+    }
+  });

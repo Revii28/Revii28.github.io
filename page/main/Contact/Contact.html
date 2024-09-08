@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RHEA STORE</title>
-    <link rel="icon" href="/asset/Rhea.png" type="image/png">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="color">
-        <div class="header">
-            <a href="/index.html">  <img src="/asset/Rhea.png" alt="RHEA STORE logo"></a>
-        </div>
-        
-        <div class="nav">
-            <a href="/index.html">Home</a>
-            <a href="/page/main/Shop/Shop.html">Shop</a>
-        </div>
+    <link rel="icon" href="/asset/Rhea.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar -->
+<nav class="navbar">
+    <a href="/index.html" class="navbar-brand">Rhea Store</a>
+    <ul class="navbar-menu" id="navbarMenu">
+        <li><a href="/index.html" class="active">Home</a></li>
+        <li><a href="/page/main/Shop/Shop.html">Shop</a></li>
+        <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
+        <li><a href="#">About</a></li>
+    </ul>
+
+    <div class="navbar-icons">
+       
+    </div>
+    <button class="navbar-toggle" id="navbarToggle">☰</button>
+
+  
+</nav>
+
+<div class="header">
+    <a href="/index.html">
+        <img src="/asset/Rhea.png" alt="RHEA STORE logo" />
+    </a>
+</div>
+<!-- End Navbar -->
  
         <div class="contact">
             <h2>Contact RHEA STORE for Support</h2>
@@ -31,48 +47,7 @@
 
         <div class="product-cards" id="productCards"></div>
 
-        <!-- Updated Modal structure -->
-        <div id="productModal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 id="productModalTitle" class="modal-title"></h2>
-                    <span class="close" onclick="closeModal()">&times;</span>
-                </div>
-                <div class="modal-body">
-                    <img id="productModalImage" src="" alt="" class="modal-image">
-                    <div class="modal-details">
-                        <p id="productModalPrice" class="modal-price"></p>
-                        <div class="modal-rating">
-                            <span class="star-rating">★★★★★</span>
-                            <span id="productModalRating"></span>
-                        </div>
-                        <div class="modal-protection">
-                            <strong>Description:</strong> <span id="productModalDescription"></span>
-                        </div>
-                        
-                        <div class="modal-protection">
-                            <strong>Protection:</strong> <span id="productModalProtection"></span>
-                        </div>
-                        <div class="modal-shipping">
-                            <strong>Shipping:</strong> <span id="productModalShipping"></span>
-                        </div>
-                        <div class="modal-color">
-                            <strong>Variant:</strong>
-                            <div id="productModalColors"></div>
-                        </div>
-                        <div class="modal-quantity">
-                            <strong>Quantity:</strong>
-                            <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
-                            <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly>
-                            <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
-                            <span id="productModalStock" class="stock-info">Stock: 20</span>
-                        </div>
-                        
-                        <button class="buy-now-btn">Buy Now</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+     
         
         <div class="footer">
             <div class="footer-content">
