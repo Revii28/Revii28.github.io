@@ -153,7 +153,7 @@ body, html {
 .product-card {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Ensures button stays at the bottom */
+    justify-content: space-between;
     width: 30%;
     border: 1px solid #ddd;
     margin-bottom: 20px;
@@ -179,7 +179,7 @@ body, html {
 .product-card p {
     color: #777;
     font-size: 16px;
-    flex: 1; /* Allows this section to take up available space */
+    flex: 1;
 }
 
 .product-card button {
@@ -359,8 +359,8 @@ body, html {
 
 .footer-content {
     max-width: 1100px;
-    margin: 0 auto; /* Memusatkan konten */
-    padding: 0 20px; /* Memberikan jarak pada kiri dan kanan */
+    margin: 0 auto;
+    padding: 0 20px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -402,7 +402,7 @@ body, html {
 
 .footer-bottom {
     background-color: #858484;
-    padding: 15px 20px; /* Tambahkan padding kiri-kanan */
+    padding: 15px 20px;
     text-align: center;
     font-size: 14px;
     color: #bbb;
@@ -452,11 +452,11 @@ body, html {
     }
 
     .footer-content {
-        padding: 0 15px; /* Jarak lebih kecil pada ukuran layar kecil */
+        padding: 0 15px;
     }
     
     .footer-section {
-        flex-basis: 100%; /* Membuat setiap section full-width pada layar kecil */
+        flex-basis: 100%;
     }
 
     .modal-body {
@@ -474,8 +474,18 @@ body, html {
 }
 
 @media screen and (max-width: 480px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .header img {
         width: 150px;
+    }
+
+    .nav {
+        width: 100%;
     }
 
     .nav a {
@@ -485,10 +495,17 @@ body, html {
 
     .carousel {
         height: 30vh;
+        width: 100%;
+    }
+
+    .product-cards {
+        justify-content: center;
+        margin: 20px 0;
     }
 
     .product-card {
-        width: 100%;
+        width: 90%;
+        margin: 0 auto 20px;
     }
 
     .contact form {
@@ -498,6 +515,7 @@ body, html {
     .modal-content {
         width: 95%;
         margin: 5% auto;
+        padding: 15px;
     }
 
     .modal-title {
@@ -511,6 +529,7 @@ body, html {
     .color-option {
         padding: 6px 10px;
         font-size: 14px;
+        margin-bottom: 5px;
     }
 
     .quantity-btn, .quantity-input {
@@ -520,33 +539,92 @@ body, html {
     .buy-now-btn {
         padding: 10px 20px;
         font-size: 16px;
-    }
-
-/* Carosel card */
-    .product-card-image-container, .modal-image-container {
-        position: relative;
-        overflow: hidden;
-    }
-    .product-card-image-container img {
         width: 100%;
-        height: auto;
     }
 
-    .modal-image-container img {
-        width: 1px;
-        height: 100px;
+    .close {
+        font-size: 30px;
+        top: 5px;
+        right: 10px;
     }
+
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .modal-price {
+        margin-top: 10px;
+    }
+
+    .modal-body {
+        gap: 10px;
+    }
+
+    .modal-image {
+        max-height: 200px;
+        object-fit: cover;
+    }
+
+    .modal-rating, .modal-protection, .modal-shipping, .modal-color {
+        margin-bottom: 10px;
+    }
+
+    .modal-quantity {
+        justify-content: center;
+    }
+}
+
+/* Carousel card */
+.product-card-image-container, .modal-image-container {
+    position: relative;
+    overflow: hidden;
+}
+.product-card-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.modal-image-container img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+.image-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+.image-nav.prev { left: 10px; }
+.image-nav.next { right: 10px; }
+.image-nav-prev { left: 0px; }
+.image-nav-next { right: 0px; }
+
+/* Additional mobile optimizations */
+@media screen and (max-width: 480px) {
+    .product-card-image-container, .modal-image-container {
+        max-height: 200px;
+    }
+
     .image-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(0,0,0,0.5);
-        color: white;
-        padding: 10px;
-        cursor: pointer;
+        padding: 5px;
+        font-size: 14px;
     }
-    .image-nav.prev { left: 10px; }
-    .image-nav.next { right: 10px; }
-    .image-nav-prev { left: 0px; }
-    .image-nav-next { right: 0px; }
+
+    .footer-content {
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        padding: 10px;
+    }
 }
