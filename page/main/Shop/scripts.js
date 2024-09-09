@@ -1,10 +1,11 @@
-
 // Navbar and search functionality
-
 const navbarToggle = document.getElementById('navbarToggle');
 const navbarMenu = document.getElementById('navbarMenu');
 const searchToggle = document.getElementById('searchToggle');
 const searchContainer = document.getElementById('searchContainer');
+const searchInput = document.getElementById('searchInput');
+const searchButton = document.getElementById('searchButton');
+const searchResults = document.getElementById('searchResults');
 
 navbarToggle.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
@@ -31,7 +32,6 @@ const modalImage = document.getElementById('productModalImage');
 const modalDescription = document.getElementById('productModalDescription');
 const modalRating = document.getElementById('productModalRating');
 const modalProtection = document.getElementById('productModalProtection');
-// const modalShipping = document.getElementById('productModalShipping');
 const modalColors = document.getElementById('productModalColors');
 const modalStock = document.getElementById('productModalStock');
 const quantityInput = document.getElementById('quantityInput');
@@ -42,6 +42,7 @@ let currentImageIndex = 0;
 function changeImage(productIndex, delta) {
     const product = products[productIndex];
     currentImageIndex = (currentImageIndex + delta + product.imgSrc.length) % product.imgSrc.length;
+    modalImage.src = product.imgSrc[currentImageIndex];
     const imgElement = document.querySelector(`[data-product-index="${productIndex}"] img`);
     if (imgElement) {
         imgElement.src = product.imgSrc[currentImageIndex];
@@ -67,11 +68,26 @@ function openModal(index) {
     fillModal(product);
 }
 
+// Fungsi untuk menghitung rentang harga
+function formatPriceRange(prices) {
+    if (Array.isArray(prices)) {
+        const sortedPrices = prices.map(price => parseInt(price)).sort((a, b) => a - b);
+        if (sortedPrices.length > 1) {
+            return `Rp${sortedPrices[0].toLocaleString()} - Rp${sortedPrices[sortedPrices.length - 1].toLocaleString()}`;
+        }
+        return `Rp${sortedPrices[0].toLocaleString()}`;
+    }
+    return prices;
+}
+
 // Fungsi untuk mengisi modal dengan data produk
 function fillModal(product) {
     currentImageIndex = 0;
     modalTitle.innerText = product.name;
-    modalPrice.innerText = product.price;
+    
+    // Menampilkan harga berdasarkan warna pertama (default)
+    modalPrice.innerText = `Rp${product.price[0].toLocaleString()}`;
+    
     modalImage.src = product.imgSrc[0];
     modalDescription.innerText = product.description;
     modalRating.innerText = product.rating;
@@ -83,24 +99,38 @@ function fillModal(product) {
         const colorOption = document.createElement('span');
         colorOption.className = 'color-option' + (i === 0 ? ' selected' : '');
         colorOption.innerText = color;
-        colorOption.onclick = () => selectColor(colorOption);
+        
+        // Menambahkan event listener untuk setiap warna
+        colorOption.onclick = () => selectColor(colorOption, i, product);
+        
         modalColors.appendChild(colorOption);
     });
 
     modal.style.display = 'block';
 }
 
+// Fungsi untuk memilih warna dan memperbarui harga berdasarkan warna yang dipilih
+function selectColor(element, colorIndex, product) {
+    document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
+    element.classList.add('selected');
+
+    // Mengubah harga berdasarkan warna yang dipilih
+    modalPrice.innerText = `Rp${product.price[colorIndex].toLocaleString()}`;
+}
+
 function closeModal() {
     modal.style.display = 'none';
 }
 
-function selectColor(element) {
-    document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
-    element.classList.add('selected');
-}
-
 function changeQuantity(delta) {
-    quantityInput.value = Math.max(1, parseInt(quantityInput.value) + delta);
+    let currentQuantity = parseInt(quantityInput.value);
+    if (delta === 1 && currentQuantity < stock) {
+        currentQuantity += 1;
+    } else if (delta === -1 && currentQuantity > 1) {
+        currentQuantity -= 1;
+    }
+    quantityInput.value = currentQuantity;
+    modalStock.innerText = `Stock: ${stock - currentQuantity}`;
 }
 
 document.querySelector('.close').onclick = closeModal;
@@ -109,6 +139,7 @@ document.querySelector('.buy-now-btn').onclick = () => {
     const product = products[currentProductIndex];
     window.location.href = product.linkPayment;
 };
+
 // Display products
 products.forEach((product, index) => {
     const card = document.createElement('div');
@@ -120,9 +151,11 @@ products.forEach((product, index) => {
             <span class="image-nav-prev" onclick="changeImage(${index}, -1)">&#10094;</span>
             <span class="image-nav-next" onclick="changeImage(${index}, 1)">&#10095;</span>
         </div>
-        <h3>${product.name}</h3>
-        <p>${product.price}</p>
-        <button onclick="openModal(${index})">Details</button>
+        <div class="product-card-details">
+            <h3 class="product-card-title">${product.name}</h3>
+            <p class="product-card-price">${formatPriceRange(product.price)}</p>
+            <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
+        </div>
     `;
     productCardsContainer.appendChild(card);
 });
@@ -160,45 +193,45 @@ function changeQuantity(change) {
     stockDisplay.textContent = `Stock: ${remainingStock}`;
 }
 
-// Toggle search popup
-
+// Search functionality
 const searchPopup = document.getElementById('searchPopup');
 const closeSearchPopup = document.getElementById('closeSearchPopup');
 
 searchToggle.addEventListener('click', () => {
-    searchPopup.style.top = '0';
+    searchPopup.style.top = '0'; // Show popup
 });
 
 closeSearchPopup.addEventListener('click', () => {
-    searchPopup.style.top = '-100%';
+    searchPopup.style.top = '-100%'; // Hide popup
 });
 
-// Pencarian produk dan membuka modal berdasarkan ID produk yang diklik
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim().toLowerCase();
-    searchResults.innerHTML = ''; // Bersihkan hasil pencarian sebelumnya
-  
+    searchResults.innerHTML = ''; // Clear previous search results
+
+    // Filter products based on name or price
     const filteredProducts = products.filter(product => 
-      product.name.toLowerCase().includes(query) || product.price.toLowerCase().includes(query)
+      product.name.toLowerCase().includes(query) || 
+      product.price.some(price => price[0].toString().includes(query))
     );
-  
+
     if (filteredProducts.length > 0) {
-      filteredProducts.forEach(product => {
-        const resultItem = document.createElement('div');
-        resultItem.classList.add('search-result-item');
-        resultItem.innerHTML = `
-          <img src="${product.imgSrc[0]}" alt="${product.name}" style="width: 100px; height: 100px;" />
-          <p>${product.name} - ${product.price}</p>
-        `;
-  
-        // Menambahkan event listener untuk membuka modal saat produk diklik
-        resultItem.addEventListener('click', () => {
-          openModalById(product.id); // Membuka modal berdasarkan ID produk
+        filteredProducts.forEach(product => {
+            const resultItem = document.createElement('div');
+            resultItem.classList.add('search-result-item');
+            resultItem.innerHTML = `
+                <img src="${product.imgSrc[0]}" alt="${product.name}" style="width: 100px; height: 100px;" />
+                <p><strong>${product.name}</strong> - <strong>${formatPriceRange(product.price)}</strong></p>
+            `;
+
+            // Add event listener to open modal
+            resultItem.addEventListener('click', () => {
+                openModalById(product.id);
+            });
+
+            searchResults.appendChild(resultItem);
         });
-  
-        searchResults.appendChild(resultItem);
-      });
     } else {
-      searchResults.innerHTML = '<p>No products found.</p>';
+        searchResults.innerHTML = '<p>Produk tidak ditemukan.</p>';
     }
-  });
+});
