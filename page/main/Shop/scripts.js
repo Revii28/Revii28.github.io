@@ -160,6 +160,8 @@ products.forEach((product, index) => {
     productCardsContainer.appendChild(card);
 });
 
+
+
 const modalImageContainer = document.createElement('div');
 modalImageContainer.className = 'modal-image-container';
 modalImageContainer.innerHTML = `

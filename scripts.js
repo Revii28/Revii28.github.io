@@ -164,10 +164,27 @@ products.forEach((product, index) => {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.setAttribute('data-product-index', index);
+    card.setAttribute('data-current-image', 0); 
+
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'product-card-image-container';
+
+    const imageElement = document.createElement('img');
+    imageElement.src = product.imgSrc[0];
+    imageElement.alt = product.name;
+
+    // Add touch event listeners for card image swiping
+    imageElement.addEventListener('touchstart', handleTouchStart, false);
+    imageElement.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].clientX;
+        const productIndex = parseInt(event.target.closest('.product-card').getAttribute('data-product-index'));
+        handleCardSwipe(productIndex);
+    }, false);
+
+    imageContainer.appendChild(imageElement);
+
     card.innerHTML = `
-        <div class="product-card-image-container">
-            <img src="${product.imgSrc[0]}" alt="${product.name}">
-        </div>
+        ${imageContainer.outerHTML} 
         <div class="product-card-details">
             <h3 class="product-card-title">${product.name}</h3>
             <p class="product-card-price">${formatPriceRange(product.price)}</p>
@@ -176,6 +193,26 @@ products.forEach((product, index) => {
     `;
     productCardsContainer.appendChild(card);
 });
+
+function handleCardSwipe(productIndex) {
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left
+        changeCardImage(productIndex, 1);
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right
+        changeCardImage(productIndex, -1);
+    }
+}
+
+function changeCardImage(productIndex, delta) {
+    const card = productCardsContainer.querySelector(`[data-product-index="${productIndex}"]`);
+    const product = products[productIndex];
+    let currentImageIndex = parseInt(card.getAttribute('data-current-image') || 0);
+    currentImageIndex = (currentImageIndex + delta + product.imgSrc.length) % product.imgSrc.length;
+    card.querySelector('img').src = product.imgSrc[currentImageIndex];
+    card.setAttribute('data-current-image', currentImageIndex);
+}
 
 // Carousel functionality
 let slideIndex = 0;
@@ -261,3 +298,38 @@ searchButton.addEventListener('click', () => {
         searchResults.innerHTML = '<p>Produk tidak ditemukan.</p>';
     }
 });
+
+// New functionality for slide gesture on product cards
+function addCardSwipeListeners(card) {
+    let startX;
+    let currentX;
+    let isDragging = false;
+    const productIndex = parseInt(card.getAttribute('data-product-index'));
+    const imageElement = card.querySelector('img');
+
+    card.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    card.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        const diff = startX - currentX;
+        if (Math.abs(diff) > 5) {
+            e.preventDefault(); // Prevent scrolling while swiping
+        }
+    });
+
+    card.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const diff = startX - currentX;
+        if (Math.abs(diff) > 50) { // Threshold for swipe
+            changeCardImage(productIndex, diff > 0 ? 1 : -1);
+        }
+    });
+}
+
+// Apply swipe listeners to all product cards
+document.querySelectorAll('.product-card').forEach(addCardSwipeListeners);
