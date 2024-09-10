@@ -272,6 +272,15 @@ searchToggle.addEventListener('click', () => {
 closeSearchPopup.addEventListener('click', () => {
     searchPopup.style.top = '-100%';
 });
+function closeModal() {
+    modal.style.display = 'none';
+    // Remove touch event listeners
+    modalImage.removeEventListener('touchstart', handleTouchStart);
+    modalImage.removeEventListener('touchend', handleTouchEnd);
+
+    // Clear history when modal is closed
+    history.replaceState({}, document.title, window.location.pathname); 
+}
 
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim().toLowerCase();
@@ -293,6 +302,8 @@ searchButton.addEventListener('click', () => {
                 openModalById(product.id);
             });
             searchResults.appendChild(resultItem);
+            searchResults.style.overflowY = 'auto'; // Enable vertical scrolling
+searchResults.style.maxHeight = '200px';
         });
     } else {
         searchResults.innerHTML = '<p>Produk tidak ditemukan.</p>';

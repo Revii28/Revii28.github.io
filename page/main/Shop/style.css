@@ -63,15 +63,15 @@ html, body {
 }
 
 .search-popup-content input:focus {
-    border-color: #007BFF; /* Highlight border on focus */
+    border-color: #ffb8bf; /* Highlight border on focus */
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px #ffb8bf;
 }
 
 .search-popup-content button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #ffb8bf;
     color: white;
     border: none;
     border-radius: 8px;
@@ -82,7 +82,7 @@ html, body {
 }
 
 .search-popup-content button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ffb8bf; 
 }
 
 /* Close button */
@@ -198,7 +198,7 @@ html, body {
 }
 
 .navbar-icons a:hover, .navbar-icons button:hover {
-    color: #007bff;
+    color: #ffd2d3;
 }
 
 /* Navbar toggle (for mobile) */
@@ -290,7 +290,8 @@ html, body {
 }
 
 .search-popup-content button:hover {
-    background-color: #ffd2d3; /* Darker blue on hover */
+    background-color: #ffd2d3;
+    color: #ffd2d3;
 }
 
 /* Close button for the search popup */
