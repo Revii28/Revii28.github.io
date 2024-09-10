@@ -183,14 +183,18 @@ products.forEach((product, index) => {
 
     imageContainer.appendChild(imageElement);
 
-    card.innerHTML = `
-        ${imageContainer.outerHTML} 
-        <div class="product-card-details">
-            <h3 class="product-card-title">${product.name}</h3>
-            <p class="product-card-price">${formatPriceRange(product.price)}</p>
-            <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
-        </div>
-    `;
+card.innerHTML = `
+    <div class="product-card-image-container">
+        <img src="${product.imgSrc[0]}" alt="${product.name}">
+        <a class="prev" onclick="changeCardImage(${index}, -1)">&#10094;</a>
+        <a class="next" onclick="changeCardImage(${index}, 1)">&#10095;</a> 
+    </div>
+    <div class="product-card-details">
+        <h3 class="product-card-title">${product.name}</h3>
+        <p class="product-card-price">${formatPriceRange(product.price)}</p>
+        <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
+    </div>
+`;
     productCardsContainer.appendChild(card);
 });
 
@@ -380,3 +384,42 @@ window.addEventListener('scroll', () => {
 backToTopButton.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
+
+
+// ... (your existing code)
+
+// Carousel functionality
+
+
+
+
+
+
+// Add swipe functionality for carousel on desktop
+const carousel = document.querySelector('.carousel');
+let isDragging = false;
+let startX;
+let currentX;
+
+carousel.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    startX = e.clientX;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    currentX = e.clientX;
+});
+
+carousel.addEventListener('mouseup', () => {
+    if (!isDragging) return;
+    isDragging = false;
+    const diff = startX - currentX;
+    if (diff > 50) { // Swipe left
+        plusSlides(1);
+    } else if (diff < -50) { // Swipe right
+        plusSlides(-1);
+    }
+});
+
+// ... (rest of your existing code)
