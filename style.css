@@ -1,13 +1,14 @@
-body, html {
+html, body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    height: 100%;
-    font-size: 16px;
+    background: #ffe4e3;
+    background-attachment: fixed; 
 }
 
 .color {
-    background: linear-gradient(135deg, #D2E0FB 20%, #FEF9D9 40%, #DEE5D4 70%, #8EACCD 100%);
+    background: linear-gradient(135deg, #D2E0FB 20%, #FEF9D9 40%, #ffb8bf 70%, #8EACCD 100%);
     min-height: 100vh;
 }
 
@@ -39,7 +40,6 @@ body, html {
     width: 90%; /* Full width for small screens */
     max-width: 500px; /* Limit max width */
     height: auto; /* Auto height */
-    background-color: rgba(255, 255, 255, 0.95); /* Light background with slight opacity */
     padding: 25px 30px;
     border-radius: 12px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -129,7 +129,7 @@ body, html {
 
 /* Navbar container */
 .navbar {
-    background-color: #ffffff;
+    background-color: #ffe4e3;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 10px 20px;
     display: flex;
@@ -143,7 +143,7 @@ body, html {
 /* Navbar brand (logo/text) */
 .navbar-brand {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: bold;
     font-size: 1.8rem;
     font-family: 'EB Garamond', serif;
@@ -171,7 +171,7 @@ body, html {
 
 .navbar-menu a {
     text-decoration: none;
-    color: #333;
+    color: black;
     font-weight: 500;
     font-size: 1rem;
     transition: color 0.3s ease;
@@ -218,7 +218,6 @@ body, html {
         width: 100%;
         flex-direction: column;
         align-items: center;
-        background-color: white;
         position: absolute;
         top: 60px; /* Position below navbar */
         left: 0;
@@ -272,15 +271,15 @@ body, html {
 }
 
 .search-popup-content input:focus {
-    border-color: #007BFF; /* Highlight border on focus */
+    border-color: #ffd2d3; /* Highlight border on focus */
     outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    box-shadow: 0 0 5px #ffd2d3;
 }
 
 .search-popup-content button {
     width: 100%;
     padding: 12px;
-    background-color: #007BFF;
+    background-color: #ffb8b7;
     color: white;
     border: none;
     border-radius: 8px;
@@ -291,7 +290,7 @@ body, html {
 }
 
 .search-popup-content button:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #ffd2d3; /* Darker blue on hover */
 }
 
 /* Close button for the search popup */
@@ -608,7 +607,7 @@ body, html {
 .product-card-price {
     font-weight: bold;
     font-size: 1.1rem;
-    color: #ffb8bf;
+    color: #fcbcb4;
     margin-bottom: 0.75rem;
 }
 
@@ -684,8 +683,9 @@ body, html {
 .modal-close {
     font-size: 28px;
     font-weight: bold;
-    color: #999;
+    color: red;
     cursor: pointer;
+    
 }
 
 .modal-body {
@@ -948,7 +948,7 @@ body, html {
 .footer-section h2 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #ffb8bf;
+    color: #ffb8b7;
 }
 
 .footer-section p, .footer-section ul {
@@ -966,7 +966,7 @@ body, html {
 }
 
 .footer-section ul li a {
-    color: #ffb8bf;
+    color: #ffb8b7;
     text-decoration: none;
 }
 
@@ -1018,6 +1018,7 @@ body, html {
         width: 100%;
         flex-direction: column;
         text-align: center;
+        background-color: #fff;
     }
 
     .navbar-menu.active {
