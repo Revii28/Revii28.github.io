@@ -183,18 +183,14 @@ products.forEach((product, index) => {
 
     imageContainer.appendChild(imageElement);
 
-card.innerHTML = `
-    <div class="product-card-image-container">
-        <img src="${product.imgSrc[0]}" alt="${product.name}">
-        <a class="prev" onclick="changeCardImage(${index}, -1)">&#10094;</a>
-        <a class="next" onclick="changeCardImage(${index}, 1)">&#10095;</a> 
-    </div>
-    <div class="product-card-details">
-        <h3 class="product-card-title">${product.name}</h3>
-        <p class="product-card-price">${formatPriceRange(product.price)}</p>
-        <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
-    </div>
-`;
+    card.innerHTML = `
+        ${imageContainer.outerHTML} 
+        <div class="product-card-details">
+            <h3 class="product-card-title">${product.name}</h3>
+            <p class="product-card-price">${formatPriceRange(product.price)}</p>
+            <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
+        </div>
+    `;
     productCardsContainer.appendChild(card);
 });
 
@@ -348,107 +344,3 @@ function addCardSwipeListeners(card) {
 
 // Apply swipe listeners to all product cards
 document.querySelectorAll('.product-card').forEach(addCardSwipeListeners);
-
-
-// Tambahkan di scripts.js
-function reveal() {
-    var reveals = document.querySelectorAll(".reveal");
-    for (var i = 0; i < reveals.length; i++) {
-      var windowHeight = window.innerHeight;
-      var elementTop = reveals[i].getBoundingClientRect().top;
-      var elementVisible = 150;
-      if (elementTop < windowHeight - elementVisible) {
-        reveals[i].classList.add("active");
-      } else {
-        reveals[i].classList.remove("active");
-      }
-    }
-  }
-  
-  window.addEventListener("scroll", reveal);
-    
-//   // Tambahkan di scripts.js
-// const darkModeToggle = document.getElementById('darkModeToggle');
-// const body = document.body;
-
-// darkModeToggle.addEventListener('click', () => {
-//   body.classList.toggle('dark-mode');
-// });
-
-
-// Tambahkan di scripts.js
-document.addEventListener("DOMContentLoaded", function() {
-    var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
-  
-    if ("IntersectionObserver" in window) {
-      let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-        entries.forEach(function(entry) {
-          if (entry.isIntersecting) {
-            let lazyImage = entry.target;
-            lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove("lazy");
-            lazyImageObserver.unobserve(lazyImage);
-          }
-        });
-      });
-  
-      lazyImages.forEach(function(lazyImage) {
-        lazyImageObserver.observe(lazyImage);
-      });
-    }
-  });
-  
-
-  // Tambahkan di scripts.js
-const backToTopButton = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    backToTopButton.style.display = 'block';
-  } else {
-    backToTopButton.style.display = 'none';
-  }
-});
-
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-
-// ... (your existing code)
-
-// Carousel functionality
-
-
-
-
-
-
-// Add swipe functionality for carousel on desktop
-const carousel = document.querySelector('.carousel');
-let isDragging = false;
-let startX;
-let currentX;
-
-carousel.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-});
-
-carousel.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    currentX = e.clientX;
-});
-
-carousel.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    const diff = startX - currentX;
-    if (diff > 50) { // Swipe left
-        plusSlides(1);
-    } else if (diff < -50) { // Swipe right
-        plusSlides(-1);
-    }
-});
-
-// ... (rest of your existing code)

@@ -291,7 +291,7 @@ html, body {
 
 .search-popup-content button:hover {
     background-color: #ffd2d3;
-    color: white;
+    color: #ffd2d3;
 }
 
 /* Close button for the search popup */
@@ -301,7 +301,7 @@ html, body {
     right: 15px;
     font-size: 28px;
     font-weight: bold;
-    color: red;
+    color: #ffb8bf;
     cursor: pointer;
     transition: color 0.3s ease;
     position: relative;
@@ -1143,48 +1143,41 @@ html, body {
         font-size: 14px;
     }
 }
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
 
-
-/* Tambahkan di style.css */
-.reveal {
-    opacity: 0;
-    transition: all 0.8s ease;
-  }
-  
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-
-  /* Tambahkan di style.css */
-.dark-mode {
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .dark-mode .navbar, .dark-mode .footer  .html body {
-    background-color: #222;
-  }
-  
-  .dark-mode .product-card {
-    background-color: #444;
-  }
-  
-
-  /* Tambahkan di style.css */
-.back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    font-size: 20px;
-    cursor: pointer;
-    display: none;
-  }
-  
+.about-us-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+h1, h2 {
+    color: #2c3e50;
+}
+ul {
+    padding-left: 1.5rem;
+}
+.contact-info {
+    background-color: #ecf0f1;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+.contact-info li {
+    margin-bottom: 0.5rem;
+}
+.highlight {
+    background-color: #f1c40f;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-weight: bold;
+}
