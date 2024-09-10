@@ -39,20 +39,30 @@ const quantityInput = document.getElementById('quantityInput');
 let currentProductIndex = 0;
 let currentImageIndex = 0;
 
+// Variables for touch events
+let touchStartX = 0;
+let touchEndX = 0;
+
+// Function to handle swipe gesture
+function handleSwipe() {
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left
+        changeImage(currentProductIndex, 1);
+    }
+    if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right
+        changeImage(currentProductIndex, -1);
+    }
+}
+
 function changeImage(productIndex, delta) {
     const product = products[productIndex];
     currentImageIndex = (currentImageIndex + delta + product.imgSrc.length) % product.imgSrc.length;
     modalImage.src = product.imgSrc[currentImageIndex];
-    const imgElement = document.querySelector(`[data-product-index="${productIndex}"] img`);
-    if (imgElement) {
-        imgElement.src = product.imgSrc[currentImageIndex];
-    }
-    if (productIndex === currentProductIndex) {
-        modalImage.src = product.imgSrc[currentImageIndex];
-    }
 }
 
-// Fungsi untuk membuka modal berdasarkan ID produk
+// Function to open modal by product ID
 function openModalById(productId) {
     const product = products.find(p => p.id === productId);
     if (product) {
@@ -61,14 +71,14 @@ function openModalById(productId) {
     }
 }
 
-// Fungsi untuk membuka modal berdasarkan index
+// Function to open modal by index
 function openModal(index) {
     const product = products[index];
     currentProductIndex = index;
     fillModal(product);
 }
 
-// Fungsi untuk menghitung rentang harga
+// Function to calculate price range
 function formatPriceRange(prices) {
     if (Array.isArray(prices)) {
         const sortedPrices = prices.map(price => parseInt(price)).sort((a, b) => a - b);
@@ -80,14 +90,11 @@ function formatPriceRange(prices) {
     return prices;
 }
 
-// Fungsi untuk mengisi modal dengan data produk
+// Function to fill modal with product data
 function fillModal(product) {
     currentImageIndex = 0;
     modalTitle.innerText = product.name;
-    
-    // Menampilkan harga berdasarkan warna pertama (default)
     modalPrice.innerText = `Rp${product.price[0].toLocaleString()}`;
-    
     modalImage.src = product.imgSrc[0];
     modalDescription.innerText = product.description;
     modalRating.innerText = product.rating;
@@ -99,27 +106,29 @@ function fillModal(product) {
         const colorOption = document.createElement('span');
         colorOption.className = 'color-option' + (i === 0 ? ' selected' : '');
         colorOption.innerText = color;
-        
-        // Menambahkan event listener untuk setiap warna
         colorOption.onclick = () => selectColor(colorOption, i, product);
-        
         modalColors.appendChild(colorOption);
     });
+
+    // Add touch event listeners
+    modalImage.addEventListener('touchstart', handleTouchStart, false);
+    modalImage.addEventListener('touchend', handleTouchEnd, false);
 
     modal.style.display = 'block';
 }
 
-// Fungsi untuk memilih warna dan memperbarui harga berdasarkan warna yang dipilih
+// Function to select color and update price
 function selectColor(element, colorIndex, product) {
     document.querySelectorAll('.color-option').forEach(opt => opt.classList.remove('selected'));
     element.classList.add('selected');
-
-    // Mengubah harga berdasarkan warna yang dipilih
     modalPrice.innerText = `Rp${product.price[colorIndex].toLocaleString()}`;
 }
 
 function closeModal() {
     modal.style.display = 'none';
+    // Remove touch event listeners
+    modalImage.removeEventListener('touchstart', handleTouchStart);
+    modalImage.removeEventListener('touchend', handleTouchEnd);
 }
 
 function changeQuantity(delta) {
@@ -133,24 +142,49 @@ function changeQuantity(delta) {
     modalStock.innerText = `Stock: ${stock - currentQuantity}`;
 }
 
-document.querySelector('.close').onclick = closeModal;
+document.querySelector('.modal-close').onclick = closeModal;
 
 document.querySelector('.buy-now-btn').onclick = () => {
     const product = products[currentProductIndex];
     window.location.href = product.linkPayment;
 };
 
+// Touch event handlers
+function handleTouchStart(event) {
+    touchStartX = event.touches[0].clientX;
+}
+
+function handleTouchEnd(event) {
+    touchEndX = event.changedTouches[0].clientX;
+    handleSwipe();
+}
+
 // Display products
 products.forEach((product, index) => {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.setAttribute('data-product-index', index);
+    card.setAttribute('data-current-image', 0); 
+
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'product-card-image-container';
+
+    const imageElement = document.createElement('img');
+    imageElement.src = product.imgSrc[0];
+    imageElement.alt = product.name;
+
+    // Add touch event listeners for card image swiping
+    imageElement.addEventListener('touchstart', handleTouchStart, false);
+    imageElement.addEventListener('touchend', (event) => {
+        touchEndX = event.changedTouches[0].clientX;
+        const productIndex = parseInt(event.target.closest('.product-card').getAttribute('data-product-index'));
+        handleCardSwipe(productIndex);
+    }, false);
+
+    imageContainer.appendChild(imageElement);
+
     card.innerHTML = `
-        <div class="product-card-image-container">
-            <img src="${product.imgSrc[0]}" alt="${product.name}">
-            <span class="image-nav-prev" onclick="changeImage(${index}, -1)">&#10094;</span>
-            <span class="image-nav-next" onclick="changeImage(${index}, 1)">&#10095;</span>
-        </div>
+        ${imageContainer.outerHTML} 
         <div class="product-card-details">
             <h3 class="product-card-title">${product.name}</h3>
             <p class="product-card-price">${formatPriceRange(product.price)}</p>
@@ -160,37 +194,40 @@ products.forEach((product, index) => {
     productCardsContainer.appendChild(card);
 });
 
+function handleCardSwipe(productIndex) {
+    const swipeThreshold = 50;
+    if (touchEndX < touchStartX - swipeThreshold) {
+        // Swipe left
+        changeCardImage(productIndex, 1);
+    } else if (touchEndX > touchStartX + swipeThreshold) {
+        // Swipe right
+        changeCardImage(productIndex, -1);
+    }
+}
+
+function changeCardImage(productIndex, delta) {
+    const card = productCardsContainer.querySelector(`[data-product-index="${productIndex}"]`);
+    const product = products[productIndex];
+    let currentImageIndex = parseInt(card.getAttribute('data-current-image') || 0);
+    currentImageIndex = (currentImageIndex + delta + product.imgSrc.length) % product.imgSrc.length;
+    card.querySelector('img').src = product.imgSrc[currentImageIndex];
+    card.setAttribute('data-current-image', currentImageIndex);
+}
 
 
-const modalImageContainer = document.createElement('div');
-modalImageContainer.className = 'modal-image-container';
-modalImageContainer.innerHTML = `
-    <img id="productModalImage" src="" alt="" class="modal-image">
-    <span class="image-nav prev" onclick="changeImage(currentProductIndex, -1)">&#10094;</span>
-    <span class="image-nav next" onclick="changeImage(currentProductIndex, 1)">&#10095;</span>
-`;
-document.querySelector('.modal-body').insertBefore(modalImageContainer, document.querySelector('.modal-details'));
 
-
-
-let stock = 199;  // Initial stock value
+// Stock management
+let stock = 199;
 const stockDisplay = document.getElementById("productModalStock");
 
-// Function to change the quantity and update the stock
 function changeQuantity(change) {
     let currentQuantity = parseInt(quantityInput.value);
-    
-    // Update quantity within bounds
     if (change === 1 && currentQuantity < stock) {
         currentQuantity += 1;
     } else if (change === -1 && currentQuantity > 1) {
         currentQuantity -= 1;
     }
-    
-    // Update input field
     quantityInput.value = currentQuantity;
-    
-    // Update stock
     const remainingStock = stock - currentQuantity;
     stockDisplay.textContent = `Stock: ${remainingStock}`;
 }
@@ -200,18 +237,16 @@ const searchPopup = document.getElementById('searchPopup');
 const closeSearchPopup = document.getElementById('closeSearchPopup');
 
 searchToggle.addEventListener('click', () => {
-    searchPopup.style.top = '0'; // Show popup
+    searchPopup.style.top = '0';
 });
 
 closeSearchPopup.addEventListener('click', () => {
-    searchPopup.style.top = '-100%'; // Hide popup
+    searchPopup.style.top = '-100%';
 });
 
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim().toLowerCase();
-    searchResults.innerHTML = ''; // Clear previous search results
-
-    // Filter products based on name or price
+    searchResults.innerHTML = '';
     const filteredProducts = products.filter(product => 
       product.name.toLowerCase().includes(query) || 
       product.price.some(price => price[0].toString().includes(query))
@@ -225,15 +260,47 @@ searchButton.addEventListener('click', () => {
                 <img src="${product.imgSrc[0]}" alt="${product.name}" style="width: 100px; height: 100px;" />
                 <p><strong>${product.name}</strong> - <strong>${formatPriceRange(product.price)}</strong></p>
             `;
-
-            // Add event listener to open modal
             resultItem.addEventListener('click', () => {
                 openModalById(product.id);
             });
-
             searchResults.appendChild(resultItem);
         });
     } else {
         searchResults.innerHTML = '<p>Produk tidak ditemukan.</p>';
     }
 });
+
+// New functionality for slide gesture on product cards
+function addCardSwipeListeners(card) {
+    let startX;
+    let currentX;
+    let isDragging = false;
+    const productIndex = parseInt(card.getAttribute('data-product-index'));
+    const imageElement = card.querySelector('img');
+
+    card.addEventListener('touchstart', (e) => {
+        startX = e.touches[0].clientX;
+        isDragging = true;
+    });
+
+    card.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        currentX = e.touches[0].clientX;
+        const diff = startX - currentX;
+        if (Math.abs(diff) > 5) {
+            e.preventDefault(); // Prevent scrolling while swiping
+        }
+    });
+
+    card.addEventListener('touchend', (e) => {
+        if (!isDragging) return;
+        isDragging = false;
+        const diff = startX - currentX;
+        if (Math.abs(diff) > 50) { // Threshold for swipe
+            changeCardImage(productIndex, diff > 0 ? 1 : -1);
+        }
+    });
+}
+
+// Apply swipe listeners to all product cards
+document.querySelectorAll('.product-card').forEach(addCardSwipeListeners);

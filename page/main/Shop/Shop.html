@@ -45,9 +45,6 @@
 </div>
 <!-- End Navbar -->
 
-      <!-- Contact -->
-  
-
    
 
       <!-- End Contact -->
@@ -55,60 +52,50 @@
       <div class="product-cards" id="productCards"></div>
 
       <!-- Updated Modal structure -->
-      <div id="productModal" class="modal">
-        <div class="modal-content">
+ <!-- Modal -->
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
           <div class="modal-header">
-            <h2 id="productModalTitle" class="modal-title"></h2>
-            <span class="close" onclick="closeModal()">&times;</span>
+              <h2 id="productModalTitle" class="modal-title"></h2>
+              <span class="modal-close" onclick="closeModal()">&times;</span>
           </div>
           <div class="modal-body">
-            <img id="productModalImage" src="" alt="" class="modal-image" />
-            <div class="modal-details">
-              <p id="productModalPrice" class="modal-price"></p>
-              <div class="modal-rating">
-                <span class="star-rating">★★★★★</span>
-                <span id="productModalRating"></span>
+              <div class="modal-image-container">
+                  <img id="productModalImage" src="" alt="" class="modal-image" />
               </div>
-              <div class="modal-protection">
-                <strong>Description:</strong>
-                <span id="productModalDescription"></span>
+              <div class="modal-details">
+                  <p id="productModalPrice" class="modal-price"></p>
+                  <div class="modal-rating">
+                      <span class="star-rating">★★★★★</span>
+                      <span id="productModalRating"></span>
+                  </div>
+                  <div class="modal-description">
+                      <strong>Description:</strong>
+                      <span id="productModalDescription"></span>
+                  </div>
+                  <div class="modal-protection">
+                      <strong>Protection:</strong>
+                      <span id="productModalProtection"></span>
+                  </div>
+                  <div class="modal-colors">
+                      <strong>Variant:</strong>
+                      <div id="productModalColors"></div>
+                  </div>
+                  <div class="modal-quantity">
+                      <strong>Quantity:</strong>
+                      <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                      <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly />
+                      <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                      <span id="productModalStock" class="stock-info">Stock: 20</span>
+                  </div>
+                  <button class="buy-now-btn">Buy Now</button>
               </div>
-
-              <div class="modal-protection">
-                <strong>Protection:</strong>
-                <span id="productModalProtection"></span>
-              </div>
-              <div class="modal-shipping">
-                <!-- <strong>Shipping:</strong> <span id="productModalShipping"></span> -->
-              </div>
-              <div class="modal-color">
-                <strong>Variant:</strong>
-                <div id="productModalColors" ></div>
-              </div>
-              <div class="modal-quantity">
-                <strong>Quantity:</strong>
-                <button class="quantity-btn" onclick="changeQuantity(-1)">
-                  -
-                </button>
-                <input
-                  type="number"
-                  id="quantityInput"
-                  class="quantity-input"
-                  value="1"
-                  min="1"
-                  readonly
-                />
-                <button class="quantity-btn" onclick="changeQuantity(1)">
-                  +
-                </button>
-                <span id="productModalStock" class="stock-info">Stock: 20</span>
-              </div>
-
-              <button class="buy-now-btn">Buy Now</button>
-            </div>
           </div>
-        </div>
       </div>
+  </div>
+
+
 
       <div class="footer">
         <div class="footer-content">

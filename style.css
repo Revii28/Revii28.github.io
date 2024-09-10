@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background: #ffe4e3;
+    background: linear-gradient(#fff, #ffe4e3); 
     background-attachment: fixed; 
 }
 
@@ -129,7 +129,7 @@ html, body {
 
 /* Navbar container */
 .navbar {
-    background-color: #ffe4e3;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     padding: 10px 20px;
     display: flex;
@@ -143,7 +143,7 @@ html, body {
 /* Navbar brand (logo/text) */
 .navbar-brand {
     text-decoration: none;
-    color: black;
+    color: #333;
     font-weight: bold;
     font-size: 1.8rem;
     font-family: 'EB Garamond', serif;
