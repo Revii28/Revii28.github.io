@@ -43,11 +43,6 @@ let currentImageIndex = 0;
 let touchStartX = 0;
 let touchEndX = 0;
 
-// Variables for mouse events
-let isScrolling = false;
-let startX;
-let scrollLeft;
-
 // Function to handle swipe gesture
 function handleSwipe() {
     const swipeThreshold = 50;
@@ -65,31 +60,6 @@ function changeImage(productIndex, delta) {
     const product = products[productIndex];
     currentImageIndex = (currentImageIndex + delta + product.imgSrc.length) % product.imgSrc.length;
     modalImage.src = product.imgSrc[currentImageIndex];
-}
-
-// Function to enable horizontal scrolling
-function enableHorizontalScroll(container) {
-    container.addEventListener('mousedown', (e) => {
-        isScrolling = true;
-        startX = e.pageX - container.offsetLeft;
-        scrollLeft = container.scrollLeft;
-    });
-
-    container.addEventListener('mouseleave', () => {
-        isScrolling = false;
-    });
-
-    container.addEventListener('mouseup', () => {
-        isScrolling = false;
-    });
-
-    container.addEventListener('mousemove', (e) => {
-        if (!isScrolling) return;
-        e.preventDefault();
-        const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // Scroll speed
-        container.scrollLeft = scrollLeft - walk;
-    });
 }
 
 // Function to open modal by product ID
@@ -144,9 +114,6 @@ function fillModal(product) {
     modalImage.addEventListener('touchstart', handleTouchStart, false);
     modalImage.addEventListener('touchend', handleTouchEnd, false);
 
-    // Enable horizontal scrolling for modal images
-    enableHorizontalScroll(document.querySelector('.modal-image-container'));
-
     modal.style.display = 'block';
 }
 
@@ -193,31 +160,22 @@ function handleTouchEnd(event) {
 }
 
 // Display products
-function displayProducts() {
-    productCardsContainer.innerHTML = '';
-    products.forEach((product, index) => {
-        const card = document.createElement('div');
-        card.className = 'product-card';
-        card.setAttribute('data-product-index', index);
-        card.innerHTML = `
-            <div class="product-card-image-container">
-                <img src="${product.imgSrc[0]}" alt="${product.name}">
-            </div>
-            <div class="product-card-details">
-                <h3 class="product-card-title">${product.name}</h3>
-                <p class="product-card-price">${formatPriceRange(product.price)}</p>
-                <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
-            </div>
-        `;
-        productCardsContainer.appendChild(card);
-    });
-
-    // Enable horizontal scrolling for product cards
-    enableHorizontalScroll(productCardsContainer);
-}
-
-// Call displayProducts instead of the previous forEach loop
-displayProducts();
+products.forEach((product, index) => {
+    const card = document.createElement('div');
+    card.className = 'product-card';
+    card.setAttribute('data-product-index', index);
+    card.innerHTML = `
+        <div class="product-card-image-container">
+            <img src="${product.imgSrc[0]}" alt="${product.name}">
+        </div>
+        <div class="product-card-details">
+            <h3 class="product-card-title">${product.name}</h3>
+            <p class="product-card-price">${formatPriceRange(product.price)}</p>
+            <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
+        </div>
+    `;
+    productCardsContainer.appendChild(card);
+});
 
 // Carousel functionality
 let slideIndex = 0;
