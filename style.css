@@ -98,7 +98,7 @@ body, html {
 }
 
 .search-popup-content .close:hover {
-    color: #ff4757; /* Red color on hover */
+    color: #ffb8bf; /* Red color on hover */
 }
 
 /* Search results styling */
@@ -301,7 +301,7 @@ body, html {
     right: 15px;
     font-size: 28px;
     font-weight: bold;
-    color: #FF6F91;
+    color: #ffb8bf;
     cursor: pointer;
     transition: color 0.3s ease;
     position: relative;
@@ -497,7 +497,7 @@ body, html {
 }
 
 .contact button {
-    background-color: #FF6F91;
+    background-color: #ffb8bf;
     color: white;
     padding: 12px;
     border: none;
@@ -608,14 +608,14 @@ body, html {
 .product-card-price {
     font-weight: bold;
     font-size: 1.1rem;
-    color: #FF6F91;
+    color: #ffb8bf;
     margin-bottom: 0.75rem;
 }
 
 .product-card-btn {
     width: 100%;
     padding: 0.75rem;
-    background-color: #FF6F91;
+    background-color: #ffb8bf;
     color: white;
     border: none;
     border-radius: 4px;
@@ -625,7 +625,7 @@ body, html {
 }
 
 .product-card-btn:hover {
-    background-color: #FF5277;
+    background-color: #ffb8bf;
 }
 
 @media (max-width: 768px) {
@@ -749,7 +749,7 @@ body, html {
 .modal-price {
     font-size: 1.5rem;
     font-weight: 500;
-    color: #ee4d2d;
+    color: black;
     margin-bottom: 10px;
 }
 
@@ -760,7 +760,7 @@ body, html {
 }
 
 .star-rating {
-    color: #ee4d2d;
+    color: #ffb8bf;
     margin-right: 5px;
 }
 
@@ -789,8 +789,8 @@ body, html {
 }
 
 .color-option.selected {
-    border-color: #ee4d2d;
-    color: #ee4d2d;
+    border-color: #ffb8bf;
+    color: #ffb8bf;
     background-color: #fff0ed;
 }
 
@@ -831,7 +831,7 @@ body, html {
 }
 
 .buy-now-btn {
-    background-color: #ee4d2d;
+    background-color: #ffb8bf;
     color: white;
     border: none;
     padding: 12px 20px;
@@ -845,7 +845,7 @@ body, html {
 }
 
 .buy-now-btn:hover {
-    background-color: #d73211;
+    background-color: #ffb8bf;
 }
 
 /* Responsive adjustments */
@@ -948,7 +948,7 @@ body, html {
 .footer-section h2 {
     font-size: 22px;
     margin-bottom: 15px;
-    color: #FF6F91;
+    color: #ffb8bf;
 }
 
 .footer-section p, .footer-section ul {
@@ -966,7 +966,7 @@ body, html {
 }
 
 .footer-section ul li a {
-    color: #FF6F91;
+    color: #ffb8bf;
     text-decoration: none;
 }
 
