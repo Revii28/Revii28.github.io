@@ -378,7 +378,6 @@ const products = [
   'Cream - 38',
   'Cream - 39',
   'Cream - 40',
-  ''
 ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sandal-gunung-peninggi-badan-model-gladiator-silang-wanita-k-19-bg-814-1'
@@ -431,7 +430,6 @@ const products = [
   'Putih - 38',
   'Putih - 39',
   'Putih - 40',
-  ''
 ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-terbaru-sneakers-wanita-m-pasir--01-bg-810'
