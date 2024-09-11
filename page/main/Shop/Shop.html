@@ -28,7 +28,7 @@
     <a href="/index.html" class="navbar-brand">Rhea Store</a>
     <ul class="navbar-menu" id="navbarMenu">
         <li><a href="/index.html" >Home</a></li>
-        <li><a href="/page/main/Shop/Shop.html" class="active" >Shop</a></li>
+        <li><a href="/page/main/Shop/Shop.html" class="active">Shop</a></li>
         <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
         <li><a href="/page/main/About/About.html">About</a></li>
     </ul>
@@ -59,7 +59,6 @@
 <!-- End Navbar -->
 
 
-
    
 
       <!-- End Contact -->
@@ -76,9 +75,12 @@
               <span class="modal-close" onclick="closeModal()">&times;</span>
           </div>
           <div class="modal-body">
-              <div class="modal-image-container">
-                  <img id="productModalImage" src="" alt="" class="modal-image" />
-              </div>
+            <div class="modal-image-container">
+              <img id="productModalImage" src="" alt="" class="modal-image" />
+              <a class="modal-nav prev" onclick="changeModalImage(-1)">&#10094;</a>
+              <a class="modal-nav next" onclick="changeModalImage(1)">&#10095;</a>
+          </div>
+          
               <div class="modal-details">
                   <p id="productModalPrice" class="modal-price"></p>
                   <div class="modal-rating">
@@ -98,7 +100,7 @@
                       <div id="productModalColors"></div>
                   </div>
                   <div class="modal-quantity">
-                      <strong>Quantity:</strong>
+                    <strong>Quantity :</strong>
                       <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
                       <input type="number" id="quantityInput" class="quantity-input" value="1" min="1" readonly />
                       <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
@@ -111,7 +113,7 @@
   </div>
 
 
-
+      
       <button id="backToTop" class="back-to-top">↑</button>
       <div class="footer">
         <div class="footer-content">

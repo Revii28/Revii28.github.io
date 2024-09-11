@@ -90,9 +90,13 @@ function formatPriceRange(prices) {
     return prices;
 }
 
+let currentModalImageIndex = 0;
+
 // Function to fill modal with product data
 function fillModal(product) {
     currentImageIndex = 0;
+    currentModalImageIndex = 0;
+    modalImage.src = product.imgSrc[currentModalImageIndex];
     modalTitle.innerText = product.name;
     modalPrice.innerText = `Rp${product.price[0].toLocaleString()}`;
     modalImage.src = product.imgSrc[0];
@@ -452,3 +456,40 @@ carousel.addEventListener('mouseup', () => {
 });
 
 // ... (rest of your existing code)
+
+
+
+
+function changeModalImage(direction) {
+    const product = products[currentProductIndex];
+    currentModalImageIndex = (currentModalImageIndex + direction + product.imgSrc.length) % product.imgSrc.length;
+    document.getElementById('productModalImage').src = product.imgSrc[currentModalImageIndex];
+}
+
+
+const modalImageContainer = document.querySelector('.modal-image-container');
+
+
+modalImageContainer.addEventListener('mousedown', (e) => {
+    startX = e.clientX;
+});
+
+modalImageContainer.addEventListener('mousemove', (e) => {
+    if (startX) {
+        moveX = e.clientX;
+    }
+});
+
+modalImageContainer.addEventListener('mouseup', () => {
+    if (startX && moveX) {
+        const diff = startX - moveX;
+        if (Math.abs(diff) > 50) { // threshold for swipe
+            changeModalImage(diff > 0 ? 1 : -1);
+        }
+    }
+    startX = moveX = null;
+});
+
+modalImageContainer.addEventListener('mouseleave', () => {
+    startX = moveX = null;
+});
