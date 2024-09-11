@@ -24,32 +24,39 @@
     </head>
   <body class="body">
     <!-- Navbar -->
+<!-- Ubah struktur HTML -->
 <nav class="navbar">
-    <a href="/index.html" class="navbar-brand">Rhea Store</a>
-    <ul class="navbar-menu" id="navbarMenu">
-        <li><a href="/index.html" >Home</a></li>
-        <li><a href="/page/main/Shop/Shop.html" class="active">Shop</a></li>
-        <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
-        <li><a href="/page/main/About/About.html">About</a></li>
-    </ul>
-
-    <div class="navbar-icons">
-        <button id="searchToggle" ><i class="fas fa-search"></i></button>
-        <!-- <button id="darkModeToggle" class="dark-mode-toggle">🌓</button> -->
-        
+  <a href="/index.html" class="navbar-brand">Rhea Store</a>
+  <div class="category-container">
+    <button class="category-toggle" id="categoryToggle">Categories</button>
+    <div class="category-dropdown" id="categoryDropdown">
+      <!-- Categories will be dynamically populated here -->
     </div>
-    <button class="navbar-toggle" id="navbarToggle">☰</button>
+  </div>
+  
+  <ul class="navbar-menu" id="navbarMenu">
+    <li><a href="/index.html" >Home</a></li>
+    <li><a href="/page/main/Shop/Shop.html" class="active">Shop</a></li>
+    <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
+    <li><a href="/page/main/About/About.html">About</a></li>
+  </ul>
+  
+  <div class="navbar-icons">
+    <button id="searchToggle"><i class="fas fa-search"></i></button>
+  </div>
+  <button class="navbar-toggle" id="navbarToggle">☰</button>
+</nav>
 
-    <!-- Search Popup -->
     <div class="search-popup" id="searchPopup">
+      
         <div class="search-popup-content">
-          <span class="close" id="closeSearchPopup">&times;</span>
+            <span class="close" id="closeSearchPopup">&times;</span>
             <input type="text" id="searchInput" placeholder="Search by name or price" />
             <button id="searchButton">Search</button>
+            
             <div onclick="openModal" id="searchResults"></div>
         </div>
     </div>
-</nav>
 
 <div class="header lazy">
     <a href="/index.html">
@@ -113,7 +120,7 @@
   </div>
 
 
-      
+    
       <button id="backToTop" class="back-to-top">↑</button>
       <div class="footer">
         <div class="footer-content">

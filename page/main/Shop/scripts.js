@@ -7,6 +7,10 @@ const searchInput = document.getElementById('searchInput');
 const searchButton = document.getElementById('searchButton');
 const searchResults = document.getElementById('searchResults');
 
+// New variables for category functionality
+const categoryToggle = document.getElementById('categoryToggle');
+const categoryDropdown = document.getElementById('categoryDropdown');
+
 navbarToggle.addEventListener('click', () => {
     navbarMenu.classList.toggle('active');
 });
@@ -15,8 +19,17 @@ searchToggle.addEventListener('click', () => {
     searchContainer.style.display = searchContainer.style.display === 'block' ? 'none' : 'block';
 });
 
-// Close menu when clicking outside
+// New category toggle functionality
+categoryToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    categoryDropdown.classList.toggle('active');
+});
+
+// Close dropdowns when clicking outside
 document.addEventListener('click', (event) => {
+    if (!categoryToggle.contains(event.target) && !categoryDropdown.contains(event.target)) {
+        categoryDropdown.classList.remove('active');
+    }
     if (!event.target.closest('.navbar')) {
         navbarMenu.classList.remove('active');
         searchContainer.style.display = 'none';
@@ -133,6 +146,9 @@ function closeModal() {
     // Remove touch event listeners
     modalImage.removeEventListener('touchstart', handleTouchStart);
     modalImage.removeEventListener('touchend', handleTouchEnd);
+
+    // Clear history when modal is closed
+    history.replaceState({}, document.title, window.location.pathname); 
 }
 
 function changeQuantity(delta) {
@@ -163,44 +179,37 @@ function handleTouchEnd(event) {
     handleSwipe();
 }
 
-// Display products
-products.forEach((product, index) => {
+// Function to create product cards
+function createProductCard(product, index) {
     const card = document.createElement('div');
     card.className = 'product-card';
     card.setAttribute('data-product-index', index);
-    card.setAttribute('data-current-image', 0); 
+    card.setAttribute('data-current-image', 0);
 
-    const imageContainer = document.createElement('div');
-    imageContainer.className = 'product-card-image-container';
+    card.innerHTML = `
+        <div class="product-card-image-container">
+            <img src="${product.imgSrc[0]}" alt="${product.name}">
+            <a class="prev" onclick="changeCardImage(${index}, -1)">&#10094;</a>
+            <a class="next" onclick="changeCardImage(${index}, 1)">&#10095;</a> 
+        </div>
+        <div class="product-card-details">
+            <h3 class="product-card-title">${product.name}</h3>
+            <p class="product-card-price">${formatPriceRange(product.price)}</p>
+            <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
+        </div>
+    `;
 
-    const imageElement = document.createElement('img');
-    imageElement.src = product.imgSrc[0];
-    imageElement.alt = product.name;
+    return card;
+}
 
-    // Add touch event listeners for card image swiping
-    imageElement.addEventListener('touchstart', handleTouchStart, false);
-    imageElement.addEventListener('touchend', (event) => {
-        touchEndX = event.changedTouches[0].clientX;
-        const productIndex = parseInt(event.target.closest('.product-card').getAttribute('data-product-index'));
-        handleCardSwipe(productIndex);
-    }, false);
-
-    imageContainer.appendChild(imageElement);
-
-card.innerHTML = `
-    <div class="product-card-image-container">
-        <img src="${product.imgSrc[0]}" alt="${product.name}">
-        <a class="prev" onclick="changeCardImage(${index}, -1)">&#10094;</a>
-        <a class="next" onclick="changeCardImage(${index}, 1)">&#10095;</a> 
-    </div>
-    <div class="product-card-details">
-        <h3 class="product-card-title">${product.name}</h3>
-        <p class="product-card-price">${formatPriceRange(product.price)}</p>
-        <button class="product-card-btn" onclick="openModal(${index})">View Product</button>
-    </div>
-`;
-    productCardsContainer.appendChild(card);
-});
+// Function to display products
+function displayProducts(productsToDisplay) {
+    productCardsContainer.innerHTML = '';
+    productsToDisplay.forEach((product, index) => {
+        const card = createProductCard(product, index);
+        productCardsContainer.appendChild(card);
+    });
+}
 
 function handleCardSwipe(productIndex) {
     const swipeThreshold = 50;
@@ -221,6 +230,7 @@ function changeCardImage(productIndex, delta) {
     card.querySelector('img').src = product.imgSrc[currentImageIndex];
     card.setAttribute('data-current-image', currentImageIndex);
 }
+
 
 
 // Stock management
@@ -244,21 +254,12 @@ const searchPopup = document.getElementById('searchPopup');
 const closeSearchPopup = document.getElementById('closeSearchPopup');
 
 searchToggle.addEventListener('click', () => {
-    searchPopup.style.top = '0';
+    searchPopup.classList.toggle('active');
 });
 
 closeSearchPopup.addEventListener('click', () => {
-    searchPopup.style.top = '-100%';
+    searchPopup.classList.remove('active');
 });
-function closeModal() {
-    modal.style.display = 'none';
-    // Remove touch event listeners
-    modalImage.removeEventListener('touchstart', handleTouchStart);
-    modalImage.removeEventListener('touchend', handleTouchEnd);
-
-    // Clear history when modal is closed
-    history.replaceState({}, document.title, window.location.pathname); 
-}
 
 searchButton.addEventListener('click', () => {
     const query = searchInput.value.trim().toLowerCase();
@@ -281,7 +282,7 @@ searchButton.addEventListener('click', () => {
             });
             searchResults.appendChild(resultItem);
             searchResults.style.overflowY = 'auto'; // Enable vertical scrolling
-searchResults.style.maxHeight = '200px';
+            searchResults.style.maxHeight = '200px';
         });
     } else {
         searchResults.innerHTML = '<p>Produk tidak ditemukan.</p>';
@@ -321,10 +322,11 @@ function addCardSwipeListeners(card) {
 }
 
 // Apply swipe listeners to all product cards
-document.querySelectorAll('.product-card').forEach(addCardSwipeListeners);
+function applySwipeListeners() {
+    document.querySelectorAll('.product-card').forEach(addCardSwipeListeners);
+}
 
-
-// Tambahkan di scripts.js
+// Reveal functionality
 function reveal() {
     var reveals = document.querySelectorAll(".reveal");
     for (var i = 0; i < reveals.length; i++) {
@@ -337,20 +339,11 @@ function reveal() {
         reveals[i].classList.remove("active");
       }
     }
-  }
-  
-  window.addEventListener("scroll", reveal);
-    
-//   // Tambahkan di scripts.js
-// const darkModeToggle = document.getElementById('darkModeToggle');
-// const body = document.body;
+}
 
-// darkModeToggle.addEventListener('click', () => {
-//   body.classList.toggle('dark-mode');
-// });
+window.addEventListener("scroll", reveal);
 
-
-// Tambahkan di scripts.js
+// Lazy loading images
 document.addEventListener("DOMContentLoaded", function() {
     var lazyImages = [].slice.call(document.querySelectorAll("img.lazy"));
   
@@ -370,96 +363,140 @@ document.addEventListener("DOMContentLoaded", function() {
         lazyImageObserver.observe(lazyImage);
       });
     }
+});
+
+// Back to top button functionality
+const backToTopButton = document.getElementById('backToTop');
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.style.display = 'block';
+    } else {
+      backToTopButton.style.display = 'none';
+    }
+  });
+  
+  backToTopButton.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
   
 
-  // Tambahkan di scripts.js
-const backToTopButton = document.getElementById('backToTop');
 
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    backToTopButton.style.display = 'block';
-  } else {
-    backToTopButton.style.display = 'none';
+  
+  function changeModalImage(direction) {
+      const product = products[currentProductIndex];
+      currentModalImageIndex = (currentModalImageIndex + direction + product.imgSrc.length) % product.imgSrc.length;
+      document.getElementById('productModalImage').src = product.imgSrc[currentModalImageIndex];
   }
-});
-
-backToTopButton.addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-});
-
-
-// ... (your existing code)
-
-// Carousel functionality
-
-
-
-
-
-
-// Add swipe functionality for carousel on desktop
-const carousel = document.querySelector('.carousel');
-let isDragging = false;
-let startX;
-let currentX;
-
-carousel.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    startX = e.clientX;
-});
-
-carousel.addEventListener('mousemove', (e) => {
-    if (!isDragging) return;
-    currentX = e.clientX;
-});
-
-carousel.addEventListener('mouseup', () => {
-    if (!isDragging) return;
-    isDragging = false;
-    const diff = startX - currentX;
-    if (diff > 50) { // Swipe left
-        plusSlides(1);
-    } else if (diff < -50) { // Swipe right
-        plusSlides(-1);
-    }
-});
-
-// ... (rest of your existing code)
-
-
-
-
-function changeModalImage(direction) {
-    const product = products[currentProductIndex];
-    currentModalImageIndex = (currentModalImageIndex + direction + product.imgSrc.length) % product.imgSrc.length;
-    document.getElementById('productModalImage').src = product.imgSrc[currentModalImageIndex];
-}
-
-
-const modalImageContainer = document.querySelector('.modal-image-container');
-
-
-modalImageContainer.addEventListener('mousedown', (e) => {
-    startX = e.clientX;
-});
-
-modalImageContainer.addEventListener('mousemove', (e) => {
-    if (startX) {
-        moveX = e.clientX;
-    }
-});
-
-modalImageContainer.addEventListener('mouseup', () => {
-    if (startX && moveX) {
-        const diff = startX - moveX;
-        if (Math.abs(diff) > 50) { // threshold for swipe
-            changeModalImage(diff > 0 ? 1 : -1);
-        }
-    }
-    startX = moveX = null;
-});
-
-modalImageContainer.addEventListener('mouseleave', () => {
-    startX = moveX = null;
-});
+  
+  const modalImageContainer = document.querySelector('.modal-image-container');
+  
+  modalImageContainer.addEventListener('mousedown', (e) => {
+      startX = e.clientX;
+  });
+  
+  modalImageContainer.addEventListener('mousemove', (e) => {
+      if (startX) {
+          moveX = e.clientX;
+      }
+  });
+  
+  modalImageContainer.addEventListener('mouseup', () => {
+      if (startX && moveX) {
+          const diff = startX - moveX;
+          if (Math.abs(diff) > 50) { // threshold for swipe
+              changeModalImage(diff > 0 ? 1 : -1);
+          }
+      }
+      startX = moveX = null;
+  });
+  
+  modalImageContainer.addEventListener('mouseleave', () => {
+      startX = moveX = null;
+  });
+  
+  // New dropdown and category filtering functionality
+  const dropdowns = document.querySelectorAll('.dropdown');
+  
+  // Function to populate the category dropdown
+  function populateCategoryDropdown() {
+      const categories = new Set();
+      products.forEach(product => {
+          product.Category.forEach(category => categories.add(category));
+      });
+  
+      // Clear existing content
+      categoryDropdown.innerHTML = '';
+  
+      // Add "All Products" option
+      const allProductsLink = document.createElement('a');
+      allProductsLink.href = '#';
+      allProductsLink.textContent = 'All Products';
+      allProductsLink.addEventListener('click', (e) => {
+          e.preventDefault();
+          filterProducts('All Products');
+      });
+      categoryDropdown.appendChild(allProductsLink);
+  
+      // Add category options
+      categories.forEach(category => {
+          const link = document.createElement('a');
+          link.href = '#';
+          link.textContent = category;
+          link.addEventListener('click', (e) => {
+              e.preventDefault();
+              filterProducts(category);
+          });
+          categoryDropdown.appendChild(link);
+      });
+  }
+  
+  // Function to filter and display products
+  function filterProducts(category) {
+      const filteredProducts = category === 'All Products' 
+          ? products 
+          : products.filter(product => product.Category.includes(category));
+  
+      displayProducts(filteredProducts);
+      applySwipeListeners();
+  
+      // Close the dropdown after selection
+      categoryDropdown.classList.remove('active');
+      // Update category toggle text (optional)
+      categoryToggle.textContent = 'Categories: ' + category;
+  }
+  
+  // Call the function to populate the dropdown
+  populateCategoryDropdown();
+  
+  // Close dropdowns when clicking outside
+  document.addEventListener('click', (event) => {
+      if (!event.target.matches('.dropbtn') && !event.target.closest('.dropdown-content')) {
+          dropdowns.forEach(dropdown => {
+              dropdown.classList.remove('active');
+          });
+      }
+  });
+  
+  // Close menu and dropdowns when resizing to desktop view
+  window.addEventListener('resize', () => {
+      if (window.innerWidth > 768) {
+          navbarMenu.classList.remove('active');
+          dropdowns.forEach(dropdown => {
+              dropdown.classList.remove('active');
+          });
+      }
+  });
+  
+  // Initialize the page
+  document.addEventListener('DOMContentLoaded', () => {
+      displayProducts(products);
+      applySwipeListeners();
+      populateCategoryDropdown();
+  });
+  
+  // Make sure these functions are available globally
+  window.changeCardImage = changeCardImage;
+  window.openModal = openModal;
+  window.formatPriceRange = formatPriceRange;
+  window.filterProducts = filterProducts;
+  

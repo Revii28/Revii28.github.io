@@ -18,6 +18,7 @@ const products = [
     colors: [
   '3in1 Hitam'
 ],
+Category: ['Handphone & Tablet'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1'
   },
@@ -40,6 +41,7 @@ const products = [
     colors: [
   '4in1 Gold-Hitam'
 ],
+Category: ['Handphone & Tablet'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/kabel-data-4in1-fast-charging-kabel-cas-4in1-type-c-usb-lightning-tipe-c'
   },
@@ -118,6 +120,7 @@ const products = [
   'Hitam - 42',
   'Hitam - 43'
 ],
+Category: ['Fashion Pria', 'Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-sneakers-jintu-pria-bg-115-1'
   },
@@ -146,6 +149,7 @@ const products = [
   'L',
   'XL'
 ],
+Category: ['Fashion Pria'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/jeans-sobek-destroy-biowash-ukuran-l-xl-1'
   },
@@ -171,6 +175,7 @@ const products = [
   'Black',
   'Cream'
 ],
+Category: ['Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sariel-tas-wanita-shoulderbag-motif-kotak-3158'
   },
@@ -234,6 +239,7 @@ const products = [
   'Hitam - Coklat 39',
   'Hitam - Coklat 40'
 ],
+Category: ['Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sandal-wedges-wanita-terbaru-tali-sambung-bg-964-1'
   },
@@ -302,6 +308,7 @@ const products = [
   'Pink - 39',
   'Pink - 40'
 ],
+Category: ['Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-sneaker-wanita-gaya-korea-love-bg-837-1'
   },
@@ -327,6 +334,7 @@ const products = [
   'Cream',
   'Hitam'
 ],
+Category: ['Kesehatan','Kecantikan'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/korset-celana-infrared-pengencang-pinggang-pants-infrared-3-in-1-korset-stocking-pelangsing-perut'
   },
@@ -379,6 +387,7 @@ const products = [
   'Cream - 39',
   'Cream - 40',
 ],
+Category: ['Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sandal-gunung-peninggi-badan-model-gladiator-silang-wanita-k-19-bg-814-1'
   },
@@ -431,6 +440,7 @@ const products = [
   'Putih - 39',
   'Putih - 40',
 ],
+Category: ['Fashion Wanita'],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-terbaru-sneakers-wanita-m-pasir--01-bg-810'
   }
