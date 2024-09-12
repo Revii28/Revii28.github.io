@@ -704,15 +704,15 @@ const products = [
   ]
 ],
     imgSrc: [
-  '/public/images/1726124378830.jpg',
-  '/public/images/1726124378832.jpg',
-  '/public/images/1726124378834.jpg',
-  '/public/images/1726124378838.jpg',
-  '/public/images/1726124378839.jpg',
-  '/public/images/1726124378840.jpg',
-  '/public/images/1726124378843.jpg',
-  '/public/images/1726124378847.jpg',
-  '/public/images/1726124378848.jpg'
+      '/public/images/1726124378848.jpg',
+      '/public/images/1726124378847.jpg',
+      '/public/images/1726124378840.jpg',
+      '/public/images/1726124378839.jpg',
+      '/public/images/1726124378838.jpg',
+      '/public/images/1726124378834.jpg',
+      '/public/images/1726124378832.jpg',
+      '/public/images/1726124378830.jpg',
+      '/public/images/1726124378843.jpg', 
 ],
     description: 'Alat penirus wajah v shape 3d shape oval face slimming belt face lift up belt penirus pelangsing wajah\r\n\r\nSemakin tua dan karena efek gravitasi, otot2 akan mengendur dan double chin (pipi yg turun) akan mulai terlihat, namun kini hadir 3D shape oval face lift merupakan produk rekomendasi ahli kecantikan Jepang untuk membentuk wajah.\r\n\r\nFungsi utama 3D shape oval face lift ialah\r\n\r\nuntuk mengangkat pipi dan dagu yang turun,\r\n\r\nmerampingkan & mengencangkan wajah,\r\n\r\nmengurangi lemak dibagian wajah dan-membentuk wajah oval yang diidamkan banyak orang.\r\n\r\nWajah oval selain lebih menarik juga lebih fotogenik di depan kamera\r\n\r\nFEATURES :\r\n\r\nMudah dibersihkan Bahan halus ; 89% Polyester, 11% Spandex, dan tidak akan menyebabkan sakit ataupun bekas pada wajah.Gunakan Produk ini setiap malam sebelum tidur (bisa juga dipakai saat tidur) dan dapatkan permukaan kulit wajah yang kencang dan lebih ramping.\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
     rating: '4.8 (5.382 Penilaian)',
