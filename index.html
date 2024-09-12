@@ -22,31 +22,37 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">   
     
     </head>
-  <body class="body">
-    <!-- Navbar -->
-<!-- Ubah struktur HTML -->
-<nav class="navbar">
-  <a href="/index.html" class="navbar-brand">Rhea Store</a>
-  <div class="category-container">
-    <button class="category-toggle" id="categoryToggle"><b>Categories</b></button>
-    <div class="category-dropdown" id="categoryDropdown">
-      <!-- Categories will be dynamically populated here -->
-    </div>
-  </div>
+    <body class="body">
+      <!-- Navbar -->
+      <!-- Ubah struktur HTML -->
+      <nav class="navbar">
+        <a href="/index.html" class="navbar-brand">Rhea Store</a>
+        <button class="navbar-toggle" id="navbarToggle">☰</button>
+  
   
   <ul class="navbar-menu" id="navbarMenu">
     <li><a href="/index.html" class="active">Home</a></li>
     <li><a href="/page/main/Contact/Contact.html">Contact</a></li>
     <li><a href="/page/main/About/About.html">About</a></li>
+    <li><div class="category-container">
+      <a href="#" class="category-toggle" id="categoryToggle">Categories</a>
+      <div class="category-dropdown" id="categoryDropdown">
+        <!-- Categories will be dynamically populated here -->
+      </div>
+    </div></li>
+    
   </ul>
   
   <div class="navbar-icons">
+    
     <button id="searchToggle"><i class="fas fa-search"></i></button>
   </div>
-  <button class="navbar-toggle" id="navbarToggle">☰</button>
+  
+  
 </nav>
 
     <div class="search-popup" id="searchPopup">
+      
       
         <div class="search-popup-content">
             <span class="close" id="closeSearchPopup">&times;</span>
