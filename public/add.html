@@ -171,7 +171,8 @@
         </div>
         <div class="form-group">
           <label for="rating"><i class="fas fa-star"></i> Rating:</label>
-          <input type="text" id="rating" name="rating" required>
+          <input type="number" id="rating" name="rating" step="0.1" min="1" max="5" required>
+          <input type="hidden" id="fullRating" name="fullRating">
         </div>
         <div class="form-group">
           <label for="Category"><i class="fas fa-tags"></i> Category:</label>
@@ -207,30 +208,61 @@
   </div>
   
   <script>
-document.getElementById('productForm').addEventListener('submit', function(event) {
-  event.preventDefault();
-  
-  const formData = new FormData(this);
-  
-  fetch('http://localhost:4000/upload', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
     }
-    return response.json();
-  })
-  .then(data => {
-    alert(data.message);
-    this.reset();
-  })
-  .catch(error => {
-    console.error('Error:', error);
-    alert('Error: ' + error.message);
-  });
-});
+    
+    function formatRating(rating) {
+      const randomThousands = getRandomInt(1, 9);
+      const randomHundreds = getRandomInt(0, 999);
+      const totalRatings = randomThousands * 1000 + randomHundreds;
+      return `${rating} (${totalRatings} Penilaian)`;
+    }
+    
+    function updateFullRating() {
+      const rating = document.getElementById('rating').value;
+      if (rating && parseFloat(rating) >= 1 && parseFloat(rating) <= 5) {
+        const formattedRating = parseFloat(rating).toFixed(1);
+        const fullRating = formatRating(formattedRating);
+        document.getElementById('fullRating').value = fullRating;
+        console.log('Full rating updated:', fullRating); // For debugging
+      }
+    }
+    
+    document.getElementById('rating').addEventListener('input', updateFullRating);
+    
+    document.getElementById('productForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      
+      updateFullRating(); // Ensure fullRating is up to date
+      
+      const formData = new FormData(this);
+      
+      // Log formData contents for debugging
+      for (let [key, value] of formData.entries()) { 
+        console.log(key, value);
+      }
+    
+      fetch('http://localhost:4000/upload', {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        alert(data.message);
+        this.reset();
+        document.getElementById('fullRating').value = '';
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error: ' + error.message);
+      });
+    });
   </script>
 </body>
 </html>

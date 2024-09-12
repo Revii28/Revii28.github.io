@@ -530,5 +530,200 @@ const products = [
   ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/skincare-innerlight-mencerahkan-memutihkan-wajah-bpom-halal-mui'
+  },
+  { 
+    id: 13,
+    name: 'Pretty Red Lip Tatto BPOM',
+    price: [
+  [
+    99000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726114961490.jpg',
+  '/public/images/1726114961492.jpg',
+  '/public/images/1726114961494.jpg',
+  '/public/images/1726114961495.jpg',
+  '/public/images/1726114961497.jpg',
+  '/public/images/1726114961499.jpg'
+],
+    description: '5 Manfaat Lip Tatto\r\n\r\n- Memerahkan bibir lebih lama\r\n\r\n- Membantu Melembabkan Bibir\r\n\r\n- Membantu Merawat Bibir\r\n\r\n- Mencerahkan Bibir Gelap\r\n\r\nCara Pemakaian :\r\n\r\nPastikan bibir dalam keadaan bersih, aplikasikan Lip Tattoo pada bibir lalu diamkan selama 15 menit atau hingga kering dan membentuk lapisan yang dapat dikelupas, setelah itu buka lapisan Lip Tattoo secara perlahan.\r\n\r\nPerhatian : Hindari penggunaan di area luka. Simpan di tempat yang kering, sejuk dan terhindar dari sinar matahari secara langsung. Hentikan penggunaan jika terjadi iritasi atau alergi.\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.9 (7.182 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Pink'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/pretty-red-lip-tatto-bpom'
+  },
+  { 
+    id: 14,
+    name: 'PIW PIW Crease Lightening Cream Krim Ketiak',
+    price: [
+  [
+    119000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726115907719.jpg',
+  '/public/images/1726115907721.jpg',
+  '/public/images/1726115907723.jpg',
+  '/public/images/1726115907725.jpg',
+  '/public/images/1726115907726.jpg'
+],
+    description: 'PIW PIW Crease Lightening Cream adalah cream khusus untuk merawat ketiak dan area lipatan kulit, diformulasikan dengan bahan-bahan alami seperti Centella Asiatica dan Ekstrak Kefir Milk, bantu untuk mencerahkan dan melembabkan kulit area lipatan.\r\n\r\nFITUR & BENEFIT:\r\n\r\n✅Mencerahkan kulit\r\n\r\n✅Meratakan warna kulit', // Use JSON.stringify for description
+    rating: '4.8 (6.282 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Putih'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/piw-piw-crease-lightening-cream-krim-ketiak'
+  },
+  { 
+    id: 15,
+    name: 'V-Comb Sisir Kutu Elektrik Flea Vacuum Comb',
+    price: [
+  [
+    115000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726116555002.jpg',
+  '/public/images/1726116555001.jpg',
+  '/public/images/1726116555000.jpg',
+  '/public/images/1726116554999.jpg'
+],
+    description: 'Sisir Penghilang Kutu Rambut Berteknologi Terbaru merupakan produk terbaru tanpa menggunakan bahan kimia berbahaya.\r\n\r\nDiciptakan khusus untuk menghilangkan kutu rambut, Anda dapat juga menggunakannya untuk binatang peliharaan Anda.\r\n\r\nIsi paket :\r\n\r\n1x Sisir kutu (plastik abs keras)\r\n\r\n2x Filter\r\n\r\nBuku Panduan\r\n\r\nSikat pembersih\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (6.282 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Putih - Biru'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/v-comb-sisir-kutu-elektrik-flea-vacuum-comb-1'
+  },
+  { 
+    id: 16,
+    name: 'Pensil Alis / Eyebrow 4 In Tint Waterproof',
+    price: [
+  [
+    55500
+  ],
+  [
+    55500
+  ],
+  [
+    55500
+  ],
+  [
+    55500
+  ],
+  [
+    55500
+  ],
+  [
+    72000
+  ],
+  [
+    61000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726117657564.jpg',
+  '/public/images/1726117657563.jpg',
+  '/public/images/1726117657560.jpg',
+  '/public/images/1726117657561.jpg',
+  '/public/images/1726117657562.jpg',
+  '/public/images/1726117657564.jpg'
+],
+    description: 'Nama Produk : Pensil Alis / Eyebrow 4 In Tint Waterproof\r\n\r\nIsi Bersih : 1\r\n\r\nManfaat : 15gr\r\n\r\nMasa Kadaluwarsa : 2 tahun\r\n\r\nPaket Pengiriman : 1 x Pensil Alis\r\n\r\nPensil alis ini memiliki ujung tip seperti garpu yang memiliki 4 garis sehingga pada saat pengaplikasian akan dapat membentuk alis yang indah dan cepat tanpa membuang banyak waktu. Tersedia Pilihan warna menarik yang dapat Anda sesuaikan dengan warna kesukaan Anda.\r\n\r\nPensil alis ini akan mengering dengan cepat setelah diaplikasikan, dan tidak mudah pudar. Anda akan semakin percaya diri dengan eyebrow brush yang memberikan tampilan alis mata yang lebih tebal.\r\n\r\n#Cara pemakaian :\r\n\r\n1. Angkat ujung pena 45 derajat lalu gambar alis di sepanjang arah pertumbuhan alis.\r\n\r\n2. Isi alis dengan area lebar dan gunakan area sempit untuk menggambar alis.\r\n\r\n3. Mengisi celah untuk menciptakan tampilan alis yang sempurna.\r\n\r\n=======================================\r\n\r\nPensil alis dengan aplikator berbentuk sisir dapat digunakan untuk membuat serat-serat halus pada alis, plusnya lagi eyebrow ini longlasting dan tahan air.\r\n\r\nKeunggulan Suake 4 TIP EYEBROW :\r\n\r\n* Membuat alis terlihat seperti disulam,\r\n\r\n* 24 jam tahan air,\r\n\r\n* Dapat digunakan untuk membuat serat alis,\r\n\r\n* Tidak luntur.\r\n\r\nFitur Produk :\r\n\r\n- Berkat desain kepala pena empat cabang, pena alis ini lebih mudah untuk menggambar alis alami daripada pensil alis biasa di pasaran. Anda bisa dengan mudah mendapatkan alis yang natural, meningkatkan riasan alami.\r\n\r\n(Waterproof & Sweatproof) - Formula tahan lama kami memastikan bahwa riasan Anda akan bertahan sepanjang hari tanpa luntur atau luntur melalui keringat, hujan, dan bahkan olahraga air yang mengurangi kekurangan akibat pudarnya alis.\r\n\r\n(Mudah Diaplikasikan) - Dengan kepala empat ujung garpu yang unik, Anda dapat menggambar kontur alis dan terus mewarnai bagian dalam alis secara merata untuk langkah terakhir, menciptakan alis yang cerah dan alami.\r\n\r\n(Simple Removal) - Pena alis microblading ini dapat dengan mudah dihilangkan dengan penghapus riasan atau minyak pembersih tanpa residu. Membuat makeup remover di malam hari dengan mudah dan simpel sehingga Anda memiliki waktu yang lebih santai.\r\n\r\n(Cocok untuk Berbagai Alis) - Dengan pensil alis ini, Anda dapat dengan mudah mencocokkan riasan apa pun dengan bentuk alis apa pun yang Anda inginkan. Pada saat yang sama, Anda dapat memilih warna yang berbeda sesuai dengan warna dan preferensi rambut Anda.', // Use JSON.stringify for description
+    rating: '4.8 (8.382 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'LIGHT BROWN',
+  'DARK BROWN',
+  'RED BROWN',
+  'GREY BROWN',
+  'BLACK',
+  'PAKET 4PCS',
+  'PAKET 2 PCS'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/pensil-alis-eyebrow-4-in-tint-waterproof'
+  },
+  { 
+    id: 17,
+    name: 'Skinmology 3in1 Morning Routine Lightening Booster Series by Bening Indonesia',
+    price: [
+  [
+    230000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726119174585.jpg',
+  '/public/images/1726119174588.jpg',
+  '/public/images/1726119174592.jpg',
+  '/public/images/1726119174576.jpg',
+  '/public/images/1726119174580.jpg',
+  '/public/images/1726119174582.jpg',
+  '/public/images/1726119174583.jpg',
+  '/public/images/1726119174596.jpg',
+  '/public/images/1726119174600.jpg'
+],
+    description: 'Skinmology Morning Routine Lightening Booster Series by Bening Indonesia\r\nSkinmology menghadirkan rangkaian skincare terbaru yang diformulasikan dengan bahan aktif terbaik dari Eropa yang disesuaikan dengan kebutuhan kulit wanita Indonesia.\r\n\r\nHero ingredients\r\n3% Achromaxyl™ dan Niacinamide.\r\n\r\nDermatology tested, for all skin type, BPOM, Halal, dr. Oky approved, teruji klinis uji invivo & invitro\r\n\r\nPaket Lightening Booster merupakan produk perawatan kulit yang dirancang khusus untuk:\r\nmencerahkan kulit, meratakan warna kulit, melembapkan kulit dan membuat kulit tampak bercahaya.\r\n\r\nManfaat:\r\n\r\nLightening Facial Wash\r\n\r\nMencerahkan kulit wajah, menyamarkan bintik hitam di wajah dan sebagai anti aging.\r\n\r\nMencerahkan kulit wajah, meratakan warna kulit, menyamarkan bekas jerawat.\r\n\r\nMelembapkan kulit, menyamarkan garis-garis halus kerutan pada kulit.\r\n\r\nLightening Sunscreen\r\n\r\nMencerahkan kulit wajah, menyamarkan bintik hitam di wajah dan sebagai anti aging.\r\n\r\nMencerahkan kulit wajah, meratakan warna kulit, menyamarkan bekas jerawat.\r\n\r\nMenjaga kelembapan kulit, merawat skin barrier.\r\n\r\nMoisturizing Gel Power\r\n\r\nMembantu mempertahankan kelembapan kulit.\r\n\r\nMampu menyamarkan garis-garis halus kerutan pada kulit, sehingga dapat meremajakan kulit wajah.\r\n\r\nMembantu menyeimbangkan kesehatan pH level kulit.\r\n\r\nDapat memperbaiki penampilan pori-pori, meningkatkan ketahanan skin barrier (lapisan pelindung kulit), hingga mengontrol produksi sebum.\r\n\r\nDetail Produk:\r\n\r\n1 Lightening Facial Wash, POM NA18231209740\r\n\r\n1 Lightening Sunscreen, POM NA18231702300\r\n\r\n1 Moisturizing Gel Power, POM NA18230113711\r\n\r\nCara Pemakaian:\r\n\r\nFacial Wash: Basahi wajah dengan air, tuangkan secukupnya pada telapak tangan dan usapkan ke seluruh wajah dengan gerakan melingkar keluar. Bilas dengan air hingga bersih.\r\n\r\nMoisturizing Gel Power : Aplikasikan pada wajah secara merata dan pijat perlahan agar moisturizer terserap optimal. Dapat digunakan pagi dan malam.\r\n\r\nSunscreen : Usapkan secara tipis dan merata pada kulit wajah yang sudah dibersihkan. Gunakan pada pagi/siang hari sebelum melakukan aktivitas diluar ruangan', // Use JSON.stringify for description
+    rating: '4.8 (4.382 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Grey'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/skinmology-3in1-morning-routine-lightening-booster-series-by-bening-s-indonesia'
+  },
+  { 
+    id: 18,
+    name: 'Sabuk Penirus Pipi Wajah Muka Green Face Belt Penghilang Double Chin',
+    price: [
+  [
+    69000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726124378830.jpg',
+  '/public/images/1726124378832.jpg',
+  '/public/images/1726124378834.jpg',
+  '/public/images/1726124378838.jpg',
+  '/public/images/1726124378839.jpg',
+  '/public/images/1726124378840.jpg',
+  '/public/images/1726124378843.jpg',
+  '/public/images/1726124378847.jpg',
+  '/public/images/1726124378848.jpg'
+],
+    description: 'Alat penirus wajah v shape 3d shape oval face slimming belt face lift up belt penirus pelangsing wajah\r\n\r\nSemakin tua dan karena efek gravitasi, otot2 akan mengendur dan double chin (pipi yg turun) akan mulai terlihat, namun kini hadir 3D shape oval face lift merupakan produk rekomendasi ahli kecantikan Jepang untuk membentuk wajah.\r\n\r\nFungsi utama 3D shape oval face lift ialah\r\n\r\nuntuk mengangkat pipi dan dagu yang turun,\r\n\r\nmerampingkan & mengencangkan wajah,\r\n\r\nmengurangi lemak dibagian wajah dan-membentuk wajah oval yang diidamkan banyak orang.\r\n\r\nWajah oval selain lebih menarik juga lebih fotogenik di depan kamera\r\n\r\nFEATURES :\r\n\r\nMudah dibersihkan Bahan halus ; 89% Polyester, 11% Spandex, dan tidak akan menyebabkan sakit ataupun bekas pada wajah.Gunakan Produk ini setiap malam sebelum tidur (bisa juga dipakai saat tidur) dan dapatkan permukaan kulit wajah yang kencang dan lebih ramping.\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (5.382 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Green'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/sabuk-penirus-pipi-wajah-muka-green-face-belt-penghilang-double-chin'
   }
 ];

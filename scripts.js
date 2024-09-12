@@ -231,23 +231,6 @@ function changeCardImage(productIndex, delta) {
     card.setAttribute('data-current-image', currentImageIndex);
 }
 
-// Carousel functionality
-let slideIndex = 0;
-showSlides();
-
-function plusSlides(n) {
-    slideIndex += n;
-    showSlides();
-}
-
-function showSlides() {
-    const slides = document.querySelectorAll('.carousel-slide');
-    slides.forEach(slide => {
-        slide.classList.remove('active');
-    });
-    slideIndex = (slideIndex + slides.length) % slides.length;
-    slides[slideIndex].classList.add('active');
-}
 
 // Contact form functionality
 document.getElementById('contactForm').addEventListener('submit', function(event) {
@@ -413,27 +396,8 @@ window.addEventListener('scroll', () => {
   let isDragging = false;
   let startX;
   let currentX;
-  
-  carousel.addEventListener('mousedown', (e) => {
-      isDragging = true;
-      startX = e.clientX;
-  });
-  
-  carousel.addEventListener('mousemove', (e) => {
-      if (!isDragging) return;
-      currentX = e.clientX;
-  });
-  
-  carousel.addEventListener('mouseup', () => {
-      if (!isDragging) return;
-      isDragging = false;
-      const diff = startX - currentX;
-      if (diff > 50) { // Swipe left
-          plusSlides(1);
-      } else if (diff < -50) { // Swipe right
-          plusSlides(-1);
-      }
-  });
+
+
   
   function changeModalImage(direction) {
       const product = products[currentProductIndex];
