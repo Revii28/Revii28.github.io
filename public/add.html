@@ -9,13 +9,13 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
     :root {
-      --primary-color: #ff6b6b;
-      --secondary-color: #4ecdc4;
-      --background-color: #f7fff7;
-      --text-color: #1a535c;
+      --primary-color: #3498db;
+      --secondary-color: #2980b9;
+      --background-color: #ecf0f1;
+      --text-color: #34495e;
       --input-background: #fff;
-      --input-border: #e6e6e6;
-      --input-focus: #4ecdc4;
+      --input-border: #bdc3c7;
+      --input-focus: #3498db;
     }
 
     body {
@@ -70,7 +70,7 @@
 
     input, textarea {
       width: 100%;
-      padding: 12px;
+      padding: 8px;
       border-radius: 6px;
       border: 2px solid var(--input-border);
       font-size: 14px;
@@ -80,19 +80,19 @@
     input:focus, textarea:focus {
       outline: none;
       border-color: var(--input-focus);
-      box-shadow: 0 0 0 3px rgba(78, 205, 196, 0.2);
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
     }
 
     textarea {
       resize: vertical;
-      min-height: 80px;
+      min-height: 60px;
     }
 
     button {
       background-color: var(--primary-color);
       color: white;
       border: none;
-      padding: 12px 24px;
+      padding: 10px 20px;
       border-radius: 6px;
       cursor: pointer;
       font-size: 16px;
@@ -103,7 +103,7 @@
     }
 
     button:hover {
-      background-color: #ff4757;
+      background-color: var(--secondary-color);
     }
 
     .file-input-wrapper {
@@ -127,7 +127,7 @@
       border: 2px solid var(--primary-color);
       color: var(--primary-color);
       background-color: transparent;
-      padding: 10px 20px;
+      padding: 8px 15px;
       border-radius: 6px;
       font-size: 14px;
       font-weight: 500;
@@ -148,10 +148,6 @@
       color: var(--text-color);
     }
 
-    .icon {
-      margin-right: 5px;
-    }
-
     @media (max-width: 768px) {
       .form-group {
         flex: 0 0 100%;
@@ -161,45 +157,41 @@
 </head>
 <body>
   <div class="container">
-    <h1><i class="fas fa-upload icon"></i> Upload Your Product</h1>
+    <h1><i class="fas fa-upload"></i> Upload Your Product</h1>
     <form id="productForm" enctype="multipart/form-data">
       <div class="form-row">
         <div class="form-group">
-          <label for="name"><i class="fas fa-tag icon"></i> Product Name:</label>
+          <label for="name"><i class="fas fa-tag"></i> Product Name:</label>
           <input type="text" id="name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="price"><i class="fas fa-money-bill-wave icon"></i> Price:</label>
-          <input type="text" id="price" name="price" required placeholder="Enter prices separated by commas">
+          <label for="price">Price:</label>
+          <input type="text" id="price" name="price" required placeholder="Enter price or prices separated by commas">
           <small>For multiple prices, separate them with commas. E.g., 100, 200, 300</small>
         </div>
         <div class="form-group">
-          <label for="rating"><i class="fas fa-star icon"></i> Rating:</label>
-          <input type="text" id="rating" name="rating" required placeholder="E.g., 4.8 (267 Penilaian)">
-        </div>
-        
-          
-          <input type="hidden" id="protection" name="protection" value="Melindungi barang belanjaan dari kerusakan hingga 6 bulan" required>
-        
-        <div class="form-group">
-          <label for="colors"><i class="fas fa-palette icon"></i> Colors:</label>
-          <input type="text" id="colors" name="colors" required placeholder="Enter colors separated by commas">
-        </div>
-        <input type="hidden" id="stock" name="stock" value="199">
-        <div class="form-group">
-          <label for="category"><i class="fas fa-tags icon"></i> Category:</label>
-          <input type="text" id="category" name="category" required placeholder="Enter categories separated by commas">
+          <label for="rating"><i class="fas fa-star"></i> Rating:</label>
+          <input type="text" id="rating" name="rating" required>
         </div>
         <div class="form-group">
-          <label for="linkPayment"><i class="fas fa-link icon"></i> Payment Link:</label>
+          <label for="Category"><i class="fas fa-tags"></i> Category:</label>
+          <input type="text" id="Category" name="Category" required placeholder="Enter categories separated by commas">
+          <small>For multiple categories, separate them with commas. E.g., Electronics, Accessories</small>
+        </div>
+        <div class="form-group">
+          <label for="colors"><i class="fas fa-palette"></i> Colors:</label>
+          <input type="text" id="colors" name="colors" required>
+        </div>
+        <div class="form-group">
+          <label for="linkPayment"><i class="fas fa-link"></i> Payment Link:</label>
           <input type="url" id="linkPayment" name="linkPayment" required>
         </div>
         <div class="form-group">
-          <label for="description"><i class="fas fa-align-left icon"></i> Description:</label>
+          <label for="description"><i class="fas fa-align-left"></i> Description:</label>
           <textarea id="description" name="description" required></textarea>
         </div>
         <div class="form-group">
-          <label for="images"><i class="fas fa-images icon"></i> Product Images:</label>
+          <label for="images"><i class="fas fa-images"></i> Product Images:</label>
           <div class="file-input-wrapper">
             <button type="button" class="btn">Choose Files</button>
             <input type="file" id="images" name="images" multiple accept="image/png, image/jpeg" required>
@@ -207,40 +199,38 @@
           <div id="file-input-name" class="file-input-name"></div>
         </div>
       </div>
-      <button type="submit"><i class="fas fa-paper-plane icon"></i> Submit Product</button>
+      <!-- Hidden inputs for Protection and Stock -->
+      <input type="hidden" name="protection" value="Melindungi barang belanjaan dari kerusakan hingga 6 bulan">
+      <input type="hidden" name="stock" value="199">
+      <button type="submit"><i class="fas fa-paper-plane"></i> Submit Product</button>
     </form>
   </div>
-
+  
   <script>
-    document.getElementById('productForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      const formData = new FormData(this);
-      formData.set('price', JSON.stringify(formData.get('price').split(',').map(price => [Number(price.trim())])));
-      formData.set('colors', JSON.stringify(formData.get('colors').split(',')));
-      formData.set('category', JSON.stringify(formData.get('category').split(',')));
-
-      fetch('http://localhost:4000/upload', {
-        method: 'POST',
-        body: formData
-      })
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok');
-        }
-        return response.json();
-      })
-      .then(data => {
-        alert(data.message);
-        this.reset();
-        document.getElementById('protection').value = "Melindungi barang belanjaan dari kerusakan hingga 6 bulan";
-        document.getElementById('stock').value = "199";
-      })
-      .catch(error => {
-        console.error('Error:', error);
-        alert('Error: ' + error.message);
-      });
-    });
+document.getElementById('productForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(this);
+  
+  fetch('http://localhost:4000/upload', {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    alert(data.message);
+    this.reset();
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    alert('Error: ' + error.message);
+  });
+});
   </script>
 </body>
 </html>

@@ -18,7 +18,9 @@ const products = [
     colors: [
   '3in1 Hitam'
 ],
-Category: ['Handphone & Tablet'],
+    Category: [
+    'Handphone & Tablet'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/kabel-data-charger-fast-charging-3-in-1'
   },
@@ -41,7 +43,9 @@ Category: ['Handphone & Tablet'],
     colors: [
   '4in1 Gold-Hitam'
 ],
-Category: ['Handphone & Tablet'],
+    Category: [
+    'Handphone & Tablet'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/kabel-data-4in1-fast-charging-kabel-cas-4in1-type-c-usb-lightning-tipe-c'
   },
@@ -120,7 +124,10 @@ Category: ['Handphone & Tablet'],
   'Hitam - 42',
   'Hitam - 43'
 ],
-Category: ['Fashion Pria', 'Fashion Wanita'],
+    Category: [
+    'Fashion Pria',
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-sneakers-jintu-pria-bg-115-1'
   },
@@ -149,7 +156,9 @@ Category: ['Fashion Pria', 'Fashion Wanita'],
   'L',
   'XL'
 ],
-Category: ['Fashion Pria'],
+    Category: [
+    'Fashion Pria'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/jeans-sobek-destroy-biowash-ukuran-l-xl-1'
   },
@@ -175,7 +184,9 @@ Category: ['Fashion Pria'],
   'Black',
   'Cream'
 ],
-Category: ['Fashion Wanita'],
+    Category: [
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sariel-tas-wanita-shoulderbag-motif-kotak-3158'
   },
@@ -239,7 +250,9 @@ Category: ['Fashion Wanita'],
   'Hitam - Coklat 39',
   'Hitam - Coklat 40'
 ],
-Category: ['Fashion Wanita'],
+    Category: [
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sandal-wedges-wanita-terbaru-tali-sambung-bg-964-1'
   },
@@ -308,7 +321,9 @@ Category: ['Fashion Wanita'],
   'Pink - 39',
   'Pink - 40'
 ],
-Category: ['Fashion Wanita'],
+    Category: [
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-sneaker-wanita-gaya-korea-love-bg-837-1'
   },
@@ -334,7 +349,10 @@ Category: ['Fashion Wanita'],
   'Cream',
   'Hitam'
 ],
-Category: ['Kesehatan','Kecantikan'],
+    Category: [
+    'Kesehatan',
+    'Kecantikan'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/korset-celana-infrared-pengencang-pinggang-pants-infrared-3-in-1-korset-stocking-pelangsing-perut'
   },
@@ -385,9 +403,11 @@ Category: ['Kesehatan','Kecantikan'],
   'Cream - 37',
   'Cream - 38',
   'Cream - 39',
-  'Cream - 40',
+  'Cream - 40'
 ],
-Category: ['Fashion Wanita'],
+    Category: [
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sandal-gunung-peninggi-badan-model-gladiator-silang-wanita-k-19-bg-814-1'
   },
@@ -438,10 +458,77 @@ Category: ['Fashion Wanita'],
   'Putih - 37',
   'Putih - 38',
   'Putih - 39',
-  'Putih - 40',
+  'Putih - 40'
 ],
-Category: ['Fashion Wanita'],
+    Category: [
+    'Fashion Wanita'
+  ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/sepatu-terbaru-sneakers-wanita-m-pasir--01-bg-810'
+  },
+  { 
+    id: 11,
+    name: 'Rak Kosmetik 3 Laci Plastik Rak Kosmetik 3 susun laci NEW Rak Kosmetik 3 Laci Plastik Rak Kosmetik 3 susun laci',
+    price: [
+  [
+    75000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726111837324.jpg',
+  '/public/images/1726111837326.jpg',
+  '/public/images/1726111837328.jpg',
+  '/public/images/1726111837329.jpg',
+  '/public/images/1726111837331.jpg',
+  '/public/images/1726111837334.jpg',
+  '/public/images/1726111837335.jpg'
+],
+    description: 'Produk ini terdiri dari 3 susun laci yang Fleksibel. Cocok untuk digunakan untuk menyimpan perlengkapan kosmetik anda!\r\n\r\nDeskripsi Produk :\r\n\r\n- Tersedia warna Putih\r\n\r\n- Terdiri dari 3 susun laci \r\n\r\n- Material Plastik Tebal\r\n\r\n- Size 27 x 17 x 24 Cm (3 susun)\r\n\r\n- Terdiri dari\r\n\r\n* 3 Laci\r\n\r\n* 6 Sekat Tempat Penyimpanan\r\n\r\nProduk sebelum dikirim sudah ditest dengan kondisi yang dipastikan aman, jika ada kerusakan kemungkinan dari pengiriman, karena paket yang terbanting.', // Use JSON.stringify for description
+    rating: '4.8 (8.982 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Putih'
+],
+    Category: [
+    'Souvenir & Kado'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/new-rak-kosmetik-3-laci-plastik-rak-kosmetik-3-susun-laci'
+  },
+  { 
+    id: 12,
+    name: 'SKINCARE INNERLIGHT MENCERAHKAN MEMUTIHKAN WAJAH BPOM HALAL MUI',
+    price: [
+  [
+    220000
+  ],
+  [
+    250000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726113846536.jpg',
+  '/public/images/1726113846545.jpg',
+  '/public/images/1726113846550.jpg',
+  '/public/images/1726113846554.jpg',
+  '/public/images/1726113846558.jpg',
+  '/public/images/1726113846560.jpg',
+  '/public/images/1726113846564.jpg',
+  '/public/images/1726113846567.jpg',
+  '/public/images/1726113846570.jpg',
+  '/public/images/1726113846573.jpg'
+],
+    description: '➡️ Acne Treatment :\r\n\r\nVarian ini diperuntukan untuk kulit oily, acne prone dan jerawat. Dalam kandungannya terdapat metode mikroenkapsulasi untuk mengangkat akar jerawat serta mengeringkan jerawat dan sebagai anti iritan.\r\n\r\n➡️ Expert :\r\n\r\nVarian ini berfungsi untuk kulit normal yg bermanfaat untuk whitening dan brightening. Dalam kandungannya ada fermentasi bakteri yaitu Ectoin dan Melazero yang mampu menahan melanosit untuk naik ke permukaan setelah di uji klinis. Terbukti cream ini mampu menghambat efek penuaan dini dan mencegah Breakout pasca pemakaian obat atau kortikosteroid.\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.9 (5.782 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Acne Treatment',
+  'Expert'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/skincare-innerlight-mencerahkan-memutihkan-wajah-bpom-halal-mui'
   }
 ];

@@ -40,6 +40,15 @@ function transformProductData(product) {
     colors = product.colors.split(',').map(color => color.trim());
   }
 
+  let Category = [];
+  if (typeof product.category === 'string') {
+    Category = product.category.split(',').map(cat => cat.trim());
+  } else if (typeof product.Category === 'string') {
+    Category = product.Category.split(',').map(cat => cat.trim());
+  } else if (Array.isArray(product.Category)) {
+    Category = product.Category;
+  }
+
   const description = product.description || 'No description available.';
   
   // Remove backticks from description if they are present
@@ -54,6 +63,7 @@ function transformProductData(product) {
     rating: product.rating || 'No rating',
     protection: product.protection || 'No protection information',
     colors: colors.length ? colors : [],
+    Category: Category.length ? Category : [],
     stock: typeof product.stock === 'string' ? parseInt(product.stock, 10) : product.stock || 0,
     linkPayment: product.linkPayment || 'No link available'
   };
@@ -73,6 +83,7 @@ function formatProductData(products) {
     rating: '${product.rating}',
     protection: '${product.protection}',
     colors: ${JSON.stringify(product.colors, null, 2)},
+    Category: ${JSON.stringify(product.Category, null, 2).replace(/\n/g, '\n  ')},
     stock: ${product.stock},
     linkPayment: '${product.linkPayment}'
   }`.replace(/"(\w+)":/g, '$1:') // Remove quotes from keys
@@ -118,7 +129,8 @@ app.post('/upload', upload.array('images'), (req, res) => {
     if (existingProductIndex !== -1) {
       products[existingProductIndex] = {
         ...products[existingProductIndex],
-        ...transformedProductData
+        ...transformedProductData,
+        Category: transformedProductData.Category
       };
     } else {
       products.push(transformedProductData);
