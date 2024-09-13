@@ -15,7 +15,8 @@ const storage = multer.diskStorage({
   },
   filename: (req, file, cb) => {
     const ext = path.extname(file.originalname);
-    cb(null, `${Date.now()}${ext}`);
+    const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
+    cb(null, file.fieldname + '-' + uniqueSuffix + ext);
   }
 });
 
@@ -68,7 +69,6 @@ function transformProductData(product) {
     linkPayment: product.linkPayment || 'No link available'
   };
 }
-
 
 // Function to format product data as JavaScript object literal
 function formatProductData(products) {
@@ -147,9 +147,6 @@ app.post('/upload', upload.array('images'), (req, res) => {
     });
   });
 });
-
-
-
 
 app.use((err, req, res, next) => {
   console.error(err.stack);

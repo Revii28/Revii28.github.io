@@ -1059,5 +1059,527 @@ const products = [
   ],
     stock: 199,
     linkPayment: 'https://rheastore.orderonline.id/bor-portable-cordless-jld-12v-10mm-chuck-bor-besi-tembok-beton-1'
+  },
+  { 
+    id: 31,
+    name: 'Translucent Loose Setting Powder Bening`s Indonesia',
+    price: [
+  [
+    149000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726189904280.jpg',
+  '/public/images/1726189904294.jpg',
+  '/public/images/1726189904304.jpg',
+  '/public/images/1726189904308.jpg',
+  '/public/images/1726189904315.jpg'
+],
+    description: 'Loose Powder by Dr. Oky Pratama\r\nMenutrisi kulit dan Tekstur Lembut.\r\n\r\nManfaat:\r\n\r\n- Berfungsi Melindungi dari kerusakan kulit yang diakibatkan paparan buruk sinar matahari.\r\n\r\n- Berfungsi Melembabkan dan mencegah kerusakan kulit dari radikal bebas, Antioksidan, Menghaluskan kulit, Membantu menutrisi kulit.\r\n\r\n- Berfungsi Menjaga kelembaban kulit, Mengandung antioksidan yang membantu, melawan radikal bebas Antiaging yang dapat mencegah penuaan dini.\r\n\r\nKlaim Product:\r\n\r\nTahan lama seharian (+/- 8 JAM) teksturnya halus,lembut dan memiliki partikel yang kecil sehingga cepat menyatu/ngeblend di wajah. ukurannya kecil, ringan, mudah dibawa, memudahkan touch up dan bisa sebagai setting make up dan tidak menempel atau meninggalkan noda (transferproof) ke pakaian. Mengurangi tampilan pori di wajah, memberikan efek blur/menyamarkan noda di wajah, tidak menyumbat pori sehingga tidak menyebabkan jerawat, aman digunakan untuk kulit yang berjerawat sekalipun. memberikan sentuhan akhir kulit smooth, flawless. Membantu mengontrol dan menyerap minyak berlebih diwajah tapi gak bikin kulit kering (dryness) dan kusam.\r\n\r\nBenefit Gratis Ongkir, Banyak Promo & Bonusnya Produk Resmi Bening’s Indonesia Produk Garansi Asli, Original (Jika produknya palsu, kami siap ganti uang Anda 25x lipat)\r\n\r\nPengiriman Cepat & Amanah Bisa COD | Bayar di Rumah. Aman banget.', // Use JSON.stringify for description
+    rating: '4.8 (5.556 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Ivory',
+  'Natural'
+],
+    Category: [
+    'Kecantikan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/translucent-loose-setting-powder-bening-s-indonesia'
+  },
+  { 
+    id: 32,
+    name: 'Kemoceng Teleskopik Pembersih Debu Gagang Panjang 2.8 Meter Sapu Microfiber Teleskopik Flexible',
+    price: [
+  [
+    68500
+  ]
+],
+    imgSrc: [
+  '/public/images/1726190201245.jpg',
+  '/public/images/1726190201246.jpg',
+  '/public/images/1726190201248.jpg',
+  '/public/images/1726190201249.jpg',
+  '/public/images/1726190201251.jpg'
+],
+    description: 'Deskripsi Kemoceng\r\n\r\nReady Stok :\r\n\r\nAlat pembersih debu kemoceng dengan tongkat teleskopik yang dapat diatur panjang – pendek nya. Berfungsi untuk membersihkan debu mobil, kaca, sofa, ac, kipas angin gantung, dan tempat2 tinggi. Kepala kemoceng lentur dapat ditekuk sehingga memudahkan bersih sudut yang sulit dijangkau\r\n\r\nSelain itu, masih ada beberapa keunggulan dari kemoceng :\r\n\r\n1.) Dilengkapi dengan tongkat teleskopik yang dapat diatur panjang-pendek\r\n\r\n2.) Tongkat teleskopik dapat dipanjangkan hingga 255 cm. \r\n\r\n3.) Kepala kemoceng lentur dapat ditekuk untuk mencapai sudut yang sulit dijangkau\r\n\r\n4.) Bulu kemoceng terbuat dari serat berkualitas tinggi dengan daya serap yang kuat\r\n\r\n5.) Mudah dibersihkan dan gampang dibilas\r\n\r\n6.)    Berfungsi untuk membersihkan kaca, mobil, sofa, dsb dari debu dan kotoran lainnya.\r\n\r\nSpesifikasi Produk :\r\n\r\n*Ukuran Produk\r\n\r\n  - Panjang Kemoceng Dipendekkan : 58 cm\r\n\r\n  - Panjang Kemoceng DIpanjangkan : 280 cm\r\n\r\n*Varian Produk : Abu\r\n\r\n*Fitur Produk\r\n\r\n  - Kepala Kemoceng Bisa Ditekuk\r\n\r\n  - Gagang teleskopik bisa dipanjang pendekkan\r\n\r\n  - Bulu Microfiber\r\n\r\nReady stok selama katalog masih aktif :\r\n\r\n✅ HARGA BERSAING! \r\n\r\n✅ PRODUK BERKUALITAS \r\n\r\n✅ PROSES PENGGIRIMAN SUPER CEPAT! \r\n\r\n✅ PACKING AMAN DAN RAPI, FREE BUBBLE WRAP \r\n\r\n✅ PENGECEKAN PRODUK SEBELUM DIKIRIM \r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.\r\n\r\n🤗HAPPY SHOPPING🤗 🤝🤝WELCOME RESELLER DAN DROPSHIPPER🤝🤝', // Use JSON.stringify for description
+    rating: '4.8 (9.612 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Grey'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/kemoceng-teleskopik-pembersih-debu-gagang-panjang-2-8-meter-sapu-microfiber-teleskopik-flexible'
+  },
+  { 
+    id: 33,
+    name: 'Sticker Leather Stiker Kulit Sofa Jok Mobil',
+    price: [
+  [
+    67500
+  ]
+],
+    imgSrc: [
+  '/public/images/1726190482177.jpg',
+  '/public/images/1726190482180.jpg',
+  '/public/images/1726190482182.jpg',
+  '/public/images/1726190482184.jpg',
+  '/public/images/1726190482186.jpg'
+],
+    description: 'Stiker Leather\r\n\r\nukuran 20 x 120 cm\r\n\r\nharga untuk per pcs, tidak bisa di sambung.\r\n\r\nnamun hasil akan terlihat seperti sambungan(tidak terpisah)\r\n\r\nkualitas bagus\r\n\r\nFungsi dapat menutupin bagian yang rusak :\r\n\r\n- untuk kulit sofa\r\n\r\n- untuk jok mobil\r\n\r\n- untuk tali pinggang\r\n\r\n- untung tas wanita\r\n\r\n- casing handphone\r\n\r\n- furniture lainya\r\n\r\ncara penggunaan :\r\n\r\n- cukup buka stikernya\r\n\r\n- lalu tempel sesuai daerah yg anda perlukan untuk menutupi bagian kerusakan\r\n\r\nWarna ready :\r\n\r\nnavy blue\r\n\r\nbeige\r\n\r\nblack\r\n\r\nwhite\r\n\r\nlight golden\r\n\r\ngolden gray\r\n\r\nkhaki\r\n\r\nlight brown\r\n\r\nbrown\r\n\r\ndark brown\r\n\r\ndark grey\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (6.337 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Hitam',
+  'Coklat'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/sticker-leather-stiker-kulit-sofa-jok-mobil'
+  },
+  { 
+    id: 34,
+    name: 'MISS CLEAN Penghilang Noda',
+    price: [
+  [
+    60000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726191012451.jpg',
+  '/public/images/1726191012460.jpg',
+  '/public/images/1726191012466.jpg',
+  '/public/images/1726191012471.jpg'
+],
+    description: 'KENAPA HARUS ORDER DISINI\r\n\r\n- Produk yang efektif\r\n\r\nRespon cepat\r\n\r\n- Mengutamakan kepuasan pelanggan\r\n\r\n- Pengiriman tepat waktu\r\n\r\nPaket dilapis bubble warp tebal, tiba dengan aman\r\n\r\n- Harga yang kompetitif\r\n\r\n- Promosi menarik\r\n\r\nToko bereputasi baik\r\n\r\n- Banyak ulasan positif\r\n\r\nMISS CLEAN MENYEDIAKAN KEBUTUHAN LAUNDRY\r\n\r\n- Stain Remover untuk menghilang noda\r\n\r\n- Advaced Whitening untuk pemutih pakaian\r\n\r\n- Liquid Deterjent untuk deterjen pencuci pakaian\r\n\r\n- Softener untuk pelembut pakaian\r\n\r\n- Fabric Smoother untuk pelicin pakaian\r\n\r\n- Parfum Laundry untuk pewangi pakaian tahan lama\r\n\r\n- Penghilang noda khusus sprei, bantal, guling\r\n\r\n- Penghilang noda khusus 17 varians seperti noda darah, noda jamur, noda karat,noda luntur, noda minyak,noda tinta, noda coklat kopi, noda karpet, noda lipstik, noda saos kecap, noda deodorant, noda getah, noda kerah, noda kunyit, noda oli, noda susu, noda tanah\r\n\r\n- Anti kusut spray untuk merapikan pakaian tanpa setrika 3 aroma\r\n\r\n- Parfum laundry premium 15 aroma\r\n\r\nCEK DAN BELI KEBUTUHAN RUMAH DI MISS CLEAN\r\n\r\n- Pembersih rumah (sofa, meja, kaca, pewangi ruangan)\r\n\r\n- Pembersih dapur dan toilet\r\n\r\n- Pembersih fashion (tas dan sepatu)\r\n\r\n- Pewangi fashion (tas, sepatu, boneka, hijab, helm)\r\n\r\n- Pewangi islami (kabah, medina, nabawi, raudhah, kasturi)\r\n\r\n- Disinfektan anti bakteri anti virus\r\n\r\n- Pengendali hama rumah (cicak, kecoa, lalat, nyamuk, rayap, semut, tikus)\r\n\r\nCATATAN : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.9 (5.984 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Luntur',
+  'Tinta',
+  'Karat',
+  'Darah',
+  'Jamur',
+  'Minyak',
+  'Lipstik',
+  'Karpet',
+  'Saos',
+  'Kecap',
+  'Coklat',
+  'Kopi',
+  'Deodorant',
+  'Getah',
+  'Daki',
+  'Kunyit',
+  'Oli',
+  'Susu',
+  'Tanah'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/miss-clean-penghilang-noda'
+  },
+  { 
+    id: 35,
+    name: 'Obeng Set Premium 24 in 1 Obeng Magnetic Pegangan Aluminium',
+    price: [
+  [
+    62000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726191176961.jpg',
+  '/public/images/1726191176964.jpg',
+  '/public/images/1726191176965.jpg'
+],
+    description: '24 in 1 artinya obeng set ini terdiri dari 24 kepala obeng sehingga dengan membeli obeng set ini maka Anda memiliki perlengkapan obeng yang sudah memadai.\r\n\r\nKepala obeng menggunakan magnetik yang dapat menempel baut untuk memudahkan pekerjaan. Obeng set ini sudah dilengkapi dengan kotak untuk menyimpan semua kepala obeng dan body obeng.\r\n\r\nFeatures:\r\n\r\n♦ Box berbahan ABS yang bagus dan sudah ada sekat untuk memudahkan memilih type yang diperlukan\r\n\r\n♦ Anda bisa dengan mudah membuka casing unibody sekalipun. Obeng ini juga untuk membuka peralatan elektronik lainnya termasuk jam tangan, komputer, laptop, dan kamera.\r\n\r\n♦ Magnetic : ujung kepala obengnya sudah dilengkapi magnet, yang memudahkan Anda menempelkan dan melepaskan baut tanpa mudah terjatuh.\r\n\r\n♦ Portable : Ukurannya sangat kecil dan bisa dimasukkan di saku Anda\r\n\r\nSpesifikasi:\r\n\r\n♦ Bintang T2 T3 T4 T5 T6 T8\r\n\r\n♦ Plus 1.5 2.0 2.5 3.0\r\n\r\n♦ Minus 1.5 2.0 2.5 3.0\r\n\r\n♦ Hexa 1.5 2.0 2.5\r\n\r\n♦ Y Shape 0.6 2.0\r\n\r\n♦ Star 0.8 2.0\r\n\r\n♦ Triangle 2.3\r\n\r\n♦ U Shape 2.6\r\n\r\n♦ Material : Aloy\r\n\r\n♦ Berat : 170 gram\r\n\r\nPackage Contents:\r\n\r\n♦ 1x Premium Box\r\n\r\n♦ 1x Obeng Set\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (5.419 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Hitam'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/obeng-set-premium-24-in-1-obeng-magnetic-pegangan-aluminium'
+  },
+  { 
+    id: 36,
+    name: 'Tablet Pembersih Mesin Cuci Laundry Machine Cleaner Shards',
+    price: [
+  [
+    50500
+  ],
+  [
+    69000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726191554152.jpg',
+  '/public/images/1726191554155.jpg',
+  '/public/images/1726191554157.jpg',
+  '/public/images/1726191554158.jpg',
+  '/public/images/1726191554160.jpg',
+  '/public/images/1726191554161.jpg',
+  '/public/images/1726191554163.jpg',
+  '/public/images/1726191554164.jpg',
+  '/public/images/1726191554166.jpg'
+],
+    description: 'Jaga Kebersihan Mesin Cuci Anda !\r\n\r\nMesin Cuci Anda Bersih, Segar & Bebas Dari Bakteri SEKARANG !!\r\n\r\nSpesifikasi Produk :\r\n\r\nBahan : Enzim biologis\r\n\r\nUkuran : 2,6 * 2,6 cm\r\n\r\nWarna : seperti foto\r\n\r\nBentuk fisik : tablet padat\r\n\r\nCara Penggunaan :\r\n\r\n1. Kosongkan mesin cuci Anda\r\n\r\n2. Tempatkan 1 pembersih tablet di bak mesin cuci - jangan di dispenser, dan jalankan siklus mesin cuci yang bersih atau siklus normal dengan pengaturan air panas\r\n\r\n3. Bersihkan residu\r\n\r\nKiat Untuk Menjaga Mesin Tetap Segar :\r\n\r\n1. Selalu hapus item dari mesin cuci segera setelah siklus berakhir\r\n\r\n2. Setelah siklus mesin cuci selesai, biarkan pintu terbuka untuk memungkinkan ventilasi yang lebih baik\r\n\r\n3. Gunakan hanya deterjen yang kompatibel dengan HE di mesin cuci HE\r\n\r\n4. Biarkan laci dispenser terbuka di akhir penggunaan mesin cuci\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (9.881 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Isi 2',
+  'Isi 10'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/tablet-pembersih-mesin-cuci-laundry-machine-cleaner-shards-1'
+  },
+  { 
+    id: 37,
+    name: 'KONCO Multi Cleaner 500 ml | Cairan Serbaguna Pembersih Kerak Kamar Mandi',
+    price: [
+  [
+    78000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726191777244.jpg',
+  '/public/images/1726191777247.jpg',
+  '/public/images/1726191777249.jpg',
+  '/public/images/1726191777251.jpg'
+],
+    description: 'KONCO Multi Cleaner\r\n\r\nFREE KUAS+SARUNG TANGAN\r\n\r\nUkuran: 500 ml KONCO Multi Cleaner Pembersih Kerak Kamar Mandi, Kerak Keramik ,Toilet Dan Noda Membandel Porcelain Cleaner\r\n\r\nManfaat KONCO Multi Cleaner :\r\n\r\nMembersihkan lantai dari noda, kerak membandel.\r\n\r\nTidak Merusak Nat\r\n\r\nsemua bakteri yang menempel dilantai.\r\n\r\nTidak berbau Menyengat\r\n\r\nLebih irit dan lebih praktis\r\n\r\nCara Penggunaanya :\r\n\r\nGunakan sarung tangan plastik atau karet\r\n\r\nKocok terlebih dahulu botol kemudian tuangkan cairan kedalam wadah secukupnya Oleskan cairan ke noda membandel menggunakan kuas..cukup dikuas tidak perlu disikat\r\n\r\nSiram dengan air yg banyak sehingga bersih\r\n\r\nUlangin langkah-langkah diatas jika noda blm hilang\r\n\r\nJangan tercecer kemana2 karena ini cairan sangat kuat\r\n\r\nSebaiknya ditest disudut kecil dulu untuk menguji kekuatan…\r\n\r\nUntuk kualitas keramik yg standard sebaiknya setelah dibersihkan dilapisi cat coating atau expoxy\r\n\r\nProses Pengiriman Dan Layanan Toko :\r\n\r\nAgar aman dalam pengiriman, setiap paket kami beri Bubble Wrap GRATIS.\r\n\r\nBisa klaim kalau menerima produk yang tidak original, Kami mengutamakan kepuasan pelanggan dengan mengirim barang berkualitas.\r\n\r\nMaksimal Order Jam 15.00 Sore Untuk dikirim hari yang sama.\r\n\r\nLayanan Chat Aktif : Senin - Sabtu Mulai Jam 08.00 Pagi – 17.00 , Hari Libur ( Passive respon).\r\n\r\nGRATIS ONGKIR KIRIM ( Pembelian Minimal diperlukan )\r\n\r\nNOTE PENTING : Mohon videokan saat proses membuka paket pesanan, untuk klaim kekurangan item, rusak dan semua jenis klaim tidak diterima / ditolak tanpa bukti video proses membuka paket. Terimakasih', // Use JSON.stringify for description
+    rating: '4.8 (8.235 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  '500 ml'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/konco-multi-cleaner-500-ml-cairan-serbaguna-pembersih-kerak-kamar-mandi'
+  },
+  { 
+    id: 38,
+    name: 'Pest Reject Pembasmi Hama Tikus Kecoa Nyamuk Lalat Elektrik',
+    price: [
+  [
+    61000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726192025228.jpg',
+  '/public/images/1726192025229.jpg',
+  '/public/images/1726192025235.jpg',
+  '/public/images/1726192025236.jpg',
+  '/public/images/1726192025237.jpg',
+  '/public/images/1726192025241.jpg'
+],
+    description: 'Keunggulan Produk\r\n\r\nTidak mengandung zat zat beracun karena alat ini menggunakan ultrasonic untuk mengusir Tikus Lalat Kecoa dan Nyamuk\r\n\r\nUltrasonic dapat menyebar hingga radius 50 meter persegi dan alat ini dapat langsung digunakan di stop kontak PLN\r\n\r\nUltrasonic akan membuat hama terasa tidak nyaman Cemas dan kabur\r\n\r\nSehingga anda bisa menyingkirkan hama yang mengganggu\r\n\r\nUlrasonic Pest Repeller ini tidak beracun aman efektif tidak berbau dan paling penting tidak membahayakan keluarga Anda\r\n\r\nFitur\r\n\r\nPest Repeller ultrasonik ini mengadopsi bahan plastik ABS berkualitas untuk cangkangnya disertai sentuhan yang bagus terasa kokoh dan awet\r\n\r\nProduk repeller hama ini mengadopsi teknologi ultrasonic tidak beracun aman efektif disertai konsumsi tenaga listrik yang rendah dan Ramah lingkungan\r\n\r\nPest Repeller Ultrasonic ini cocok digunakan di rumah gudang toko hotel rumah sakit kantor dan sebagainya\r\n\r\nKeterangan produk\r\n\r\nfeature eco-frindly\r\n\r\nberat bersih 200 gram\r\n\r\nsumber daya listrik 5 Watt\r\n\r\njenis produk ultrasonic pest Repeller\r\n\r\nBahan ABS\r\n\r\nDimensi 90 x 56 x 50 mm\r\n\r\nSaran Pemakaian\r\n\r\nPest Repeller ini harus dipasang pada jarak 80 sampai 120 sentimeter dari lantai\r\n\r\nTitik pemasangan harus dihindari dari karpet tirai dll yang menempel pada alat pest Repeller\r\n\r\nKarena kain akan menyerap ultrasonik dan menurunkan efek mengusir nyamuk kecoa lalat dan mengusir Tikus\r\n\r\nLazim hama nyamuk kecoa akan terlihat meningkat pada awal pemakaian karena mereka bergerak menjauh dari tempat tinggal mereka setelah serangan ultrasonik\r\n\r\njauhkan pemasangan alat ini pada hewan peliharaan anda seperti anjing kucing hamster burung dll\r\n\r\nSuara ultrasonic dapat menyebar dengan jarak mencapai 30 sampai 50 meter persegi.\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (1.504 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Putih - Hitam'
+],
+    Category: [
+    'Rumah Tangga'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/pest-reject-pembasmi-hama-tikus-kecoa-nyamuk-lalat-elektrik-1'
+  },
+  { 
+    id: 39,
+    name: 'JAM TANGAN DIGITAL LED POLOS (RECOMENDED FOR BUNDLING) GRATIS BOX EXCLUSIVE',
+    price: [
+  [
+    67000
+  ]
+],
+    imgSrc: [
+  '/public/images/4238241696831666044.jpg',
+  '/public/images/8349731696831649206.jpg',
+  '/public/images/3947511696831654835.jpg',
+  '/public/images/4142661696831660237.jpg'
+],
+    description: '⚡️Spesifikasi Produk⚡️\r\n\r\n- Diameter Case : 3,5 cm\r\n\r\n- Bahan Case : Alloy\r\n\r\n- Ketebalan Case : 1 cm\r\n\r\n- Lebar Strap : 2 cm\r\n\r\n- Panjang Strap : 23,9 cm\r\n\r\n- Bahan Strap : Rubber\r\n\r\n- Gender : Unisex\r\n\r\n- Jenis Gerakan : Digital\r\n\r\n- Waterproof : No\r\n\r\n- Style: Sport Water Resistant |Kehujanan & Cuci Tangan, Bukan Design Khusus Swimming|\r\n\r\nFREE BUBBLE WRAP & FREE BATRE CADANGAN & BOX EXCLUSIVE\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (4.702 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'HITAM',
+  'ABU',
+  'HIJAU',
+  'MERAH',
+  'PINK',
+  'NAVY'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/jam-tangan-digital-led-polos-recomended-for-bundling-gratis-box-exclusive-1'
+  },
+  { 
+    id: 40,
+    name: 'Nora Tas Wanita Shoulderbag Motif NY',
+    price: [
+  [
+    85000
+  ]
+],
+    imgSrc: [
+  '/public/images/1358131716173753999.jpg',
+  '/public/images/1674191716173710861.jpg',
+  '/public/images/1726193322654.jpg',
+  '/public/images/1726193322656.jpg',
+  '/public/images/1726193322657.jpg'
+],
+    description: '• Deskripsi Produk :\r\n• *Bahan : PU Leather Premium\r\n\r\n• *Ukuran : P 23 x L 6 x T 17 cm\r\n\r\n• *Warna : Cream, Black, Tan\r\n\r\n• *Kualitas : Import\r\n\r\n• *Tali : 60cm adjustable (Tidak ada Tali Panjang)\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (1.476 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Black',
+  'Cream',
+  'Coklat'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/nora-tas-wanita-shoulderbag-motif-ny-3159'
+  },
+  { 
+    id: 41,
+    name: 'Hot Shaper Camisole Korset Rompi Cami Pembakar Lemak',
+    price: [
+  [
+    84000
+  ],
+  [
+    88000
+  ],
+  [
+    92000
+  ],
+  [
+    94000
+  ],
+  [
+    98000
+  ],
+  [
+    102000
+  ]
+],
+    imgSrc: [
+  '/public/images/1726196345424.jpg',
+  '/public/images/1726196345425.jpg',
+  '/public/images/1726196345428.jpg',
+  '/public/images/1726196345429.jpg'
+],
+    description: 'Hot Shaper Slimming Vest atau Rompi Pembakar Lemak diciptakan dengan teknologi\r\n\r\nterbaru dalam hal Melangsingkan dan Merampingkan Badan.\r\n\r\nManfaat:\r\n\r\n-Efektif untuk membantu menurunkan berat badan dengan menjaga panas tubuh dan\r\n\r\nmerangsang pembakaran lemak selama latihan\r\n\r\n-Bahan Neotex yang di rancang khusus untuk meningkatkan suhu tubuh dan menyerap\r\n\r\nkeringat sehingga menjaga bagian -luar agar tetap kering\r\n\r\n-Nyaman , ringan , dan kain elastis yang menyesuaikan dengan gerakan tubuh,\r\n\r\ntidak mengganggu anda saat melakukan aktivitas apapun\r\n\r\n-Desain sporty dan trendi cocok digunakan saat berolahraga', // Use JSON.stringify for description
+    rating: '4.8 (1.884 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'S',
+  'M',
+  'L',
+  'XL',
+  'XXL',
+  '3XL'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/hot-shaper-camisole-korset-rompi-cami-pembakar-lemak-1'
+  },
+  { 
+    id: 42,
+    name: 'JAS HUJAN / MANTEL HUJAN TRENDY KEKINIAN BAHAN KUAT PREMIUM VIRAL',
+    price: [
+  [
+    104000
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726198472254-897203089.jpg',
+  '/public/images/images-1726198472255-35556902.jpg',
+  '/public/images/images-1726198472258-519141620.jpg',
+  '/public/images/images-1726198472257-6408325.jpg',
+  '/public/images/images-1726198472262-442391271.jpg'
+],
+    description: 'Jas Hujan Motor Full Body Pria & Wanita / Rain Cover / Jas Hujan Ponco\r\n\r\n● Ada pelindung muka (hood), bila menggunakan helm, hood dapat dilepas pasang. Memakai hood Cocok bagi pengendara disekitar komplek rumah.\r\n\r\n● Terdapat 2 cover mika yaitu berbentuk topi dan pelindung muka. bisa dilepas pasang (LAMA)\r\n\r\n● Hanya ada mika topi yang sudah menempel tidak bisa dilepas pasang. jika tidak ingin dipakai bisa di adjust dengan dilipat kedalam atau keluar. (BARU)\r\n\r\n● Bahan Oxford+Latex Premium Tidak mudah robek\r\n\r\n● Spesifikasi Bahan :\r\n\r\n● Oxford + Latex premium tidak mudah robek Terdapat bagian transparan di bagian lampu depan sehingga tidak menghalangi lampu\r\n\r\n● Ukuran : All Size\r\n\r\nDisclaimer : produk dalam foto dan video hanya gambaran, untuk ukuran saat dipakai tergantung motor dan tinggi badan personal.\r\n\r\nSpesifikasi Bahan : Oxford + Latex premium tidak mudah robek Terdapat bagian transparan di bagian lampu depan sehingga tidak menghalangi lampu\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (2.729 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'PUTIH',
+  'BIRU',
+  'PINK'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/jas-hujan-mantel-hujan-trendy-kekinian-bahan-kuat-premium-viral-1'
+  },
+  { 
+    id: 43,
+    name: 'Kaos kaki unisex random untuk pria dan wanita UNISEX',
+    price: [
+  [
+    53700
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726198806978-597706950.jpg',
+  '/public/images/images-1726198806969-699960026.jpg',
+  '/public/images/images-1726198806976-173563577.jpg',
+  '/public/images/images-1726198806973-974924959.jpg',
+  '/public/images/images-1726198806970-21364424.jpg'
+],
+    description: 'DESKRIPSI\r\n\r\nPanjang setengah betis\r\n\r\ntidak panas di kaki karna terbuat dari bahan cotton.\r\n\r\nwarna :\r\n\r\n-polos\r\n\r\n-motif\r\n\r\n????Real picture & ready stock\r\n\r\n????stock banyak silahkan langsung order ya kak\r\n\r\n????kaos kaki dewasa pria dan wanita\r\n\r\n????panjang sebetis\r\n\r\n????bahan cotton nyaman dipakai\r\n\r\n???? yang kakinya ukuran 38 sampai 46 bisa pakai.\r\n\r\nNOTE : Barang sebelum dikirim sudah di cek dalam keadaan baik (Tidak cacat, Rusak atau pun Sobek) dan dipacking dengan keadaan baik, segala jenis kerusakan akibat expedisi bukan tanggung jawab kami', // Use JSON.stringify for description
+    rating: '4.8 (7.516 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Random'
+],
+    Category: [
+    'Fashion Wanita',
+    'Fashion Pria'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/kaos-kaki-unisex-random-untuk-pria-dan-wanita-unisex'
+  },
+  { 
+    id: 44,
+    name: 'Tas Peronia Promo Gratis Dompet Croco',
+    price: [
+  [
+    107000
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726199094424-908186660.jpg',
+  '/public/images/images-1726199094423-566177624.jpg',
+  '/public/images/images-1726199094425-575533857.jpg',
+  '/public/images/images-1726199094428-138566058.jpg',
+  '/public/images/images-1726199094430-577195065.jpg',
+  '/public/images/images-1726199094431-824241923.jpg',
+  '/public/images/images-1726199094432-478000907.jpg'
+],
+    description: 'Deskripsi Produk :\r\n• *Bahan : PU Leather Premium\r\n\r\n• *Ukuran : P 25.5 x L 7 x T 23 cm\r\n\r\n• *Warna : Hitam, White\r\n\r\n• *Kualitas : Import\r\n\r\n• *Bag Mouth : Zipper\r\n\r\n• *Adjustable : Tidak\r\n\r\n• *Panjang Tali : 70cm ( Tali Kulit) Dan 55cm (Tali Rantai)\r\n\r\nFREE DOMPET CROCO WANITA LUXURY\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.9 (2.178 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Black',
+  'White'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/tas-peronia-promo-gratis-dompet-croco'
+  },
+  { 
+    id: 45,
+    name: '5 PCS CELANA HOT PANTS KOREA, UNISEX MUDA MUDI CEWEK COWOK, MODIS',
+    price: [
+  [
+    130000
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726199382627-972941436.jpg',
+  '/public/images/images-1726199382627-601276052.jpg',
+  '/public/images/images-1726199382627-780277568.jpg',
+  '/public/images/images-1726199382630-832462256.jpg',
+  '/public/images/images-1726199382630-415972051.jpg'
+],
+    description: 'Celana Hot pants / Short pants santai Bahan Fleece gramasi 230 Tebal cocok Untuk Cewek Dan Cowo ( Unisex)\r\n\r\nAda saku di bagian Kanan dan Kiri, Dilengkapi Tali di bagian Pinggang\r\n\r\nUNTUK DEWASA BAHAN FLEECE GRAMASI 230 SAKU KANAN DAN KIRI\r\n\r\nCelana santai, Celana Pantai, Celana Short Pants, Short cargo, Short Chino, Boardshort dan Celana Pendek Premium H&M\r\n\r\n#UNTUK SETIAP PESANAN WARNA AKAN DIKIRIM SECARA RANDOM\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.8 (6.358 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Random'
+],
+    Category: [
+    'Fashion Wanita'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/5-pcs-celana-hot-pants-korea-unisex-muda-mudi-cewek-cowok-modis-copy-1'
+  },
+  { 
+    id: 46,
+    name: 'MASSAGE GUN ALAT PIJAT CHARGE 4in1',
+    price: [
+  [
+    120000
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726201030406-117568298.jpg',
+  '/public/images/images-1726201030406-161308955.jpg',
+  '/public/images/images-1726201030406-674957348.jpg',
+  '/public/images/images-1726201030406-858749439.jpg',
+  '/public/images/images-1726201030407-467735529.jpg',
+  '/public/images/images-1726201030410-783554959.jpg',
+  '/public/images/images-1726201030412-179356405.jpg',
+  '/public/images/images-1726201030412-581515007.jpg'
+],
+    description: 'Alat Pijat Elektrik Massage Gun refleksi Rechargeable 4in1 alat ini sangat berguna bagi kamu yang suka berpergian kemanapun dan gampang pegel pada tubuh. Dengan baterai yang cukup besar 1800 mAh dan rechargeable memudahkan kamu untuk memakai alat ini dimanapun kamu berada tanpa aliran listrik. Penggunaan terus menerus TIDAK DISARANKAN melebihi 15 menit. Tunggu massage gun dingin sebelum digunakan kembali.\r\n\r\nFitur: ✔️ Rechargeable sehingga mudah dibawa kemana-mana. ✔️ Menggunakan motor penggerak yang powerful sehingga kekuatan pijat dari alat ini sangat kencang. ✔️ Berbentuk seperti pistol sehingga gampang untuk digenggam dan tidak membuat tangan lelah saat memijat. ✔️Memberikan relaxasi pada tubuh sehingga membuat aliran darah lancar. ✔️ Memiliki 4 macam bentuk kepala tebakan yang dapat disesuaikan sesuai keinginan.\r\n\r\nSpesifikasi: Tipe USB : Tipe C Daya : 5V Sumber Daya : Baterai isi ulang lithium Uk Produk : 132x134x50mm Kapasitas baterai : 1800 mAh Daya mesin : 30 W Kecepatan: 6 kecepatan pengaturan\r\n\r\nIsi Paket : 1 x Alat Pijat Elektrik Massage Gun 1 x Kabel Tipe C (tidak termasuk kepala charger) 4 x Kepala tembakan\r\n\r\nCatatan : Kami haya mengirim barang sesuai dengan yang dimasukan ke keranjang belanja. Jika ingin complain barang WAJIB ada video Unboxing. Membeli berarti menyetujui , Terima Kasih.', // Use JSON.stringify for description
+    rating: '4.9 (6.698 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Hitam'
+],
+    Category: [
+    'Kesehatan'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/massage-gun-alat-pijat-charge-4in1'
+  },
+  { 
+    id: 47,
+    name: 'TOYASI ASI BOOSTER SUSU ETAWA 200gr',
+    price: [
+  [
+    75000
+  ]
+],
+    imgSrc: [
+  '/public/images/images-1726202050738-429777365.jpg',
+  '/public/images/images-1726202050740-19386648.jpg',
+  '/public/images/images-1726202050741-490385066.jpg',
+  '/public/images/images-1726202050741-934180926.jpg',
+  '/public/images/images-1726202050741-464414107.jpg',
+  '/public/images/images-1726202050743-471648917.jpg',
+  '/public/images/images-1726202050744-477371508.jpg',
+  '/public/images/images-1726202050745-421489169.jpg',
+  '/public/images/images-1726202050746-521236012.jpg'
+],
+    description: 'SPESIFIKASI Product name: Blender Portabel Elektrik Tanpa Kabel / Mini Chopper 250ML Rated Capacity: 250mL Battery voltage: 3.7V== Rated working current: 6A rated power: 45W operating hours: ≤30S Rated input voltage: 5V== Rated input current: 1A FITUR 1. TANPA KABEL & WATERPROOF 2. Design aman nyaman untuk digunakan. 3. Material berkualitas aman food grade untuk memasak, food-grade SUS304 stainless steel blade , gampang di bersihkan , dan aman untuk pemakaian bahan masakan panas. 4. Komponen yg dapat di lepas, dapat dibilas langsung.\r\n\r\nCARA PAKAI 1. Charge sampai penuh (sampai lampu biru menyala) , bersihkan chopper. 2. Pasang pisau chopper , masukan bahan yang akan di haluskan sesuai takaran jangan terlalu banyak atau chopper susah bekerja. 3.Tutup chopper dengan aman baru dinyalakan. 4. Haluskan makanan sesuai keinginan.\r\n\r\nINDIKATOR LAMPU 1. Merah : lagi proses charge 2. Biru : full charged 3. Tutup pengaman dinyalakan : Lampu biru kedip 5 kali 4. Tutup pengaman di matikan : Lampu biru dan merah kedip masing2 2 kali 5. Dalam pemakaian : lampu biru nyala 30 detik 6. Habis baterai : lampu merah nyala 10 detik KELENGKAPAN 1 x buku Manual 1 x Portable Blender 1 x USB Cable\r\n\r\nProduk sebelum dikirim sudah ditest dengan kondisi yang dipastikan aman, jika ada kerusakan kemungkinan dari pengiriman, karena paket yang terbanting.', // Use JSON.stringify for description
+    rating: '4.8 (1.122 Penilaian)',
+    protection: 'Melindungi barang belanjaan dari kerusakan hingga 6 bulan',
+    colors: [
+  'Pink'
+],
+    Category: [
+    'Dapur'
+  ],
+    stock: 199,
+    linkPayment: 'https://rheastore.orderonline.id/mini-blender-elektrik-mini-blender-portable-blender-buah-dan-sayuran'
   }
 ];

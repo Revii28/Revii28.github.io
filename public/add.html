@@ -221,6 +221,30 @@
     return `${rating} (${totalRatings} Penilaian)`;
   }
 
+  const submitButton = document.querySelector('button[type="submit"]');
+  const imageInput = document.getElementById('images');
+
+  imageInput.addEventListener('change', function() {
+    const files = this.files;
+    let loadedCount = 0;
+
+    submitButton.disabled = true; // Disable the submit button initially
+
+    for (let i = 0; i < files.length; i++) {
+      const reader = new FileReader();
+
+      reader.onload = function() {
+        loadedCount++;
+
+        if (loadedCount === files.length) {
+          submitButton.disabled = false; // Enable the submit button when all images are loaded
+        }
+      };
+
+      reader.readAsDataURL(files[i]);
+    }
+  });
+
   document.getElementById('productForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
